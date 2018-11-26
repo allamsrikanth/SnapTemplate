@@ -1,0 +1,99 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543053831107' stop='1543053873030'>
+    <name>Verify the functionality of Save &amp; Continue button when slug field does not contain word template</name>
+    <title>Verify the functionality of Save &amp; Continue button when slug field does not contain word template</title>
+    <test-cases>
+        <test-case start='1543053831108' status='failed' stop='1543053864134'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='fb6ec30a-a8d2-445a-a356-59ba1e4b880e-attachment.png' type='image/png' size='91079'/>
+            </attachments>
+            <failure>
+                <message>Failed: No element found using locator: By(css selector, img[alt='Sign in with Slack'])</message>
+                <stack-trace>NoSuchElementError: No element found using locator: By(css selector, img[alt='Sign in with Slack'])
+                    at elementArrayFinder.getWebElements.then (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+                    at ManagedPromise.invokeCallback_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+                    at &lt;anonymous>
+                    at process._tickCallback (internal/process/next_tick.js:189:7)Error
+                    at ElementArrayFinder.applyAction_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+                    at ElementArrayFinder.(anonymous function).args [as click] (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+                    at ElementFinder.(anonymous function).args [as click] (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+                    at LoginPage.enterSlackDetails (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\LoginPage.js:13:75)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_newyork.js:10:13)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                From: Task: Run it("Launch and login  Tribune Application") in control flow
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+                    at attempt (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+                    at Spec.queueRunnerFactory (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+                    at Spec.execute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+                    at UserContext.fn (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+                    at attempt (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+                From asynchronous test: 
+                Error
+                    at Suite.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_newyork.js:5:2)
+                    at addSpecsToSuite (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+                    at Env.describe (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+                    at describe (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+                    at Object.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_newyork.js:2:1)
+                    at Module._compile (module.js:653:30)
+                    at Object.Module._extensions..js (module.js:664:10)
+                    at Module.load (module.js:566:32)
+                    at tryModuleLoad (module.js:506:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1543053864134' status='passed' stop='1543053872744'>
+            <name>should  enters the slug without template word</name>
+            <title>should  enters the slug without template word</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='54885e77-09ad-4939-b1b0-bc7eef1b8e5e-attachment.png' type='image/png' size='68769'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543053872744' status='failed' stop='1543053873029'>
+            <name>encountered a declaration exception</name>
+            <title>encountered a declaration exception</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='12961137-91dc-403f-8aac-41ca48cb06a9-attachment.png' type='image/png' size='65597'/>
+            </attachments>
+            <failure>
+                <message>SyntaxError: Unexpected token .</message>
+                <stack-trace>C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:6
+                		element(by.xpath("//input[@name='headline']")).clear();
+                		          ^
+                
+                SyntaxError: Unexpected token .
+                    at createScript (vm.js:80:10)
+                    at Object.runInThisContext (vm.js:139:10)
+                    at Module._compile (module.js:617:28)
+                    at Object.Module._extensions..js (module.js:664:10)
+                    at Module.load (module.js:566:32)
+                    at tryModuleLoad (module.js:506:12)
+                    at Function.Module._load (module.js:498:3)
+                    at Module.require (module.js:597:17)
+                    at require (internal/module.js:11:18)
+                    at Suite.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_newyork.js:20:21)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
