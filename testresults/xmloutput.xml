@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="3" time="76.706">
- <testsuite name="should Verify the pop up message when user enters the already taken slug" timestamp="2018-11-26T19:32:37" hostname="localhost" time="76.706" errors="0" tests="3" skipped="0" disabled="0" failures="0">
-  <testcase classname="should Verify the pop up message when user enters the already taken slug" name="Launch and login  Tribune Application" time="24.155" />
-  <testcase classname="should Verify the pop up message when user enters the already taken slug" name="should create a new template" time="11.967" />
-  <testcase classname="should Verify the pop up message when user enters the already taken slug" name="enter the Byline value" time="40.584" />
+<testsuites disabled="0" errors="0" failures="0" tests="3" time="128.77">
+ <testsuite name="Verify that user is able to update the added section" timestamp="2018-11-30T17:08:07" hostname="localhost" time="128.77" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Verify that user is able to update the added section" name="Launch and login  Tribune Application" time="14.295" />
+  <testcase classname="Verify that user is able to update the added section" name="should click on  new template" time="8.434" />
+  <testcase classname="Verify that user is able to update the added section" name="should save the template without adding section" time="106.037" />
  </testsuite>
 </testsuites>
