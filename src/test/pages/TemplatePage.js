@@ -96,7 +96,7 @@ var TemplatePage=function () {
 		//this._counter = 0;
 		this._counter++;
 		  element(by.xpath("//input[@name='slug']")).clear();
-		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-teesrtggclicksaveandConttee-auuto1oo-aaadmin-xeeebbbiii-template+"this._counter"+-2018");
+		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-teesrtggclicksaveandConttee-auuto1oo-aaadmin-xeeebbbiii-template"+this._counter+"-2018");
 		  browser.driver.sleep(6000);""
 		  return this;
 	};
