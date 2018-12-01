@@ -2,6 +2,7 @@
 //var baseObject = require('../pages/BasePage.js');
 
 var TemplatePage=function () {
+	this._counter = 0;
 	this.snapHomePage = function(){
 		element(by.xpath("//i[@id='home']")).isDisplayed().toBe(true);
 		//browser.driver.sleep(4000);
@@ -92,9 +93,11 @@ var TemplatePage=function () {
 		  return this;
 	};
 	this.enterSlugName17 = function(){
+		//this._counter = 0;
+		this._counter++;
 		  element(by.xpath("//input[@name='slug']")).clear();
-		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-teesrtggclicksaveandConttee-auuto1oo-aaadmin-xeeebbbiii-template-2018");
-		  browser.driver.sleep(6000);
+		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-teesrtggclicksaveandConttee-auuto1oo-aaadmin-xeeebbbiii-template+"this._counter"+-2018");
+		  browser.driver.sleep(6000);""
 		  return this;
 	};
 	this.verifySectionErrorpopup = function(){
