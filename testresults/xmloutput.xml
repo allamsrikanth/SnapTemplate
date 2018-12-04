@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="3" time="137.322">
- <testsuite name="Verify that template history revisions show correct sections relevant to the given revision" timestamp="2018-12-04T18:12:50" hostname="localhost" time="137.322" errors="0" tests="3" skipped="0" disabled="0" failures="0">
-  <testcase classname="Verify that template history revisions show correct sections relevant to the given revision" name="Launch and login  Tribune Application" time="15.124" />
-  <testcase classname="Verify that template history revisions show correct sections relevant to the given revision" name="should click on  new template" time="8.763" />
-  <testcase classname="Verify that template history revisions show correct sections relevant to the given revision" name="should enter all mandatory fields and verify section" time="113.433" />
+<testsuites disabled="0" errors="0" failures="0" tests="3" time="134.974">
+ <testsuite name="Verify that template history revisions show correct sections relevant to the given revision" timestamp="2018-12-04T18:55:40" hostname="localhost" time="134.974" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Verify that template history revisions show correct sections relevant to the given revision" name="Launch and login  Tribune Application" time="13.135" />
+  <testcase classname="Verify that template history revisions show correct sections relevant to the given revision" name="should click on  new template" time="8.651" />
+  <testcase classname="Verify that template history revisions show correct sections relevant to the given revision" name="should enter all mandatory fields and verify correct is section added or not" time="113.186" />
  </testsuite>
 </testsuites>

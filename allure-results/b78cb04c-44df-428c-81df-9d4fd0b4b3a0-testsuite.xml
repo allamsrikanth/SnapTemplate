@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543929940288' stop='1543930075262'>
+    <name>Verify that template history revisions show correct sections relevant to the given revision</name>
+    <title>Verify that template history revisions show correct sections relevant to the given revision</title>
+    <test-cases>
+        <test-case start='1543929940289' status='passed' stop='1543929953424'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='4875e790-add3-4282-ab93-2a3f0ef997c6-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543929953424' status='passed' stop='1543929962075'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='74253e6a-6550-41a3-8c16-de5ec25a196a-attachment.png' type='image/png' size='68769'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543929962075' status='passed' stop='1543930075261'>
+            <name>should enter all mandatory fields and verify correct is section added or not</name>
+            <title>should enter all mandatory fields and verify correct is section added or not</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='2cf7745c-a711-486a-bc8d-514f743b99d4-attachment.png' type='image/png' size='62682'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
