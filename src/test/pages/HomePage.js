@@ -139,6 +139,24 @@ var HomePage=function () {
         element(by.xpath(OR.locators.LogoutPage.template_edit)).click();
         browser.driver.sleep(3000);
     };
+this.searchTemplate = function(){
+		
+		element(by.id("dashboard-search-input")).sendKeys("Verify section Template");
+		element(by.xpath("//button[contains(text(),'Search')]")).click();
+		browser.driver.sleep(6000);
+		//var dsp = element(by.xpath("//div/h3[text()='New Template123']")).isDisplayed();
+		//expect(dsp).toBe(true);	
+
+		};
+		this.searchTemplate25 = function(){
+			
+			element(by.id("dashboard-search-input")).sendKeys("Verify P2P Mode template");
+			element(by.xpath("//button[contains(text(),'Search')]")).click();
+			browser.driver.sleep(6000);
+			//var dsp = element(by.xpath("//div/h3[text()='New Template123']")).isDisplayed();
+			//expect(dsp).toBe(true);	
+
+			};
     this.verifyNewStoryCreationPage = function(){
         element(by.css(OR.locators.LogoutPage.searchbar)).sendKeys(OR.locators.data.searchtemplate);
         element(by.css(OR.locators.LogoutPage.searchicon)).click();
