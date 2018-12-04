@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543401075400' stop='1543401100706'>
+    <name>Verify that following fields are autoselected</name>
+    <title>Verify that following fields are autoselected</title>
+    <test-cases>
+        <test-case start='1543401075400' status='passed' stop='1543401088747'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='ec0d0679-9957-434b-8a54-3e9bcb09a8be-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543401088747' status='passed' stop='1543401100408'>
+            <name>should  enters the slug without template word</name>
+            <title>should  enters the slug without template word</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='89a7322e-02ff-484a-ab22-57364e7a85b4-attachment.png' type='image/png' size='79623'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543401100408' status='failed' stop='1543401100705'>
+            <name>encountered a declaration exception</name>
+            <title>encountered a declaration exception</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='766641e3-a273-4144-97ac-9286bb729089-attachment.png' type='image/png' size='83762'/>
+            </attachments>
+            <failure>
+                <message>SyntaxError: missing ) after argument list</message>
+                <stack-trace>C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:199
+                			expect(element(by.xpath("//input[@name='slug']")).getText().toEqual('ny-snap-test-auto-admin-ct-xebia-template-20181128'););	 
+                			                                                                                                                        ^
+                
+                SyntaxError: missing ) after argument list
+                    at createScript (vm.js:80:10)
+                    at Object.runInThisContext (vm.js:139:10)
+                    at Module._compile (module.js:617:28)
+                    at Object.Module._extensions..js (module.js:664:10)
+                    at Module.load (module.js:566:32)
+                    at tryModuleLoad (module.js:506:12)
+                    at Function.Module._load (module.js:498:3)
+                    at Module.require (module.js:597:17)
+                    at require (internal/module.js:11:18)
+                    at Suite.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_newyork.js:319:22)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

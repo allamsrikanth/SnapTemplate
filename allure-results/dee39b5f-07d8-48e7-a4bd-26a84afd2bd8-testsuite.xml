@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543387560797' stop='1543387599962'>
+    <name>Verify the functionality of Save &amp; Continue button when mandatory fields are blank</name>
+    <title>Verify the functionality of Save &amp; Continue button when mandatory fields are blank</title>
+    <test-cases>
+        <test-case start='1543387560797' status='passed' stop='1543387582224'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='de616bd1-d011-4548-ac54-6a60e1a74460-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543387582224' status='passed' stop='1543387589855'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='a28eb901-3b5f-4d79-82a4-d3b120e2e2e6-attachment.png' type='image/png' size='74825'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543387589855' status='failed' stop='1543387599961'>
+            <name>Verify that user is able see headline preview </name>
+            <title>Verify that user is able see headline preview </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='1554d867-d555-4bce-a342-12a6f8ef6c0f-attachment.png' type='image/png' size='68667'/>
+            </attachments>
+            <failure>
+                <message>Expected true to be false.</message>
+                <stack-trace>Error: Failed expectation
+                    at TemplatePage.clickOnOk (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:47:94)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_newyork.js:159:16)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

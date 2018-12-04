@@ -1,0 +1,54 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543921071015' stop='1543921112851'>
+    <name>Verify the functionality of SAVE REMINDER dropdown list</name>
+    <title>Verify the functionality of SAVE REMINDER dropdown list</title>
+    <test-cases>
+        <test-case start='1543921071016' status='passed' stop='1543921093832'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='aff086d4-ffbf-45bc-bbba-231d3c463bb1-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543921093832' status='passed' stop='1543921102305'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='4167fc0d-7782-4e6f-8365-2d096f36d9b1-attachment.png' type='image/png' size='65597'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543921102305' status='failed' stop='1543921112850'>
+            <name>verify  options in savereminder</name>
+            <title>verify  options in savereminder</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='33390ed8-c173-47d4-b701-4b4df0f4ab09-attachment.png' type='image/png' size='75822'/>
+            </attachments>
+            <failure>
+                <message>Expected $[0] = '5' to equal '5 minutes'.
+                Expected $[1] = '15' to equal '15 minutes'.
+                Expected $[2] = '30' to equal '30 minutes'.
+                Expected $[3] = '60' to equal '60 minutes'.
+                Expected $[4] = 'off' to equal 'No reminder'.</message>
+                <stack-trace>Error: Failed expectation
+                    at TemplatePage.verifyOptionsSaveReminder (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:477:21)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_newyork.js:433:16)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

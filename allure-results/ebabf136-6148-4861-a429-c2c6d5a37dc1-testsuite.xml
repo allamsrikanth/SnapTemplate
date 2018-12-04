@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543563282147' stop='1543563323031'>
+    <name>Verify that user is able to save the template without adding section</name>
+    <title>Verify that user is able to save the template without adding section</title>
+    <test-cases>
+        <test-case start='1543563282147' status='passed' stop='1543563298975'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='3098b2a4-5c83-4725-b138-135765a687e9-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543563298976' status='passed' stop='1543563307349'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='38d83225-e901-403d-9dcf-3e3f386ef207-attachment.png' type='image/png' size='68769'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543563307349' status='passed' stop='1543563323030'>
+            <name>should save the template without adding section</name>
+            <title>should save the template without adding section</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='2968ed70-b905-412a-84dd-5c70d1f8d5e5-attachment.png' type='image/png' size='73672'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

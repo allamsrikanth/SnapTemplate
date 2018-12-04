@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543773527164' stop='1543773564153'>
+    <name>Verify that section field is not present on template creation page.</name>
+    <title>Verify that section field is not present on template creation page.</title>
+    <test-cases>
+        <test-case start='1543773527165' status='passed' stop='1543773541803'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='bae5f015-480e-48e4-a3f1-9aac44d1fc99-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543773541804' status='passed' stop='1543773553752'>
+            <name>should  create new template</name>
+            <title>should  create new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='32544432-22cb-4333-8525-8713db6307a1-attachment.png' type='image/png' size='79623'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543773553752' status='passed' stop='1543773564152'>
+            <name>Verify that user is able see autofiled fields</name>
+            <title>Verify that user is able see autofiled fields</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='27fa6eb2-572f-4dfd-84b8-4d7cb1b8999a-attachment.png' type='image/png' size='83762'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

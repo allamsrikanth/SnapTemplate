@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543558940573' stop='1543558995058'>
+    <name>Verify that following fields are autoselected</name>
+    <title>Verify that following fields are autoselected</title>
+    <test-cases>
+        <test-case start='1543558940574' status='passed' stop='1543558958722'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='01543d65-2788-4f66-baf7-fc132a74976e-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543558958723' status='passed' stop='1543558970288'>
+            <name>should  enters the slug without template word</name>
+            <title>should  enters the slug without template word</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='aa4f597f-cab3-4947-b0cb-ad72e0095de6-attachment.png' type='image/png' size='79623'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543558970288' status='failed' stop='1543558995058'>
+            <name>Verify that user is able see autofiled fields</name>
+            <title>Verify that user is able see autofiled fields</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='87c50a13-cd20-48ec-a076-276751656d47-attachment.png' type='image/png' size='83762'/>
+            </attachments>
+            <failure>
+                <message>Expected 'snap-test-auto-normal-ct-xebia Joshi Template' to equal 'snap-test-auto-admin-ct-xebia Joshi Template'.</message>
+                <stack-trace>Error: Failed expectation
+                    at TemplatePage.verifyHeadline (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:191:83)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_newyork.js:54:17)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

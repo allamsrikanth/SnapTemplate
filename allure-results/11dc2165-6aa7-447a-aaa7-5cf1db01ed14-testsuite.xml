@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543571688620' stop='1543571789671'>
+    <name>Verify that added section is displayed on SNAP preview</name>
+    <title>Verify that added section is displayed on SNAP preview</title>
+    <test-cases>
+        <test-case start='1543571688620' status='passed' stop='1543571715839'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='c09138cb-0d72-4782-9beb-d114083bea82-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543571715839' status='passed' stop='1543571724335'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='61dd37a9-ac15-46f4-9093-059fd6f8bd79-attachment.png' type='image/png' size='65597'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543571724335' status='passed' stop='1543571789671'>
+            <name>should save the template without adding section</name>
+            <title>should save the template without adding section</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6bd2d525-a501-4873-bc12-22dbd44e0a9c-attachment.png' type='image/png' size='73181'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

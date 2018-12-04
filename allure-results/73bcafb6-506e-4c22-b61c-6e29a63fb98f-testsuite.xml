@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543728630925' stop='1543728724954'>
+    <name>Verify that user is not allowed to add same section multiple timess</name>
+    <title>Verify that user is not allowed to add same section multiple timess</title>
+    <test-cases>
+        <test-case start='1543728630927' status='passed' stop='1543728647776'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='314f09d3-b617-4500-8b9e-aff2b4673b7c-attachment.png' type='image/png' size='549356'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543728647776' status='passed' stop='1543728657032'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6f5f7f3b-4872-4185-8ea2-381360cea2b0-attachment.png' type='image/png' size='71448'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543728657032' status='passed' stop='1543728724954'>
+            <name>should save the template without adding section</name>
+            <title>should save the template without adding section</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='0d309921-2000-4f4d-9281-3c29bab1b1e4-attachment.png' type='image/png' size='83914'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

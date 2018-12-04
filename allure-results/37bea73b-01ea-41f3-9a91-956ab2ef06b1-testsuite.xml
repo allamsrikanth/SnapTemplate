@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543345696244' stop='1543345706134'>
+    <name>Verify the login functionality with invalid credentials</name>
+    <title>Verify the login functionality with invalid credentials</title>
+    <test-cases>
+        <test-case start='1543345696244' status='passed' stop='1543345706133'>
+            <name>should not login the user and error message should be displayed</name>
+            <title>should not login the user and error message should be displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='998e2306-9cb1-4e30-b57a-54bc3e270d3d-attachment.png' type='image/png' size='186462'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

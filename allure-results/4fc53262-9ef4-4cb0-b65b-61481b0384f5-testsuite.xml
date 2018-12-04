@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1543921181100' stop='1543921213731'>
+    <name>Verify the functionality of SAVE REMINDER dropdown list</name>
+    <title>Verify the functionality of SAVE REMINDER dropdown list</title>
+    <test-cases>
+        <test-case start='1543921181101' status='passed' stop='1543921194472'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='45f77027-2f2d-4041-b62f-e790c6e8a617-attachment.png' type='image/png' size='402070'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543921194472' status='passed' stop='1543921203213'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6c4b0bb7-a576-467d-9db9-ebd8d193ccfd-attachment.png' type='image/png' size='68769'/>
+            </attachments>
+        </test-case>
+        <test-case start='1543921203213' status='passed' stop='1543921213730'>
+            <name>verify  options in savereminder</name>
+            <title>verify  options in savereminder</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='5a8be184-251f-489a-b387-f20bc97d87be-attachment.png' type='image/png' size='75822'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
