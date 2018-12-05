@@ -13,17 +13,17 @@ exports.config = {
 
    // specs: ['src/test/test_spec/login_spec.js'],
     suites:{
-        login_newyork : 'src/test/test_spec/login_spec_new_york.js',
-        login_latimes : 'src/test/test_spec/login_spec_los_angeles.js',
-        login_chicago : 'src/test/test_spec/login_spec_chicago.js',
-        priority_p2p_newyork : 'src/test/test_spec/priority_spec_p2p_newyork.js',
-        priority_arc_newyork : 'src/test/test_spec/priority_spec_arc_newyork.js',
+        login_newyork :            'src/test/test_spec/login_spec_new_york.js',
+        login_latimes :            'src/test/test_spec/login_spec_los_angeles.js',
+        login_chicago :            'src/test/test_spec/login_spec_chicago.js',
+        priority_p2p_newyork :     'src/test/test_spec/priority_spec_p2p_newyork.js',
+        priority_arc_newyork :     'src/test/test_spec/priority_spec_arc_newyork.js',
         priority_p2p_los_angeles : 'src/test/test_spec/priority_spec_p2p_losangeles.js',
         priority_arc_los_angeles : 'src/test/test_spec/priority_spec_arc_losangeles.js',
-        priority_p2p_chicago : 'src/test/test_spec/priority_spec_p2p_chicago.js',
-        priority_arc_chicago : 'src/test/test_spec/priority_spec_arc_chicago.js',
-        template_p2p_newyork : 'src/test/test_spec/template_spec_p2p_newyork.js',
-        template_arc_newyork : 'src/test/test_spec/template_spec_arc_newyork.js'
+        priority_p2p_chicago :     'src/test/test_spec/priority_spec_p2p_chicago.js',
+        priority_arc_chicago :     'src/test/test_spec/priority_spec_arc_chicago.js',
+        template_p2p_newyork :     'src/test/test_spec/template_spec_p2p_newyork.js',
+        template_arc_newyork :     'src/test/test_spec/template_spec_arc_newyork.js'
     },
 
     jasmineNodeOpts: {

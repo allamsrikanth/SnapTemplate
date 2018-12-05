@@ -1,31 +1,29 @@
+var OR = require('../json/OR_new_york.json');
 var base = require('../pages/Basepage.js');
 var loginpage = require('../pages/LoginPage.js');
 var homepage = require('../pages/HomePage.js');
 var templatepage = require('../pages/TemplatePage.js');
 
-/*describe('Verify that user is able to create a new template', function() {
+describe('Verify that user is able to create a new template', function() {
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
-		loginpage.enterSlackDetails();
-		loginpage.enterOrganizationDetails();
+        //loginpage.enterSlackDetails();
+		//loginpage.enterOrganizationDetails();
 	});
 	
-	
-	it('should create a new template',function() {
-		  browser.driver.sleep(10000);
+	it('should click on new template',function() {
+		  browser.driver.sleep(6000);
 		  homepage.createNewTemplate();
 	});
 	
-	
 	it('Verify that user is able to create a new template', function() {
 		templatepage.verifySnapHomePage();
-		templatepage.enterTemplateName();
-		
-		templatepage.enterSlugName();
+		templatepage.enterHeadline();
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
 		//templatepage.enterMandatoryFields();
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();
@@ -34,12 +32,12 @@ var templatepage = require('../pages/TemplatePage.js');
 
 });
 	
-describe('Verify the functionality of Save & Continue button when slug field does not contain word template', function() {
+/*describe('Verify the functionality of Save & Continue button when slug field does not contain word template', function() {
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		loginpage.enterSlackDetails();
 		loginpage.enterOrganizationDetails();
@@ -66,7 +64,7 @@ describe('Verify that user can update existing template with additional details 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
@@ -89,7 +87,7 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
@@ -114,7 +112,7 @@ describe('Verify the functionality of HEADLINE field when user enters morethan 2
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
@@ -139,7 +137,7 @@ describe('Verify the functionality of Save & Continue button when mandatory fiel
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
@@ -170,7 +168,7 @@ describe('Verify the functionality of STORY TYPE dropdown list in p2p mode ', fu
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);;
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
@@ -205,7 +203,7 @@ describe('Verify the functionality of BYLINE field', function() {
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
@@ -245,7 +243,7 @@ describe('should Verify the pop up message when user enters the already taken sl
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
@@ -259,7 +257,7 @@ describe('should Verify the pop up message when user enters the already taken sl
 		
 	
 	it('enter the Byline value',function() {
-		templatepage.enterTemplateName();		 
+		templatepage.enterHeadline();		 
 		templatepage.enterSlugName();
 		templatepage.clicksaveandCont();
 		templatepage.alredyTakenPopup();
@@ -275,7 +273,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
@@ -306,7 +304,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
 			browser.ignoreSynchronization = true;
-			base.navigateToURL('https://snap-nydailynews-qa.tribdev.com');
+			base.navigateToURL(OR.url);
 			loginpage.enterDetails();
 			//loginpage.enterSlackDetails();
 			//loginpage.enterOrganizationDetails();
@@ -336,7 +334,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
 			browser.ignoreSynchronization = true;
-			base.navigateToURL('https://snap-nydailynews-qa.tribdev.com/');
+			base.navigateToURL(OR.url);
 			loginpage.enterDetails();
 			//loginpage.enterSlackDetails();
 			//loginpage.enterOrganizationDetails();
@@ -361,13 +359,13 @@ describe('Verify that user is able to add multiple byliness', function() {
 			//templatepage.verifypopup();
 		
 		});
-	});*/
+	});
 	describe('Verify that section field is not present on template creation page.',function(){
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
 			browser.ignoreSynchronization = true;
-			base.navigateToURL('https://snap-nydailynews-qa.tribdev.com');
+			base.navigateToURL(OR.url);
 			loginpage.enterDetails();
 			//loginpage.enterSlackDetails();
 			//loginpage.enterOrganizationDetails();
@@ -384,4 +382,4 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
-});
+});*/
