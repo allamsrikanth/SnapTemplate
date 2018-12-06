@@ -31,6 +31,30 @@ describe('Verify the functionality of STORY TYPE dropdown list ', function() {
 	});
 
 });	
+describe('Verify that user can update existing template with additional details or not', function() {
+	
+	
+	it('Launch and login  Tribune Application', function() {
+		browser.waitForAngularEnabled(false);
+		browser.ignoreSynchronization = true;
+		base.navigateToURL(OR.url);
+		loginpage.enterDetails();
+		//loginpage.enterSlackDetails();
+		//loginpage.enterOrganizationDetails();
+	});
+	
+	it('Verify that user is able to search an old template',function() {
+		  browser.driver.sleep(10000);
+		  homepage.verifyTemplateEditPage();
+	});
+	
+
+	it('Verify that user is able to Update an old template', function() {		
+		templatepage.updateDetails();
+		templatepage.clickOnSection();
+		templatepage.verifyUpdatedTemplate();
+	});
+});
 /*	describe('Verify that following fields are autoselected',function(){
 		
 		it('Launch and login  Tribune Application', function() {
@@ -115,7 +139,7 @@ describe('Verify that user is able to save the template without adding section',
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();		 
 		//templatepage.clickOnOk();
-		<div class="alert pop bullseye error" style="cursor: pointer; display: none;"><div id="alert-body">Cannot assign a story to the same section multiple times</div><button class="close"><i class="fa fa-times"></i></button></div>
+		//<div class="alert pop bullseye error" style="cursor: pointer; display: none;"><div id="alert-body">Cannot assign a story to the same section multiple times</div><button class="close"><i class="fa fa-times"></i></button></div>
 		//div[text()='Cannot assign a story to the same section multiple times']
 	
 	});

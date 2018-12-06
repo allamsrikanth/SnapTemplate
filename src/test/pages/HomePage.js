@@ -126,6 +126,7 @@ var HomePage=function () {
     this.createNewTemplate = function(){
         element(by.css(OR.locators.LogoutPage.newtemplate_button)).click();
         element(by.css(OR.locators.TemplatePage.preview_screen)).click();
+        browser.driver.sleep(6000);
 
     };
     this.createNewStory = function(){

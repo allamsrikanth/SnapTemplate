@@ -84,7 +84,7 @@
     },
     "StoryPage":{
       "new_story_button":"button[id='dashboard-new-story-btn']",
-      "snap_icon":"img[id='snap-img']",
+      "snap_icon":"img[id='snap-img']"
       "version_number":"div[class='version']",
       "snap_username":"div[id='dashboard-slack-user-name']",
       "options_dropdown":"select[id='user-options']",
@@ -188,7 +188,6 @@
       "image_caption":"input[name='caption']",
       "text_body":"body.cke_editable.cke_editable_themed.cke_contents_ltr.cke_show_borders:nth-child(2)",
       "section_selected_la":"div[name='/la-times/nation']"
-
     },
     "data": {
       "username": "snap-test-auto-normal-ct-xebia",
@@ -240,7 +239,3 @@
     }
   }
 }
-
-
-
-
