@@ -4,7 +4,7 @@ var loginpage = require('../pages/LoginPage.js');
 var homepage = require('../pages/HomePage.js');
 var templatepage = require('../pages/TemplatePage.js');
 
-/*describe('Verify that user is able to create a new template', function() {
+describe('Verify that user is able to create a new template', function() {
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
@@ -16,17 +16,18 @@ var templatepage = require('../pages/TemplatePage.js');
 	});
 	
 	it('should click on new template',function() {
-		  browser.driver.sleep(6000);
+		  browser.driver.sleep(3000);
 		  homepage.createNewTemplate();
 	});
 	
 	it('Verify that user is able to create a new template', function() {
-		templatepage.verifySnapHomePage();
+		//templatepage.verifySnapHomePage();
 		templatepage.enterHeadline();
 		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
-		//templatepage.enterMandatoryFields();
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();
+		templatepage.headlinePreview();
+		// base.killbrowser();headlinePreview
 		
 	});
 
@@ -37,14 +38,15 @@ describe('Verify the functionality of Save & Continue button when slug field doe
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
 
 	it('verify that user is able to create new template',function() {
-		  browser.driver.sleep(10000);
+		  browser.driver.sleep(5000);
 		  homepage.createNewTemplate();
 	});
 		
@@ -54,6 +56,11 @@ describe('Verify the functionality of Save & Continue button when slug field doe
 		templatepage.enterSlugName(templatepage.getName(10)+"-2018");
 		templatepage.clicksaveandCont();
 		templatepage.verifyslugpupup();
+		templatepage.handlepopup();
+		
+		browser.refresh();
+		browser.switchTo().alert().accept();
+		 //base.killbrowser();
 	});
 	
 });
@@ -64,15 +71,16 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
-		//loginpage.enterSlackDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
+	    //loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
 	
 
 	it('should click on  new template',function() {
-		  browser.driver.sleep(10000);
+		  browser.driver.sleep(3000);
 		  homepage.createNewTemplate();
 	});
 	
@@ -81,10 +89,14 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 		templatepage.enterHeadline();		 
 		templatepage.headlinePreview();
 		
+		//browser.switchTo().alert().accept();
+        //browser.driver.sleep(3000)
+        //base.killbrowser();
+		
 	});
 
 });
-describe('Verify the functionality of HEADLINE field when user enters morethan 200 characters', function() {
+/*describe('Verify the functionality of HEADLINE field when user enters morethan 200 characters', function() {
 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
@@ -105,6 +117,9 @@ describe('Verify the functionality of HEADLINE field when user enters morethan 2
 	it('Verify that user is able see headline preview ', function() {
 		templatepage.enterHeadline200();		 
 		templatepage.verifyHeadlinePopup();
+		//browser.switchTo().alert().accept();
+       // browser.driver.sleep(3000)
+        base.killbrowser();
 	
 	});
 
@@ -133,41 +148,32 @@ describe('Verify the functionality of Save & Continue button when mandatory fiel
 		templatepage.clicksaveandCont();
 		templatepage.verifyErrorPopup();		 
 		templatepage.clickOnOk();
-		
-		
-	
-	
+		 base.killbrowser();
 	});
 
 });
-describe('Verify the functionality of STORY TYPE dropdown list in p2p mode ', function() {
+describe('Verify the functionality of STORY TYPE dropdown list in p2p mode', function() {
 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);;
+		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
 	
 	
-	it('should click on  new template',function() {
+	it('should click on new template', function() {
 		  browser.driver.sleep(6000);
 		  homepage.createNewTemplate();
 	});
 	
 
-	it('Verify the options in story type in p2p mode ', function() {
+	it('Verify the options in story type in p2p mode', function() {
 		templatepage.clickOnStorytype();
 		templatepage.verifyStorytypeOptions();
-		//templatepage.clicksaveandCont();
-		//templatepage.verifyErrorPopup();		 
-		//templatepage.clickOnOk();
-		
-		
-	
-	
+		 base.killbrowser();
 	});
 
 });
@@ -205,6 +211,7 @@ describe('Verify the functionality of BYLINE field', function() {
 		templatepage.verifyBylineEmpty();
 		templatepage.clicksaveandCont();
 		templatepage.verifyBylinepreviewEmpty();
+		base.killbrowser();
 	});
 	
 });
@@ -232,6 +239,7 @@ describe('should Verify the pop up message when user enters the already taken sl
 		templatepage.enteralreadytakenSlugName();
 		templatepage.clicksaveandCont();
 		templatepage.alredyTakenPopup();
+		base.killbrowser();
 		
 		
 	});
@@ -252,7 +260,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 	
 	
 	it('should create a new template',function() {
-		  browser.driver.sleep(10000);
+		  browser.driver.sleep(3000);
 		  homepage.createNewTemplate();
 	});
 	
@@ -263,14 +271,15 @@ describe('Verify that user is able to add multiple byliness', function() {
 		templatepage.selectBylinefromAutopopulated();
 		templatepage.clickonByline1();
 		templatepage.selectBylinefromAutopopulated1();
-		templatepage.clickonByline1();
-		templatepage.selectBylinefromAutopopulated2();
+		//templatepage.clickonByline1();
+		//templatepage.selectBylinefromAutopopulated2();
 		templatepage.verifyBylinePreview1();
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();
+		base.killbrowser();
 	
 	});
-});*/
+});
 
 
 	describe('Verify that following fields are autoselected',function(){
@@ -284,7 +293,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 			//loginpage.enterOrganizationDetails();
 		});
 		
-		it('should  enters the slug without template word',function() {
+		it('should able to create a new template',function() {
 			  //browser.driver.sleep(10000);
 			  homepage.createNewTemplate();
 			  browser.driver.sleep(6000);
@@ -297,14 +306,13 @@ describe('Verify that user is able to add multiple byliness', function() {
 			templatepage.verifyBasicbuild();
 			templatepage.verifycomments();
 			templatepage.verifysaveReminder();
-
-		
+			 base.killbrowser();	
 		});
 		
 	
 });
 	
-	/*describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story ', function() {
+	describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story ', function() {
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
@@ -330,13 +338,12 @@ describe('Verify that user is able to add multiple byliness', function() {
 			templatepage.verifyBasicbuildIsNotPresent();
 			templatepage.verifyShowADRailIsPresent();
 			templatepage.verifytheWidgets2();
-			//templatepage.clicksaveandCont();
-			//templatepage.verifypopup();
+			base.killbrowser();
 		
 		});
 	});
 	
-	/*describe('Verify that section field is not present on template creation page.',function(){
+	describe('Verify that section field is not present on template creation page.',function(){
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
@@ -352,8 +359,11 @@ describe('Verify that user is able to add multiple byliness', function() {
 			  homepage.createNewTemplate();
 		});
 
-		it('Verify if section is not displayed and collection is displayed', function() {
+		it('Verify if section is not displayed and collection is displayed in template edit page', function() {
 			templatepage.verifySectionNotDisp().verifyCollection();
+			//browser.switchTo().alert().accept();
+            //browser.driver.sleep(3000);
+			// base.killbrowser();
 		
 		});
 		

@@ -9,5 +9,8 @@ var BasePage = function(){
     this.getCurrentURL = function(){
         return browser.driver.getCurrentUrl();
     }
+    this.killbrowser = function(){
+    	browser.restart();
+    }
 };
 module.exports = new BasePage();

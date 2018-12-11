@@ -1,9 +1,10 @@
+var OR = require('../json/OR_new_york.json');
 var base = require('../pages/Basepage.js');
 var loginpage = require('../pages/LoginPage.js');
 var homepage = require('../pages/HomePage.js');
 var templatepage = require('../pages/TemplatePage.js');
 
-describe('Verify the functionality of STORY TYPE dropdown list ', function() {
+/*describe('Verify the functionality of STORY TYPE dropdown list ', function() {
 	
 
 	it('Launch and login  Tribune Application', function() {
@@ -17,20 +18,24 @@ describe('Verify the functionality of STORY TYPE dropdown list ', function() {
 	
 	
 	it('should click on  new template',function() {
-		  browser.driver.sleep(6000);
+		  browser.driver.sleep(3000);
 		  homepage.createNewTemplate();
 	});
 	
 
-	it('Verify the options in story type ', function() {
-		templatepage.clickOnStorytypeArc();		 
+	it('Verify the options story type in arc mode ', function() {
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
+		browser.driver.sleep(9000);
+		
+		templatepage.clickOnStorytypeArc();
 		templatepage.verifyStorytypeOptionsArc();
 		//templatepage.clicksaveandCont();
 		//templatepage.verifyErrorPopup();		 
 		//templatepage.clickOnOk();	
 	});
 
-});	
+});
+
 describe('Verify that user can update existing template with additional details or not', function() {
 	
 	
@@ -55,32 +60,9 @@ describe('Verify that user can update existing template with additional details 
 		templatepage.verifyUpdatedTemplate();
 	});
 });
-/*	describe('Verify that following fields are autoselected',function(){
-		
-		it('Launch and login  Tribune Application', function() {
-			browser.waitForAngularEnabled(false);
-			browser.ignoreSynchronization = true;
-			base.navigateToURL(OR.url);
-			loginpage.enterDetails();
-			//loginpage.enterSlackDetails();
-			//loginpage.enterOrganizationDetails();
-		});
-		
-		it('should  enters the slug without template word',function() {
-			  browser.driver.sleep(10000);
-			  homepage.createNewTemplate();
-		});
 	
-		it('Verify that user is able see autofiled fields', function() {
-			templatepage.verifyHeadline();		 
-			templatepage.verifySlug();
-			templatepage.verifyStory();
-			templatepage.verifyBasicbuild();
-			templatepage.verifycomments();
 		
-		});
-		
-		describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story ARC mode ', function() {
+describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Right Rail story and Full Width story', function() {
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
@@ -93,12 +75,12 @@ describe('Verify that user can update existing template with additional details 
 		
 	
 		it('should click on new template',function() {
-			  browser.driver.sleep(10000);
+			  browser.driver.sleep(3000);
 			  homepage.createNewTemplate();
 		});
 		
 	
-		it('verify BasicBuild and ShowAD Rail options',function() {
+		it('verify BasicBuild and ShowAD Rail options in Arc mode',function() {
 			templatepage.verifyStoryArc();		 
 			templatepage.verifyBasicbuildIsPresent();
 			templatepage.clickOnBasicbuildIsVerifyOptions();
@@ -113,7 +95,7 @@ describe('Verify that user can update existing template with additional details 
 			//templatepage.verifypopup();
 		
 		});
-	});
+	});*/
 describe('Verify that user is able to save the template without adding section', function() {
 	
 
@@ -134,10 +116,12 @@ describe('Verify that user is able to save the template without adding section',
 	
 	
 	it('should save the template without adding section', function() {
-		templatepage.enterHeadline16();		 
-		templatepage.enterSlugName16();
+		templatepage.enterHeadline();		 
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
+		templatepage.verifySectionNotDisp();
 		templatepage.clicksaveandCont();
-		templatepage.verifypopup();		 
+		templatepage.verifypopup();	
+		
 		//templatepage.clickOnOk();
 		//<div class="alert pop bullseye error" style="cursor: pointer; display: none;"><div id="alert-body">Cannot assign a story to the same section multiple times</div><button class="close"><i class="fa fa-times"></i></button></div>
 		//div[text()='Cannot assign a story to the same section multiple times']
@@ -146,7 +130,7 @@ describe('Verify that user is able to save the template without adding section',
 
 });
 
-describe('Verify that added section is displayed on SNAP preview', function() {
+/*describe('Verify that added section is displayed on SNAP preview', function() {
 	
 	
 	it('Launch and login  Tribune Application', function() {
@@ -160,15 +144,16 @@ describe('Verify that added section is displayed on SNAP preview', function() {
 	
 	
 	it('should click on  new template',function() {
-		  browser.driver.sleep(6000);
+		  browser.driver.sleep(3000);
 		  homepage.createNewTemplate();
 	});
 	
 	
 	it('should save the template without adding section', function() {
-		templatepage.enterHeadline17();		 
-		templatepage.enterSlugName17();
-		templatepage.clickOnSection17();
+		templatepage.enterHeadline();		 
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
+		templatepage.clickOnSection();
+		templatepage.AddNewSection();
 		templatepage.clicksaveandCont();
 		templatepage.verifySectionAdded();		 
 		//templatepage.clickOnOk();
@@ -450,7 +435,7 @@ describe('Verify the functionality of SAVE REMINDER dropdown list', function() {
 	
 	});
 
-});*/
+});
 describe('Verify that template history revisions show correct sections relevant to the given revision', function() {
 	
 
@@ -486,7 +471,7 @@ describe('Verify that template history revisions show correct sections relevant 
 	
 	});
 
-});
+});*/
 
 
 		
