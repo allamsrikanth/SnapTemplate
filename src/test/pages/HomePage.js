@@ -124,9 +124,10 @@ var HomePage=function () {
         });
     };
     this.createNewTemplate = function(){
-        element(by.css(OR.locators.LogoutPage.newtemplate_button)).click();
-        element(by.css(OR.locators.TemplatePage.preview_screen)).click();
-        browser.driver.sleep(6000);
+    	element(by.xpath(OR.locators.TemplatePage.click_template)).click();
+        //element(by.css(OR.locators.LogoutPage.newtemplate_button)).click();
+        //element(by.css(OR.locators.TemplatePage.preview_screen)).click();
+        browser.driver.sleep(3000);
 
     };
     this.createNewStory = function(){
@@ -134,6 +135,7 @@ var HomePage=function () {
         element(by.css(OR.locators.TemplatePage.preview_screen)).click();
     };
     this.verifyTemplateEditPage = function(){
+    	browser.driver.sleep(2000);
         element(by.css(OR.locators.LogoutPage.searchbar)).sendKeys(OR.locators.data.searchtemplate);
         element(by.css(OR.locators.LogoutPage.searchicon)).click();
         browser.driver.sleep(2000);
@@ -142,9 +144,9 @@ var HomePage=function () {
     };
 this.searchTemplate = function(){
 		
-		element(by.id("dashboard-search-input")).sendKeys("Verify section Template");
+		element(by.id("dashboard-search-input")).sendKeys("verifying sections template");
 		element(by.xpath("//button[contains(text(),'Search')]")).click();
-		browser.driver.sleep(6000);
+		browser.driver.sleep(3000);
 		//var dsp = element(by.xpath("//div/h3[text()='New Template123']")).isDisplayed();
 		//expect(dsp).toBe(true);	
 

@@ -26,7 +26,7 @@ var TemplatePage=function () {
 	};
 	
 	this.enterHeadline = function(){
-		browser.driver.sleep(2000);		
+		browser.driver.sleep(4000);		
 		element(by.xpath(OR.locators.TemplatePage.headline)).clear();
 		element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("snap-Template_test-auto-admin-ct-xebia");
 		browser.driver.sleep(4000);
@@ -35,135 +35,95 @@ var TemplatePage=function () {
 	this.enterHeadline200 = function(){
 		browser.driver.sleep(3000);
 		element(by.xpath(OR.locators.TemplatePage.headline)).clear();
-		 element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("snap automationo snap automation snap automation snap autoaamation snap automaaaaassaaaaaaaasaaaaaatissaaossaan aassaaaaautomation snap automation snap auotomation automation snapsnapp automation snap au");
-	
-		return this;	
+	    element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("snap automationo snap automation snap automation snap autoaamation snap automaaaaassaaaaaaaasaaaaaatissaaossaan aassaaaaautomation snap automation snap auotomation automation snapsnapp automation snap au");
+	    return this;	
 	};
-	this.enterStoryHeadline32 = function(){
+	this.enterStoryHeadline = function(){
 		browser.driver.sleep(6000);
-		element(by.xpath("//input[@name='headline']")).clear();
-		 element(by.xpath("//input[@name='headline']")).sendKeys("Show comment story");
-	
+		element(by.xpath(OR.locators.TemplatePage.headline)).clear();
+		element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("Show comment story");
 		return this;	
 	};
-	this.enterStorySlug32 = function(){
-		browser.driver.sleep(6000);
-		 element(by.xpath("//input[@name='slug']")).clear();
-		  element(by.xpath("//input[@name='slug']")).sendKeys("show-commentt-story-20180622");
-		return this;	
+	this.enterStorySlug = function(){
+		 browser.driver.sleep(6000);
+		 element(by.xpath(OR.locators.TemplatePage.slugname)).clear();
+		 element(by.xpath(OR.locators.TemplatePage.slugname)).sendKeys("ny-show-commelxhhbbnntg-story-20180622");
+		 return this;	
 	};
-		
 	this.enterHeadline32= function(){
-		browser.driver.sleep(6000);
-		element(by.xpath("//input[@name='headline']")).clear();
+		 browser.driver.sleep(6000);
+		 element(by.xpath("//input[@name='headline']")).clear();
 		 element(by.xpath("//input[@name='headline']")).sendKeys("Test tronc template");
-	
-		return this;	
+	     return this;	
 	};
 	this.clearHeadline = function(){
-		
-		element(by.xpath(OR.locators.TemplatePage.headline)).clear();
-		browser.driver.sleep(6000);
-		
-		return this;	
+		 element(by.xpath(OR.locators.TemplatePage.headline)).clear();
+		 browser.driver.sleep(6000);
+		 return this;	
 	};
 	this.clearSlug = function(){
 		 element(by.xpath(OR.locators.TemplatePage.slugname)).clear();
 		 browser.driver.sleep(6000);
-		  return this;
+		 return this;
 	};
 	this.verifyErrorPopup= function(){
-		expect(element(by.xpath(OR.locators.TemplatePage.headline_error)).isDisplayed()).toBe(true);
-		browser.driver.sleep(3000);
-	    //expect(element(by.xpath("//p[contains(text(),'Please enter a Slug')]")).isDisplayed()).toBe(true);
-	    expect(element(by.xpath(OR.locators.TemplatePage.ok_ispresent)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.headline_error)).isDisplayed()).toBe(true);
 		 
-    return this;
-		  
+	     expect(element(by.xpath(OR.locators.TemplatePage.ok_ispresent)).isDisplayed()).toBe(true);
+	     browser.driver.sleep(3000);
+		 return this;
 	};
 	this.clickOnOk = function(){
-		element(by.xpath(OR.locators.TemplatePage.clickon_ok)).click();
-		browser.driver.sleep(3000);
-		expect(element(by.xpath(OR.locators.TemplatePage.story_notcreate)).isPresent()).toBeFalsy();
-		expect(element(by.xpath(OR.locators.TemplatePage.please_enterheadline)).isPresent()).toBeFalsy();
-		expect(element(by.xpath(OR.locators.TemplatePage.template_editpage)).isDisplayed()).toBe(true);
-		browser.driver.sleep(3000);
-		  return this;
+		 element(by.xpath(OR.locators.TemplatePage.clickon_ok)).click();
+		 browser.driver.sleep(3000);
+		 expect(element(by.xpath(OR.locators.TemplatePage.story_notcreate)).isPresent()).toBeFalsy();
+		 expect(element(by.xpath(OR.locators.TemplatePage.please_enterheadline)).isPresent()).toBeFalsy();
+		 expect(element(by.xpath(OR.locators.TemplatePage.template_editpage)).isDisplayed()).toBe(true);
+		 browser.driver.sleep(3000);
+		 return this;
 	};
 	this.verifyHeadlinePopup = function(){
 		 //browser.driver.sleep(1000);
 		 var disp= element(by.xpath(OR.locators.TemplatePage.verify_headline200popup)).isDisplayed()
 		 expect(disp).toBe(true);
-		browser.driver.sleep(3000);
-		return this;
+		 browser.driver.sleep(6000);
+		 return this;
 	};
-	
 	this.getName = function(characterLength){
-		var randomText = "";
-	    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-	    for (var i = 0; i < characterLength; i++)
-	        randomText += possible.charAt(Math.floor(Math.random() * possible.length));
-	    return randomText;
+		 var randomText = "";
+	     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	     for (var i = 0; i < characterLength; i++)
+	     randomText += possible.charAt(Math.floor(Math.random() * possible.length));
+	     return randomText;
 	};
 	this.enterSlugName = function(slugName){
+		 browser.driver.sleep(3000);
 		  element(by.xpath(OR.locators.TemplatePage.slugname)).clear();
 		  element(by.xpath(OR.locators.TemplatePage.slugname)).sendKeys(slugName);
-		  browser.driver.sleep(6000);
+		  browser.driver.sleep(2000);
 		  return this;
 	};
 	this.enteralreadytakenSlugName = function(){
-		  element(by.xpath(OR.locators.TemplatePage.slugname)).clear();
-		  element(by.xpath(OR.locators.TemplatePage.slugname)).sendKeys("SlugTemplate09876543");
-		  browser.driver.sleep(6000);
-		  return this;
+		 element(by.xpath(OR.locators.TemplatePage.slugname)).clear();
+		 element(by.xpath(OR.locators.TemplatePage.slugname)).sendKeys("SlugTemplate09876543");
+		 browser.driver.sleep(6000);
+		 return this;
 	};
-	this.enterSlugName16 = function(){
-		  element(by.xpath("//input[@name='slug']")).clear();
-		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-teeste-auto1o-admin-xebbiii-template-2018");
-		  browser.driver.sleep(6000);
-		  return this;
-	};
-	this.enterSlugName18 = function(){
-		  element(by.xpath("//input[@name='slug']")).clear();
-		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-teestexw-auuto1o-admin-xebbiioi-template-2018");
-		  browser.driver.sleep(6000);
-		  return this;
-	};
-	this.enterSlugName32 = function(){
-		  element(by.xpath("//input[@name='slug']")).clear();
-		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-testttbt-troncccdc-template-20180622");
-		  browser.driver.sleep(6000);
-		  return this;
-	};
-	this.enterSlugName26 = function(){
-		  element(by.xpath("//input[@name='slug']")).clear();
-		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-testttbt-tronccacdc-template-20180622");
-		  browser.driver.sleep(6000);
-		  return this;
-	};																							
-	this.enterSlugName17 = function(){
-		
-		  element(by.xpath("//input[@name='slug']")).clear();
-		  element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-tilrhgcliasdedfghhjcksaveandConttee-auuto1oo-aaadmin-xeeebbbiii-template"+this._counter+"-2018");
-		  browser.driver.sleep(6000);""
-		  return this;
-	};
-	this.verifySectionErrorpopup = function(){
+    this.verifySectionErrorpopup = function(){
 		browser.driver.sleep(1000);
 		expect(element(by.id(OR.locators.TemplatePage.verify_sectionerror)).isDisplayed()).toBe(true);
 		//expect(element(by.xpath("//div[@id='react-modal-message']")).isDisplayed()).toBe(true);
 		//expect(element(by.xpath("//div[text()='Cannot assign a story to the same section multiple times']")).isDisplayed()).toBe(true);
 		return this;
 	};
-	
 	this.getSlugName = function(){
-		element(by.xpath(OR.locators.TemplatePage.get_slugtext)).getText();
-		return this;
+		 element(by.xpath(OR.locators.TemplatePage.get_slugtext)).getText();
+		 return this;
 	};
 	this.clickOnStorytype = function(){
-		element(by.xpath(OR.locators.TemplatePage.clickstorytypep2p)).click();
-		browser.driver.sleep(6000);
-		return this;
+		 element(by.xpath(OR.locators.TemplatePage.clickstorytypep2p)).click();
+		 browser.driver.sleep(6000);
+		 return this;
 	};
 	this.clickOnStorytypeArc = function(){
 		 element(by.xpath(OR.locators.TemplatePage.click_storytypearc)).click();
@@ -172,137 +132,178 @@ var TemplatePage=function () {
 	};
 	this.verifyStorytypeOptions = function(){
 		 expect(element(by.id(OR.locators.TemplatePage.vrify_storyoptionsp2p)).all(by.tagName('option')).getText()).toEqual(['Simple Story','HTMLStory','Big Story']);
-			browser.driver.sleep(3000);
-			return this;
+		 browser.driver.sleep(3000);
+		 return this;
 	};
 	this.verifyStorytypeOptionsArc = function(){
 		 expect(element(by.id(OR.locators.TemplatePage.verify_storyoptionsArc)).all(by.tagName('option')).getText()).toEqual(['Right Rail','Full Width']);
+		 browser.driver.sleep(4000);
 		 return this;
 	};
-	
-	
 	this.getHeadline = function(){
-     element(by.xpath(OR.locators.TemplatePage.get_headlinetext)).getText();
-     return this;
+         element(by.xpath(OR.locators.TemplatePage.get_headlinetext)).getText();
+         return this;
 	};
-	
 	this.clicksaveandCont = function(){
-		element(by.xpath(OR.locators.TemplatePage.click_saveandcont)).click();
-		//browser.driver.sleep(8000);
-		return this;
+		 element(by.xpath(OR.locators.TemplatePage.click_saveandcont)).click();
+		 //browser.driver.sleep(8000);
+		 return this;
 	};
 	this.clicksaveandCont25 = function(){
-		element(by.xpath("//button[@id='save']")).click();
-		//browser.driver.sleep(10000);
-		return this;
+		 element(by.xpath("//button[@id='save']")).click();
+		 //browser.driver.sleep(10000);
+		 return this;
 	};
 	this.clickShowAdvancedSettings = function(){
-		element(by.xpath(OR.locators.TemplatePage.click_showadvancedsettings)).click();
-		//browser.driver.sleep(10000);
-		return this;
+		 element(by.xpath(OR.locators.TemplatePage.click_showadvancedsettings)).click();
+		 //browser.driver.sleep(10000);
+		 return this;
 	};
 	this.clickOnCreateStoryFromTemplate = function(){
-		browser.driver.sleep(5000);
-		element(by.xpath(OR.locators.TemplatePage.click_createstoryfromtemplate)).click();
-		//browser.driver.sleep(10000);
-		return this;
+		 browser.driver.sleep(5000);
+		 element(by.xpath(OR.locators.TemplatePage.click_createstoryfromtemplate)).click();
+		 //browser.driver.sleep(10000);
+		 return this;
 	};
 	this.verifyStoryCreationPagePresent = function(){
-		expect(element(by.xpath(OR.locators.TemplatePage.verify_storycreationpagepresent)).isDisplayed()).toBe(true);
-		//browser.driver.sleep(10000);
-		return this;
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_storycreationpagepresent)).isDisplayed()).toBe(true);
+		 //browser.driver.sleep(10000);
+		 return this;
 	};
-	
-	
 	this.verifypopup = function(){
-		//browser.driver.sleep(1000);
-		expect(element(by.xpath(OR.locators.TemplatePage.verify_templatecreated)).isDisplayed()).toBe(true);
-		browser.driver.sleep(5000);
-		return this;
+		 browser.driver.sleep(1000);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_templatecreated)).isDisplayed()).toBe(true);
+		 browser.driver.sleep(5000);
+		 return this;
 	};
 	this.handlepopup = function(){
-		//browser.driver.sleep(1000);
-		var ptor = protractor.getAllWindowHandles();
-		var alertDialog = ptor.switchTo().alert();
-		alertDialog.accept();  
-		alertDialog.dismiss();
-		return this;
+		 //browser.driver.sleep(1000);
+		 var ptor = protractor.getWindowHandle()
+		 var alertDialog = ptor.switchTo().alert();
+		 alertDialog.accept();  
+		 //alertDialog.dismiss();
+		 return this;
 	};
-	
 	this.verifyslugpupup = function(){
-		//browser.driver.sleep(2000);
-		var alert = element(by.xpath(OR.locators.TemplatePage.verify_slugpopuperror)).isDisplayed()
-		expect(alert).toBe(true);
-		//expect(element(by.xpath("//p[text()='Template slug must include the word \"template\"']")).isDisplayed()).toBe(true);
-		element(by.xpath("//button/span[text()='OK']")).click();
-		return this;
+		 //browser.driver.sleep(2000);
+		 var alert = element(by.xpath(OR.locators.TemplatePage.verify_slugpopuperror)).isDisplayed()
+		 expect(alert).toBe(true);
+		 //expect(element(by.xpath("//p[text()='Template slug must include the word \"template\"']")).isDisplayed()).toBe(true);
+		 element(by.xpath("//button/span[text()='OK']")).click();
+		 return this;
 	};
-	
 	this.enterSlug = function(){
-		element(by.xpath("//input[@name='slug']")).clear();
-		element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-test-auto-admin-ct-xebia-template");
-		browser.driver.sleep(10000);
-		return this;
+		 element(by.xpath("//input[@name='slug']")).clear();
+		 element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-test-auto-admin-ct-xebia-template");
+		 browser.driver.sleep(10000);
+		 return this;
 	};
-	
-    this.enterMandatoryFields = function(){
-	element.all(by.xpath('option[.="Full Width"]')).click();
-	element.all(by.xpath('option[.="SendtoNews"]')).click();
-
-	return this;
+	this.enterMandatoryFields = function(){
+	     element.all(by.xpath('option[.="Full Width"]')).click();
+	     element.all(by.xpath('option[.="SendtoNews"]')).click();
+         return this;
 	};
-   
     this.enterTemplateName123=function(){
-	element(by.id("dashboard-search-input")).sendKeys("New Template2");
-	element(by.xpath("//button[contains(text(),'Search')]")).click();
-	return this;
+	     element(by.id("dashboard-search-input")).sendKeys("New Template2");
+	     element(by.xpath("//button[contains(text(),'Search')]")).click();
+	     return this;
     };
     this.editTemplate=function(){
-	
-	element(by.xpath(OR.locators.TemplatePage.click_edittepmlate)).click();
-	element(by.xpath("//input[@name='headline']")).clear();
-	element(by.xpath("//input[@name='headline']")).sendKeys("New Template123");
-	return this;
+	     element(by.xpath(OR.locators.TemplatePage.click_edittepmlate)).click();
+	     element(by.xpath("//input[@name='headline']")).clear();
+	     element(by.xpath("//input[@name='headline']")).sendKeys("New Template123");
+	     return this;
     };
     this.updateDetails=function(){
-	
-	element(by.xpath("//input[@name='headline']")).clear();
-	element(by.xpath("//input[@name='headline']")).sendKeys("New Template123");
-	return this;
+    	browser.driver.sleep(6000);
+	     element(by.xpath(OR.locators.TemplatePage.headline)).clear();
+	     element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("New Template123");
+	     return this;
     };
-    this.clickOnSection=function()	{	
-	element(by.xpath(OR.locators.TemplatePage.click_section)).click();
+    this.clickOnSection=function()	{
+    	browser.driver.sleep(3000);
+    	element(by.xpath(OR.locators.TemplatePage.click_section)).click();
+    	browser.driver.sleep(5000);
     };
+    this.clearSectionField=function()	{
+    	browser.driver.sleep(6000);
+    	element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+		 //element(by.xpath("//button/span[text()='Add new section']")).click();
+		  browser.driver.sleep(5000);
+		  element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
+		  element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).clear();
+		  browser.driver.sleep(5000);
+   };
+    this.selectSection=function(sectionName){
+    	browser.driver.sleep(6000);
+    	element(by.xpath("//button/span[text()='Add new section']")).click();
+	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
+	     let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+	     expect(eles.count()).toBeGreaterThan(0);
+	     browser.driver.sleep(6000);
+	     element(by.xpath("//div[text()='"+sectionName+"']")).click();
+	     browser.driver.sleep(6000);
+	     
+   };
+   this.selectSection21=function()	{
+   	//element(by.xpath("//button/span[text()='Add new section']")).click();
+	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
+	     let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+	     expect(eles.count()).toBeGreaterThan(0); 
+	     browser.driver.sleep(10000);
+	     //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
+	     element(by.xpath("//div[text()='/entertainment/tv']")).click();
+	     browser.driver.sleep(10000);
+	     
+  };
+   this.selectSectionAgain=function()	{
+	   element(by.xpath("//button/span[text()='Add new section']")).click();
+		 browser.driver.sleep(5000);
+		 element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[2]")).click();
+	     browser.driver.sleep(6000);
+		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+		 expect(eles.count()).toBeGreaterThan(0);
+		 browser.driver.sleep(6000);
+		 element(by.xpath("//div[text()='/sports/hockey/rangers']")).click();
+		// browser.driver.sleep(6000);
+		 //element(by.xpath("//div[text()='/new-york/brooklyn']")).click();
+		 //element(by.xpath("//div[text()='/entertainment/tv']")).click();
+		 //browser.driver.sleep(6000);
+	     
+  };
+    this.verifySectionPreview=function()	{	
+    	expect(element(by.xpath("//span[@class='tag tag-solid tag-last']")).isDisplayed()).toBe(true);
+   };
     this.AddNewSection=function(){
-	element(by.xpath(OR.locators.TemplatePage.click_addnewsection)).click();
-	element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-	let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-	expect(eles.count()).toBeGreaterThan(0);
-	  browser.driver.sleep(10000);
-	 element(by.xpath("//div[@name='/new-york/brooklyn']")).click();
-	//element(by.xpath("//div[text()='/entertainment/tv']")).click();
-	 browser.driver.sleep(6000);
-	 expect(element(by.xpath("//span[contains(text()='new-york/brooklyn')]")).isDisplayed()).toBe(true);
-	//var isdsp = element(by.xpath("//span[contains(text(),'new-york/bronx')]")).isDisplayed();
-	//expect(isdsp).toBe(true);
-	 browser.driver.sleep(6000);
-	element(by.id("home")).click();
-	return this;
+	     element(by.xpath(OR.locators.TemplatePage.click_addnewsection)).click();
+	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
+	     let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+	     expect(eles.count()).toBeGreaterThan(0);
+	     browser.driver.sleep(6000);
+	     //element(by.xpath("//div[@name='/new-york/brooklyn']")).click();
+	     //element(by.xpath("//div[text()='/entertainment/tv']")).click();
+	     //browser.driver.sleep(6000);
+	     
+	     //var isdsp = element(by.xpath("//span[contains(text(),'new-york/bronx')]")).isDisplayed();
+	     //expect(isdsp).toBe(true);
+	    // browser.driver.sleep(6000);
+	     //element(by.id("home")).click();
+	     return this;
 	};
 	this.clickOnSection17=function(){	
-	element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-	element(by.xpath("//button/span[text()='Add new section']")).click();
-	element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-	let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-	expect(eles.count()).toBeGreaterThan(0); 
-	browser.driver.sleep(10000);
-	//element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-	element(by.xpath("//div[text()='/entertainment/tv']")).click();
-	browser.driver.sleep(10000);
-	//var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-	//expect(isdsp).toBe(true);
-	//element(by.id("home")).click();
-	return this;
+	     element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+	     element(by.xpath("//button/span[text()='Add new section']")).click();
+	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
+	     let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+	     expect(eles.count()).toBeGreaterThan(0); 
+	     browser.driver.sleep(10000);
+	     //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
+	     element(by.xpath("//div[text()='/entertainment/tv']")).click();
+	     browser.driver.sleep(10000);
+	     //var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
+	     //expect(isdsp).toBe(true);
+	     //element(by.id("home")).click();
+	     return this;
 	};
 	this.clickOnSection18=function(){	
 	     element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
@@ -318,33 +319,44 @@ var TemplatePage=function () {
 		 //expect(isdsp).toBe(true);
 		 //element(by.id("home")).click();
 		 return this;
-	 };
-		
-    this.addSection25=function()	{	
-		element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-				element(by.xpath("//button/span[text()='Add new section']")).click();
-				element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-				let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-				expect(eles.count()).toBeGreaterThan(0);
-				  browser.driver.sleep(10000);
-				  //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-				element(by.xpath("//div[text()='/entertainment/tv']")).click();
-				  browser.driver.sleep(6000);
-				//var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-				//expect(isdsp).toBe(true);
-				//element(by.id("home")).click();
-				return this;
-		};
-		this.addSection32=function()	{	
-			//element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-					//element(by.xpath("//button/span[text()='Add new section']")).click();
-					element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-					let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-					expect(eles.count()).toBeGreaterThan(0);
-					  browser.driver.sleep(10000);
-					
-					element(by.xpath("//div[text()='/entertainment/tv']")).click();
-					  browser.driver.sleep(6000);
+    };
+	this.addSection25=function()	{
+		browser.driver.sleep(6000);
+		 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+		 element(by.xpath("//button/span[text()='Add new section']")).click();
+		 element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
+		 browser.driver.sleep(10000);
+		 //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
+		 element(by.xpath("//div[text()='/entertainment/tv']")).click();
+		 browser.driver.sleep(6000);
+		 return this;
+	};
+	this.addSectiondummy=function()	{
+		browser.driver.sleep(6000);
+		 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+		 element(by.xpath("//button/span[text()='Add new section']")).click();
+		 element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
+		 //let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+		 //expect(eles.count()).toBeGreaterThan(0);
+		 browser.driver.sleep(10000);
+		 //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
+		 element(by.xpath("//div[text()='/entertainment/tv']")).click();
+		 //element(by.xpath("//input[@value='/entertainment/tv']")).click();
+		 browser.driver.sleep(6000);
+		 //var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
+		 //expect(isdsp).toBe(true);
+		 //element(by.id("home")).click();
+		 return this;
+	};
+	this.addSection32=function()	{	
+		 //element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+ 		 //element(by.xpath("//button/span[text()='Add new section']")).click();
+		 element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
+		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+		 expect(eles.count()).toBeGreaterThan(0);
+		 browser.driver.sleep(10000);
+		 element(by.xpath("//div[text()='/entertainment/tv']")).click();
+		 browser.driver.sleep(6000);
 					
 					return this;
 			};
@@ -356,74 +368,61 @@ var TemplatePage=function () {
 				return this;
 				};
 	this.clickOnSection32=function()	{	
+		browser.driver.sleep(6000);	
 		element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
 		element(by.xpath("//button/span[text()='Add new section']")).click();
 		browser.driver.sleep(6000);			
 		return this;
 	};
-	this.clickOnSaveWithoutDeadline32=function()	{	
+	this.clickOnSaveWithoutDeadline=function()	{
+		browser.driver.sleep(6000);	
 		element(by.xpath(OR.locators.TemplatePage.click_savewithoutdeadline)).click();
-		browser.driver.sleep(6000);			
+		browser.driver.sleep(8000);			
 		return this;
 	};
-	this.clickOnArc32=function()	{	
+	this.clickOnArc=function()	{	
+		browser.driver.sleep(6000);
 		element(by.xpath(OR.locators.TemplatePage.click_Arc)).click();
 		browser.driver.sleep(6000);			
 		return this;
 	};	
-		
-	this.clickOnSectionAgain17=function()	{	
-			element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-			element(by.xpath("//button/span[text()='Add new section']")).click();
-			 browser.driver.sleep(5000);
-			
-			element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[2]")).click();
-			  browser.driver.sleep(10000);
-			let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-			expect(eles.count()).toBeGreaterThan(0);
-			  browser.driver.sleep(6000);
-			  element(by.xpath("//div[text()='/sports/hockey/rangers']")).click();
-			  //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-			 // eles.get(2).click();
-			//element(by.xpath("//div[text()='/entertainment/tv']")).click();
-			 // browser.driver.sleep(10000);
-			//var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-			//expect(isdsp).toBe(true);
-			//element(by.id("home")).click();
-			return this;
-		};
-		this.clickOnSectionAgain18=function()	{	
-			//element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-			element(by.xpath("//button/span[text()='Add new section']")).click();
-			element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[2]")).click();
-			let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-			expect(eles.count()).toBeGreaterThan(0);
-			  browser.driver.sleep(10000);
-			  //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-			element(by.xpath("//div[text()='/new-york/brooklyn']")).click();
-			  browser.driver.sleep(6000);
-			//element(by.xpath("//button/span[text()='Add new section']")).click();
-			 //browser.driver.sleep(6000);
-			
-			//element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[2]")).click();
-			  //browser.driver.sleep(10000);
-			//let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-			//expect(eles.count()).toBeGreaterThan(0);
-			 //browser.driver.sleep(5000);
-			  //element(by.xpath("//input[@value='/new-york/brooklyn']")).click();
-			 // element(by.xpath("//div[@name='/new-york/brooklyn')).click();
-			  //eles.get(2).click();
-			//element(by.xpath("//div[text()='/entertainment/tv']")).click();
-			 // browser.driver.sleep(10000);
-			//var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-			//expect(isdsp).toBe(true);
-			//element(by.id("home")).click();
-			return this;
-		};
-		this.clickOnSectionAgainand18=function()	{	
-			//element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-			element(by.xpath("//button/span[text()='Add new section']")).click();
-			 browser.driver.sleep(10000);
+	this.clickOnSectionAgainn=function()	{	
+		browser.driver.sleep(6000);
+		 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+		 element(by.xpath("//button/span[text()='Add new section']")).click();
+		 browser.driver.sleep(5000);
+		 element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[2]")).click();
+	     browser.driver.sleep(10000);
+		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+		 expect(eles.count()).toBeGreaterThan(0);
+		 browser.driver.sleep(6000);
+		 //element(by.xpath("//div[text()='/entertainment/tv']")).click();
+	     element(by.xpath("//div[text()='/sports/hockey/rangers']")).click();
+		 //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
+		 // eles.get(2).click();
+		 //element(by.xpath("//div[text()='/entertainment/tv']")).click();
+		 // browser.driver.sleep(10000);
+		 //var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
+		 //expect(isdsp).toBe(true);
+		 //element(by.id("home")).click();
+		 return this;
+	};
+	this.clickOnSectionAgain18=function()	{	
+		 //element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+		 element(by.xpath("//button/span[text()='Add new section']")).click();
+	     element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[2]")).click();
+		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+		 expect(eles.count()).toBeGreaterThan(0);
+	     browser.driver.sleep(10000);
+		 //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
+		 element(by.xpath("//div[text()='/new-york/brooklyn']")).click();
+		 browser.driver.sleep(6000);
+		return this;
+	};
+	this.clickOnSectionAgainand18=function()	{	
+		 //element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+		  element(by.xpath("//button/span[text()='Add new section']")).click();
+		  browser.driver.sleep(10000);
 			
 			element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[3]")).click();
 			  browser.driver.sleep(10000);
@@ -438,9 +437,8 @@ var TemplatePage=function () {
 			//expect(isdsp).toBe(true);
 			//element(by.id("home")).click();
 			return this;
-		};
-	
-		this.clickOnSectionAgain21=function()	{	
+	};
+	this.clickOnSectionAgain21=function()	{	
 			 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
 			 //element(by.xpath("//button/span[text()='Add new section']")).click();
 			  browser.driver.sleep(10000);
@@ -459,99 +457,101 @@ var TemplatePage=function () {
 				//expect(isdsp).toBe(true);
 				//element(by.id("home")).click();
 				return this;
-				};		
-this.verifySnapHomePage = function(){
-	 browser.driver.sleep(6000);
-	 element(by.xpath(OR.locators.TemplatePage.click_homepage)).click();
-	 browser.driver.sleep(4000);
-	 var home = element(by.xpath(OR.locators.TemplatePage.verify_snaphomepage)).isDisplayed();
-	 expect(home).toBe(true);
-     return this;
-
-	};
-this.verifySectionAdded = function(){
-		
-	var isdsp = element(by.xpath(OR.locators.TemplatePage.verify_sectionisadded)).isDisplayed();
-	expect(isdsp).toBe(true);
-	 browser.driver.sleep(10000);
-		return this;
-
-	};
+	};		
+    this.verifySnapHomePage = function(){
+	     browser.driver.sleep(8000);
+	     element(by.xpath(OR.locators.TemplatePage.click_homepage)).click();
+	     browser.driver.sleep(4000);
+	     var home = element(by.xpath(OR.locators.TemplatePage.verify_snaphomepage)).isDisplayed();
+	     expect(home).toBe(true);
+         return this;
+    };
+    this.verifySectionAdded = function(){
+	     var isdsp = element(by.xpath(OR.locators.TemplatePage.verify_sectionisadded)).isDisplayed();
+	     expect(isdsp).toBe(true);
+	     browser.driver.sleep(4000);
+		 return this;
+    };
+    this.verifySectionAddedd = function(){
+	     var isdsp = element(by.xpath(OR.locators.TemplatePage.verify_sectionisaddedd)).isDisplayed();
+	     expect(isdsp).toBe(true);
+	     browser.driver.sleep(4000);
+		 return this;
+   };
 	this.clickOnComments = function(){
-		
-	 element(by.xpath(OR.locators.TemplatePage.click_comments)).click();
-	 browser.driver.sleep(10000);
-			return this;
-
+		 element(by.xpath(OR.locators.TemplatePage.click_comments)).click();
+	     browser.driver.sleep(10000);
+		 return this;
 	};
-	this.clickOnViewRevisions26 = function(){
-		
+	this.clickOnViewRevisions = function(){
+		browser.driver.sleep(10000);
 		 element(by.xpath(OR.locators.TemplatePage.click_viewrevisions)).click();
 		 browser.driver.sleep(10000);
-				return this;
-
-	};
-	this.clickOnView26 = function(){
-		
+		 return this;
+    };
+	this.clickOnView = function(){
 		 element(by.xpath(OR.locators.TemplatePage.click_view)).click();
 		 browser.driver.sleep(10000);
-				return this;
-
-		};
-		
+		 return this;
+    };
+    this.clickOnExit = function(){
+    	browser.driver.sleep(3000);
+		 element(by.xpath(OR.locators.TemplatePage.click_exit)).click();
+		 browser.driver.sleep(3000);
+		 var home = element(by.xpath(OR.locators.TemplatePage.verify_snaphomepage)).isDisplayed();
+	     expect(home).toBe(true);
+	     browser.driver.sleep(2000);
+		 return this;
+   };
 	this.clickOnSaveReminder = function(){
-		
 		 element(by.xpath(OR.locators.TemplatePage.click_savereminder)).click();
 		 browser.driver.sleep(10000);
-				return this;
-
-			};
-		
-		
+		 return this;
+    };
 	this.verifyOptionsInComments = function(){			
- 	    var strValues = element(by.xpath(OR.locators.TemplatePage.verify_optionsincomments)).all(by.tagName("option")).getAttribute("value");
-		expect(strValues).toEqual(['show','hide'])
-		return this;
+ 	     var strValues = element(by.xpath(OR.locators.TemplatePage.verify_optionsincomments)).all(by.tagName("option")).getAttribute("value");
+		 expect(strValues).toEqual(['show','hide'])
+		 return this;
 	};
 	this.verifyOptionsSaveReminder = function(){			
- 	    var strValues = element(by.xpath(OR.locators.TemplatePage.verify_optionsinsavereminder)).all(by.tagName("option")).getAttribute("value");
-		expect(strValues).toEqual(['5','15','30','60','off'])
+ 	     var strValues = element(by.xpath(OR.locators.TemplatePage.verify_optionsinsavereminder)).all(by.tagName("option")).getAttribute("value");
+		 expect(strValues).toEqual(['5','15','30','60','off'])
 		 //expect(element(by.id('save_reminder')).all(by.tagName('option')).getText()).toEqual(['5 minutes','15 minutes','30 minutes','60 minutes','No reminder']);
-		return this;
+		 return this;
 	};
 	this.verifySectionField25 = function(){
-		expect(element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getAttribute("value")).toEqual("");
-		///element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getText().toEqual('');
-		//var isdsp = element(by.xpath("//span[contains(text(),'sports/hockey/rangers')]")).isDisplayed();
-		//expect(isdsp).toBe(true);
+		element(by.xpath("//button/span[text()='Add new section']")).click();
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionispresent)).getAttribute("value")).toEqual("");
+		 ///element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getText().toEqual('');
+		 //var isdsp = element(by.xpath("//span[contains(text(),'sports/hockey/rangers')]")).isDisplayed();
+		 //expect(isdsp).toBe(true);
 		 browser.driver.sleep(10000);
-			return this;
+		 return this;
 
-		};
-		this.verifySectionFieldIsEmpty25 = function(){
-			expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionfieldisempty)).getAttribute("value")).toEqual("");
-			//expect(element(by.xpath("//div[text()='/entertainment/tv']")).isDisplayed()).toBe(false);
-			//var isdsp = element(by.xpath("//span[contains(text(),'sports/hockey/rangers')]")).isDisplayed();
-			//expect(isdsp).toBe(true);
-			 browser.driver.sleep(10000);
-				return this;
-
-		};
-		this.verifySectionFieldIsEmpty = function(){
-			expect(element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getAttribute("value")).toEqual("");
-			 browser.driver.sleep(10000);
-				return this;
-
-		};
-		this.verifySectionFieldIsPresent25 = function(){
-				expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionispresent)).getAttribute("value")).toEqual("/entertainment/tv");
+	};
+	this.verifySectionFieldIsEmpty25 = function(){
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionfieldisempty)).getAttribute("value")).toEqual("");
+		 //expect(element(by.xpath("//div[text()='/entertainment/tv']")).isDisplayed()).toBe(false);
+		 //var isdsp = element(by.xpath("//span[contains(text(),'sports/hockey/rangers')]")).isDisplayed();
+		 //expect(isdsp).toBe(true);
+		 browser.driver.sleep(8000);
+		 return this;
+    };
+	this.verifySectionFieldIsEmpty = function(){
+		element(by.xpath("//button/span[text()='Add new section']")).click();
+	     expect(element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getAttribute("value")).toEqual("");
+		 browser.driver.sleep(10000);
+		 return this;
+     };
+	 this.verifySectionFieldIsPresent = function(){
+		  expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionispresent)).getAttribute("value")).toEqual("/entertainment/tv");
 				//expect(element(by.xpath("//div[text()='/entertainment/tv']")).isDisplayed()).toBe(true);
 				//var isdsp = element(by.xpath("//span[contains(text(),'/entertainment/tv')]")).isDisplayed();
 				//expect(isdsp).toBe(true);
 				 browser.driver.sleep(10000);
 					return this;
          };
-         this.verifySectionField26 = function(){
+         this.verifySectionFieldd = function(){
        	 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
         	browser.driver.sleep(6000);
  		 expect(element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getAttribute("value")).toEqual("/entertainment/tv");
@@ -566,17 +566,21 @@ this.verifySectionAdded = function(){
 	
 	this.verifySectionAdded21 = function(){
 		
-		var isdsp = element(by.xpath("//span[contains(text(),'new-york/brooklyn')]")).isDisplayed();
+		var isdsp = element(by.xpath("//span[contains(text(),'new-york/bronx')]")).isDisplayed();
 		expect(isdsp).toBe(true);
-		 browser.driver.sleep(10000);
+		 browser.driver.sleep(4000);
 			return this;
 
 		};
 	this.verifyUpdatedTemplate=function(){
-		element(by.id(OR.locators.TemplatePage.search_updatedtemplate)).sendKeys("New Template123");
-		element(by.xpath(OR.locators.TemplatePage.click_search)).click();
+		browser.driver.sleep(5000);
+		
+		element(by.css(OR.locators.LogoutPage.searchbar)).sendKeys("New Template123");
+		element(by.css(OR.locators.LogoutPage.searchicon)).click();
+		//element(by.id(OR.locators.TemplatePage.search_updatedtemplate)).sendKeys("New Template123");
+		//element(by.xpath(OR.locators.TemplatePage.click_search)).click();
 		browser.driver.sleep(6000);
-		var dsp = element(by.xpath("//div/h3[text()='New Template123']")).isDisplayed();
+		var dsp = element(by.xpath(OR.locators.TemplatePage.verify_updatedtemplate)).isDisplayed();
 		expect(dsp).toBe(true);	
 		return this;
 		
@@ -588,49 +592,47 @@ this.verifySectionAdded = function(){
 	};
 	
 	this.verifySlug = function(){
-		browser.driver.sleep(6000);
-		expect(element(by.xpath(OR.locators.TemplatePage.slugname)).getAttribute('value')).toEqual('ny-snap-test-auto-normal-ct-xebia-template-20181207');	 
-	 	return this;
+		 browser.driver.sleep(6000);
+		 expect(element(by.xpath(OR.locators.TemplatePage.slugname)).getAttribute('value')).toEqual('ny-snap-test-auto-normal-ct-xebia-template-20181218');	 
+	 	 return this;
 	};
 	this.verifyStory=function(){
-		browser.driver.sleep(4000);
-		expect(element(by.id(OR.locators.TemplatePage.verify_defaultstoryvalue)).$('option:checked').getText()).toEqual('Simple Story');
-		return this;
+		 browser.driver.sleep(4000);
+		 expect(element(by.id(OR.locators.TemplatePage.verify_defaultstoryvalue)).$('option:checked').getText()).toEqual('Simple Story');
+		 return this;
 	};
 	this.verifyStoryArc=function(){
-		browser.driver.sleep(4000);
-		element(by.xpath(OR.locators.TemplatePage.click_storytypearc)).click();
-		browser.driver.sleep(3000);
-		expect(element(by.id(OR.locators.TemplatePage.verify_defaultstoryvalueArc)).$('option:checked').getText()).toEqual('Right Rail');
-		return this;
+		 browser.driver.sleep(4000);
+		 element(by.xpath(OR.locators.TemplatePage.click_storytypearc)).click();
+		 browser.driver.sleep(3000);
+		 expect(element(by.id(OR.locators.TemplatePage.verify_defaultstoryvalueArc)).$('option:checked').getText()).toEqual('Right Rail');
+		 return this;
 	};
 		
 	this.verifyBasicbuild=function(){	
-		browser.driver.sleep(4000);		
+		 browser.driver.sleep(4000);		
 		 expect(element(by.id(OR.locators.TemplatePage.verify_defaultbasicbuildvalue)).$('option:checked').getText()).toEqual('No section');
-			return this;
+	   	 return this;
 		};
 	this.verifyBasicbuildIsPresent=function(){	
 		browser.driver.sleep(4000);
 		expect(element(by.xpath(OR.locators.TemplatePage.verify_basicbuildispresent)).isDisplayed()).toBe(true);
 		return this;
-    	};
+    };
     this.clickOnBasicbuildIsVerifyOptions=function(){
-     	browser.driver.sleep(4000);
-     	element(by.xpath(OR.locators.TemplatePage.click_basicbuild)).click();
-   	    browser.driver.sleep(6000);
-   	    expect(element(by.id(OR.locators.TemplatePage.verify_basicbuildoptions)).all(by.tagName('option')).getText()).toEqual(['No section','Breaking Graphic','SendtoNews']);
-   		return this;
-		};
-		
-		
-  this.verifyShowADRailIsNotPresent=function(){	
-	   browser.driver.sleep(4000);
-	   expect(element(by.xpath(OR.locators.TemplatePage.verify_showADrail)).isPresent()).toBeFalsy();
-			 //isPresent()).toBeFalsy();
-		return this;
-		 };
-  this.verifytheWidgets1=function(){
+     	 browser.driver.sleep(4000);
+     	 element(by.xpath(OR.locators.TemplatePage.click_basicbuild)).click();
+   	     browser.driver.sleep(6000);
+   	     expect(element(by.id(OR.locators.TemplatePage.verify_basicbuildoptions)).all(by.tagName('option')).getText()).toEqual(['No section','Breaking Graphic','SendtoNews']);
+   		 return this;
+	};
+	this.verifyShowADRailIsNotPresent=function(){	
+	     browser.driver.sleep(6000);
+	     expect(element(by.xpath(OR.locators.TemplatePage.verify_showADrail)).isPresent()).toBeFalsy();
+         return this;
+	     //isPresent()).toBeFalsy();
+	};
+   this.verifytheWidgets1=function(){
 		expect(element(by.xpath(OR.locators.TemplatePage.verify_text)).isDisplayed()).toBe(true);
 	    expect(element(by.xpath(OR.locators.TemplatePage.verify_quote)).isDisplayed()).toBe(true);
 	    expect(element(by.xpath(OR.locators.TemplatePage.verify_image)).isDisplayed()).toBe(true);
@@ -642,28 +644,28 @@ this.verifySectionAdded = function(){
 		expect(element(by.xpath(OR.locators.TemplatePage.verify_infobox)).isDisplayed()).toBe(true);
 		return this;
 			 
-		}
-  this.selectHtmlStory=function(){	
-		element.all(by.xpath(OR.locators.TemplatePage.click_htmlstory)).click();
-	return this;
+	}
+    this.selectHtmlStory=function(){	
+		 element.all(by.xpath(OR.locators.TemplatePage.click_htmlstory)).click();
+	     return this;
 	};
-  this.selectFullWidth=function(){	
-	   browser.driver.sleep(4000);
-	   element(by.xpath("//select[@id='meta-story-type']")).click();
-	   browser.driver.sleep(4000);
-	   element.all(by.xpath(OR.locators.TemplatePage.select_fullwidth)).click();
-	  return this;
-      };
-  this.verifyShowADRailIsPresent=function(){	
-	   expect(element(by.xpath(OR.locators.TemplatePage.verify_showADrail)).isDisplayed()).toBe(true);
-	   expect(element(by.xpath(OR.locators.TemplatePage.verify_defaultaAdrailvalue)).$('option:checked').getText()).toEqual('Show');
-	   return this;
-	  };
-  this.verifyBasicbuildIsNotPresent=function(){	
+   this.selectFullWidth=function(){	
+	   // browser.driver.sleep(4000);
+	   // element(by.xpath("//select[@id='meta-story-type']")).click();
 	    browser.driver.sleep(4000);
-		expect(element(by.xpath(OR.locators.TemplatePage.verify_basicbuildispresent)).isDisplayed()).toBe(false);;
-	  return this;
-	  };
+	    element.all(by.xpath(OR.locators.TemplatePage.select_fullwidth)).click();
+	    return this;
+    };
+    this.verifyShowADRailIsPresent=function(){	
+	     expect(element(by.xpath(OR.locators.TemplatePage.verify_showADrail)).isDisplayed()).toBe(true);
+	     expect(element(by.xpath(OR.locators.TemplatePage.verify_defaultaAdrailvalue)).$('option:checked').getText()).toEqual('Show');
+	     return this;
+	};
+    this.verifyBasicbuildIsNotPresent=function(){	
+	     browser.driver.sleep(4000);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_basicbuildispresent)).isDisplayed()).toBe(false);;
+	     return this;
+	};
   this.verifytheWidgets2=function(){	
 	   //expect(element(by.xpath(OR.locators.TemplatePage.headline)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_quote)).isDisplayed()).toBe(true);
@@ -677,104 +679,85 @@ this.verifySectionAdded = function(){
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_infobox)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_break)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.verify_adholder)).isDisplayed()).toBe(true);
-	   browser.driver.sleep(3000);
-   return this;
-			 
-	  };
+	   //browser.driver.sleep(6000);
+       return this;
+    };
    this.verifytheWidgets3=function(){	
-			 expect(element(by.xpath("//li[@title='Text']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Quote']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Image']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Embedded Video']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Roadblock']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='HTML']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Tweet']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Instagram']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Facebook']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='P2PEmbed']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Video']")).isDisplayed()).toBe(true);
-			 browser.driver.sleep(6000);
-			 return this;
-		};
-		this.verifytheWidgets4=function(){	
-			 expect(element(by.xpath("//li[@title='Text']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Quote']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Image']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Embedded Video']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Roadblock']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='HTML']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Tweet']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Instagram']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Facebook']")).isDisplayed()).toBe(true);
-			 expect(element(by.xpath("//li[@title='Video']")).isDisplayed()).toBe(true);
-			 browser.driver.sleep(6000);
-			 return this;
-		};
-		
-		
-					
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_text)).isDisplayed()).toBe(true);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_quote)).isDisplayed()).toBe(true);
+      	expect(element(by.xpath(OR.locators.TemplatePage.verify_image)).isDisplayed()).toBe(true);
+	    expect(element(by.xpath(OR.locators.TemplatePage.verify_embeddedvideo)).isDisplayed()).toBe(true);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_roadblock)).isDisplayed()).toBe(true);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_html)).isDisplayed()).toBe(true);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_tweet)).isDisplayed()).toBe(true);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_instagram)).isDisplayed()).toBe(true);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_facebook)).isDisplayed()).toBe(true);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_P2Pembed)).isDisplayed()).toBe(true);
+		expect(element(by.xpath("//li[@title='Video']")).isDisplayed()).toBe(true);
+		browser.driver.sleep(6000);
+		return this;
+	};
+	this.verifytheWidgets4=function(){	
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_text)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_quote)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_image)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_embeddedvideo)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_roadblock)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_html)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_tweet)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_instagram)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath(OR.locators.TemplatePage.verify_facebook)).isDisplayed()).toBe(true);
+		 expect(element(by.xpath("//li[@title='Video']")).isDisplayed()).toBe(true);
+		 browser.driver.sleep(6000);
+		 return this;
+	};
 	this.verifycomments=function(){
-		browser.driver.sleep(4000);		
-		expect(element(by.name(OR.locators.TemplatePage.verify_defaultcommentsvalue)).$('option:checked').getText()).toEqual('Show');
-		return this;
-			//var comm=element.all(by.xpath("//option[.='Show']")).getText();
-			//expect(comm).toEqual("Show");
-			//return this;
-		};
-	this.verifysaveReminder=function(){
-		expect(element(by.name(OR.locators.TemplatePage.verify_defaultsaveremindervalue)).$('option:checked').getText()).toEqual('15 minutes');
-		return this;
-		
-		//var save=element.all(by.xpath("//option[.='15 minutes']")).getText();
-			//expect(save).toEqual("15 minutes");
-			//return this;
-		};
-
-	this.alreadyTakenslug=function(){
-			element(by.xpath("//input[@name='slug']")).clear();
-			 element(by.xpath("//input[@name='slug']")).sendKeys("SlugTemplate09876543");
-				return this;
-		};
+		 browser.driver.sleep(4000);		
+		 expect(element(by.name(OR.locators.TemplatePage.verify_defaultcommentsvalue)).$('option:checked').getText()).toEqual('Show');
+		  return this;
+			 
+	 };
+	 this.verifysaveReminder=function(){
+		  expect(element(by.name(OR.locators.TemplatePage.verify_defaultsaveremindervalue)).$('option:checked').getText()).toEqual('15 minutes');
+		  return this;
+    };
+    
 	this.slugErrorPopup=function(){
-		var alert = element(by.xpath("//div[@class='alert pop bullseye warn']")).isDisplayed()
-		expect(alert).toBe(true);
-		return this;
-		
-      };
+		 var alert = element(by.xpath("//div[@class='alert pop bullseye warn']")).isDisplayed()
+		 expect(alert).toBe(true);
+		 return this;
+	};
 	this.slugwithoutTemplate=function(){
 		 element(by.xpath("//input[@name='slug']")).clear();
 		 element(by.xpath("//input[@name='slug']")).sendKeys("Slug09876543");
-			return this;
+		 return this;
 	};
     this.errorTemplate=function(){
-    	 var mesg = element(by.xpath("//div[@id='react-modal-message']")).isDisplayed()
-		 expect(mesg).toBe(true);
-    		return this;
+    	  var mesg = element(by.xpath("//div[@id='react-modal-message']")).isDisplayed()
+		  expect(mesg).toBe(true);
+          return this;
     };
     this.headlinePreview=function(){
-    	var disp= element(by.xpath(OR.locators.TemplatePage.check_headlinepreiview)).isDisplayed()
-		expect( disp).toBe(true);
-    	return this;
-    	
+    	 var disp= element(by.xpath(OR.locators.TemplatePage.check_headlinepreiview)).isDisplayed()
+		 expect( disp).toBe(true);
+    	 browser.driver.sleep(6000);
+    	 return this;
     };
     this.alredyTakenPopup=function(){
     	 browser.driver.sleep(6000);
- 		var alert = element(by.xpath(OR.locators.TemplatePage.verify_alreadytakenslug)).isDisplayed()
- 		expect(alert).toBe(true);
+ 		 var alert = element(by.xpath(OR.locators.TemplatePage.verify_alreadytakenslug)).isDisplayed()
+ 		 expect(alert).toBe(true);
  		 browser.driver.sleep(6000);
-    	return this;
-    	
+    	 return this;
     };
     this.clickonByline=function(){
-    element(by.xpath(OR.locators.TemplatePage.click_byline)).clear();
-    element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys("jim");
-	return this;
-    	
-    };
+         element(by.xpath(OR.locators.TemplatePage.click_byline)).clear();
+         element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys("jim");
+	     return this;
+     };
     this.clickonByline1=function(){
-        element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys("jim");
-    	return this;
-        	
+         element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys("jim");
+    	 return this;
         };
     this.selectBylinefromAutopopulated=function(){
     	 browser.driver.sleep(6000);
@@ -782,52 +765,48 @@ this.verifySectionAdded = function(){
 		 expect(eles.get(0).getText()).toEqual("Jim Carrey");
 		 expect(eles.get(1).getText()).toEqual("Jim Rich");	 
 		 eles.get(0).click();
-			return this;
+		 return this;
     };
     this.selectBylinefromAutopopulated1=function(){
     	 browser.driver.sleep(6000);
     	 element.all(by.xpath(OR.locators.TemplatePage.select_byline)).get(1).click();
-    	// element.all(by.xpath("//li[@class='ui-menu-item']")).get(1).click();
-			return this;
+         return this;
    };
    this.selectBylinefromAutopopulated2=function(){
-	   browser.driver.sleep(6000);
-	   element.all(by.xpath(OR.locators.TemplatePage.select_byline)).get(4).click();
-	   browser.driver.sleep(6000);
-			return this;
+	    browser.driver.sleep(6000);
+	    element.all(by.xpath(OR.locators.TemplatePage.select_byline)).get(4).click();
+	    browser.driver.sleep(6000);
+		return this;
  };
     this.verifyBylinePresentWithinBox=function(){
     	 var disp= element(by.xpath(OR.locators.TemplatePage.verify_bylineinbox)).isDisplayed();
 		 expect(disp).toBe(true);
-			return this;
+		 return this;
     };
     this.verifyBylinePreview=function(){
-    	browser.driver.sleep(5000);
-    	var show = element(by.xpath(OR.locators.TemplatePage.verify_bylinepreview)).isDisplayed()
+    	 browser.driver.sleep(5000);
+    	 var show = element(by.xpath(OR.locators.TemplatePage.verify_bylinepreview)).isDisplayed()
 		 expect(show).toBe(true);
-    	return this;
+    	 return this;
     };
     this.verifyBylinePreview1=function(){
-    	browser.driver.sleep(2000);
-    	expect(element(by.xpath(OR.locators.TemplatePage.verify_byispresentinpreview)).isDisplayed()).toBe(true);
-    	return this;
+    	 browser.driver.sleep(2000);
+    	 expect(element(by.xpath(OR.locators.TemplatePage.verify_byispresentinpreview)).isDisplayed()).toBe(true);
+    	 return this;
     };
     this.clickOnCrossSign=function(){
-    	
-    	element(by.xpath(OR.locators.TemplatePage.click_crossign)).click();
-    	return this;
+    	 element(by.xpath(OR.locators.TemplatePage.click_crossign)).click();
+    	 return this;
     };
- this.clickOnEditTemplate25=function(){
-    	
-    	element(by.xpath("//td[@class='dashboard-search-result-action-button dashboard-user-template-open']")).click();
+   this.clickOnEditTemplate25=function(){
+    	element(by.xpath("(//td[@title='Edit this template'])[1]")).click();
     	browser.driver.sleep(8000);
     	return this;
     };
- this.clickOnEditTemlate=function(){
-    	
-    	element(by.xpath("(//td[@class='dashboard-search-result-action-button dashboard-user-template-open'])[1]")).click();
-    	browser.driver.sleep(5000);
-    	return this;
+  this.clickOnEditTemlate=function(){
+       element(by.xpath("(//td[@title='Edit this template'])[1]")).click();
+       browser.driver.sleep(5000);
+       return this;
     };
     
     this.verifyBylineEmpty=function(){
@@ -854,9 +833,11 @@ this.verifySectionAdded = function(){
 	};
 	
 	this.verifySectionNotDisp = function(){
-		 browser.driver.sleep(6000);
-		expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionnotpresent)).isPresent()).toBeFalsy();;
+		 browser.driver.sleep(4000);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionnotpresent)).isPresent()).toBeFalsy();
+				//isPresent()).toBeFalsy();isDisplayed()).toBe(true);
 		return this;
+		//isPresent()).toBeFalsy();
 	};
 	
 	this.verifyCollection = function(){
@@ -868,26 +849,29 @@ this.verifySectionAdded = function(){
 	//input[@value='/entertainment/tv']/../../following-sibling::div/input
 	
 	this.verifyPrimarySectionIsPresent = function(){
-		expect(element(by.xpath("//input[@value='/entertainment/tv']/../../following-sibling::div/input")).isDisplayed()).toBe(true);
+		expect(element(by.xpath(OR.locators.TemplatePage.verify_primarysection)).isDisplayed()).toBe(true);
+				//isPresent()).toBeTruthy();
+				//isDisplayed()).toBe(true);
 		 browser.driver.sleep(6000);
 		return this;
 	};
-	this.verifyPrimarySectionIsPresent23 = function(){
+	this.verifyPrimarySectionIsPresentt = function(){
+		browser.driver.sleep(6000)
 		expect(element(by.xpath("//input[@value='/sports/hockey/rangers']/../../following-sibling::div/input")).isDisplayed()).toBe(true);
 		 browser.driver.sleep(6000);
 		return this;
 	};
 	this.clickOnSection23 = function(){
 		 browser.driver.sleep(6000);
-		element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
+		 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
 		 browser.driver.sleep(6000);
-		return this;
+		 return this;
 	};
 	this.deletePrimarySection = function(){
-		element(by.xpath("(//i[@class='fa fa-trash'])[1]")).click();
+		 element(by.xpath(OR.locators.TemplatePage.delete_primarysection)).click();
 		 browser.driver.sleep(8000);
-		return this;
+		 return this;
     };   
-		};
+	};
 
 module.exports = new TemplatePage();

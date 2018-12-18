@@ -23,7 +23,8 @@ exports.config = {
         priority_p2p_chicago :     'src/test/test_spec/priority_spec_p2p_chicago.js',
         priority_arc_chicago :     'src/test/test_spec/priority_spec_arc_chicago.js',
         template_p2p_newyork :     'src/test/test_spec/template_spec_p2p_newyork.js',
-        template_arc_newyork :     'src/test/test_spec/template_spec_arc_newyork.js'
+        template_arc_newyork :     'src/test/test_spec/template_spec_arc_newyork.js',
+        template_p2p_losangeles :     'src/test/test_spec/template_p2p_losangeles.js'	
     },
 
     jasmineNodeOpts: {

@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1545113420977' stop='1545113469730'>
+    <name>should Verify the pop up message when user enters the already taken slug</name>
+    <title>should Verify the pop up message when user enters the already taken slug</title>
+    <test-cases>
+        <test-case start='1545113420977' status='passed' stop='1545113433391'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='a9eb2f4f-8e82-4d09-b66b-9397ac41a321-attachment.png' type='image/png' size='67788'/>
+            </attachments>
+        </test-case>
+        <test-case start='1545113433391' status='passed' stop='1545113439480'>
+            <name>should create a new template</name>
+            <title>should create a new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='d344e6ce-515c-4078-944d-36d480a061f8-attachment.png' type='image/png' size='83774'/>
+            </attachments>
+        </test-case>
+        <test-case start='1545113439480' status='passed' stop='1545113469729'>
+            <name>enter the Byline value</name>
+            <title>enter the Byline value</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='0a60afc0-e533-42ba-9a1b-5eb65b39fc5d-attachment.png' type='image/png' size='3473'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -4,7 +4,7 @@ var loginpage = require('../pages/LoginPage.js');
 var homepage = require('../pages/HomePage.js');
 var templatepage = require('../pages/TemplatePage.js');
 
-/*describe('Verify the functionality of STORY TYPE dropdown list ', function() {
+describe('Verify the functionality of STORY TYPE dropdown list ', function() {
 	
 
 	it('Launch and login  Tribune Application', function() {
@@ -18,38 +18,36 @@ var templatepage = require('../pages/TemplatePage.js');
 	
 	
 	it('should click on  new template',function() {
-		  browser.driver.sleep(3000);
 		  homepage.createNewTemplate();
 	});
 	
 
 	it('Verify the options story type in arc mode ', function() {
 		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
-		browser.driver.sleep(9000);
-		
 		templatepage.clickOnStorytypeArc();
 		templatepage.verifyStorytypeOptionsArc();
-		//templatepage.clicksaveandCont();
-		//templatepage.verifyErrorPopup();		 
-		//templatepage.clickOnOk();	
+		browser.refresh();
+		browser.switchTo().alert().accept();
+		
 	});
 
 });
 
-describe('Verify that user can update existing template with additional details or not', function() {
+/*describe('Verify that user can update existing template with additional details or not', function() {
 	
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage()
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
 	
 	it('Verify that user is able to search an old template',function() {
-		  browser.driver.sleep(10000);
+		  browser.driver.sleep(4000);
 		  homepage.verifyTemplateEditPage();
 	});
 	
@@ -57,18 +55,24 @@ describe('Verify that user can update existing template with additional details 
 	it('Verify that user is able to Update an old template', function() {		
 		templatepage.updateDetails();
 		templatepage.clickOnSection();
+		templatepage.selectSection("/entertainment/tv");
+		//templatepage.AddNewSection();
+		templatepage.clicksaveandCont();
+		//templatepage.verifySectionPreview();
+		templatepage.headlinePreview();
+		templatepage.verifySnapHomePage();
 		templatepage.verifyUpdatedTemplate();
+		//templatepage.clickOnExit();
 	});
-});
-	
-		
+});*/
 describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Right Rail story and Full Width story', function() {
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
 			browser.ignoreSynchronization = true;
-			base.navigateToURL(OR.url);
-			loginpage.enterDetails();
+			templatepage.verifySnapHomePage();
+			//base.navigateToURL(OR.url);
+			//loginpage.enterDetails();
 			//loginpage.enterSlackDetails();
 			//loginpage.enterOrganizationDetails();
 		});
@@ -91,19 +95,18 @@ describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and 
 			templatepage.clickOnBasicbuildIsVerifyOptions();
 			templatepage.verifyShowADRailIsNotPresent();
 			templatepage.verifytheWidgets4();
-			//templatepage.clicksaveandCont();
-			//templatepage.verifypopup();
 		
 		});
-	});*/
-describe('Verify that user is able to save the template without adding section', function() {
+	});
+/*describe('Verify that user is able to save the template without adding section', function() {
 	
 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+        //loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -121,23 +124,20 @@ describe('Verify that user is able to save the template without adding section',
 		templatepage.verifySectionNotDisp();
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();	
-		
-		//templatepage.clickOnOk();
-		//<div class="alert pop bullseye error" style="cursor: pointer; display: none;"><div id="alert-body">Cannot assign a story to the same section multiple times</div><button class="close"><i class="fa fa-times"></i></button></div>
-		//div[text()='Cannot assign a story to the same section multiple times']
 	
 	});
 
 });
 
-/*describe('Verify that added section is displayed on SNAP preview', function() {
+describe('Verify that added section is displayed on SNAP preview', function() {
 	
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -153,14 +153,9 @@ describe('Verify that user is able to save the template without adding section',
 		templatepage.enterHeadline();		 
 		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
 		templatepage.clickOnSection();
-		templatepage.AddNewSection();
+		templatepage.selectSection("/entertainment/tv");
 		templatepage.clicksaveandCont();
 		templatepage.verifySectionAdded();		 
-		//templatepage.clickOnOk();
-		
-		
-	
-	
 	});
 
 });
@@ -171,8 +166,9 @@ describe('Verify that user is not allowed to add same section multiple timess', 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -185,18 +181,17 @@ describe('Verify that user is not allowed to add same section multiple timess', 
 	
 
 	it('should save the template without adding section', function() {
-		templatepage.enterHeadline17();		 
-		templatepage.enterSlugName17();
-		templatepage.clickOnSection17();
-		templatepage.clickOnSectionAgain17();
-		
-		templatepage.verifySectionErrorpopup();		 
-		//templatepage.clickOnOk();
-		
-		
-	
-	
-	});
+		templatepage.enterHeadline();		 
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
+		templatepage.clickOnSection();
+		//templatepage.selectSection("/entertainment/tv");
+		templatepage.selectSection("/sports/hockey/rangers");
+		templatepage.selectSectionAgain();
+		//templatepage.clickOnSectionAgainn();
+		templatepage.verifySectionErrorpopup();	
+		browser.refresh();
+		browser.switchTo().alert().accept();
+		});
 
 });
 describe('Verify that user is able to update the added section', function() {
@@ -205,8 +200,9 @@ describe('Verify that user is able to update the added section', function() {
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -219,28 +215,29 @@ describe('Verify that user is able to update the added section', function() {
 	
 
 	it('should save the template without adding section', function() {
-		templatepage.enterHeadline17();		 
-		templatepage.enterSlugName17();
-		templatepage.clickOnSection17();
+		templatepage.enterHeadline();		 
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
+		templatepage.clickOnSection();
+		templatepage.selectSection("/entertainment/tv");
 		templatepage.clicksaveandCont();
-		templatepage.clickOnSectionAgain21();
-		templatepage.clicksaveandCont();
-		templatepage.verifySectionAdded21();		 
-		//templatepage.clickOnOk();
+		templatepage.clearSectionField();
+		//templatepage.selectSection21();
+		templatepage.selectSection("/sports/hockey/rangers");
+		templatepage.verifySectionAddedd();
+		browser.refresh();
+		browser.switchTo().alert().accept();
 		
-		
-	
-	
 	});
 
-});
+    });
 describe('Verify that deleting primary section, the top remaining section becomes the primary section', function() {
 	
-	it('Launch and login  Tribune Application', function() {
-		browser.waitForAngularEnabled(false);
-		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+	    it('Launch and login  Tribune Application', function() {
+		    browser.waitForAngularEnabled(false);
+	 	   browser.ignoreSynchronization = true;
+	 	templatepage.verifySnapHomePage();
+	  	  //base.navigateToURL(OR.url);
+		  //loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -252,20 +249,20 @@ describe('Verify that deleting primary section, the top remaining section become
 	
 	it('should save the template without adding section', function() {
 		templatepage.clickOnEditTemlate();		 
-		templatepage.clickOnSection23();
+		templatepage.clickOnSection();
 		templatepage.verifyPrimarySectionIsPresent();
 		templatepage.deletePrimarySection();
-		templatepage.verifyPrimarySectionIsPresent23();		 
+		templatepage.verifyPrimarySectionIsPresentt();		 
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();		 
-		templatepage.verifySectionAdded();
+		templatepage.verifySectionAddedd();
 		
 	
 	
 	});
 
-});
-describe('Verify that user is able to add multiple sections to the template and make any section as a primary section', function() {
+});*/
+/*describe('Verify that user is able to add multiple sections to the template and make any section as a primary section', function() {
 	
 
 	it('Launch and login  Tribune Application', function() {
@@ -285,28 +282,29 @@ describe('Verify that user is able to add multiple sections to the template and 
 	
 
 	it('should save the template without adding section', function() {
-		templatepage.enterHeadline18();		 
-		templatepage.enterSlugName18();
+		templatepage.enterHeadline();		 
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
 		templatepage.clickOnSection18();
 		templatepage.clickOnSectionAgain18();
 		templatepage.clickOnSectionAgainand18();
 		templatepage.clicksaveandCont();
 		templatepage.verifySectionAdded21();		 
 		//templatepage.clickOnOk();
-		
+		//not done
 		
 	
 	
 	});
 
-});
-describe('Verify that section field is blank when user opens the P2P mode template in ARC mode', function() {
+});*/
+/*describe('Verify that section field is blank when user opens the P2P mode template in ARC mode', function() {
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -318,19 +316,16 @@ describe('Verify that section field is blank when user opens the P2P mode templa
 	
 	it('should save the template without adding section', function() {
 		
-		templatepage.clickOnEditTemplate25();
-		templatepage.clickOnSection25();
-		templatepage.verifySectionField25();
-		//templatepage.deletePrimarySection();
-				 
-		templatepage.clicksaveandCont25();
+		templatepage.clickOnEditTemlate();
+		templatepage.clickOnSection();
+        templatepage.verifySectionFieldIsEmpty();
+        templatepage.clicksaveandCont();
 		templatepage.verifypopup();
-		templatepage.verifySectionFieldIsEmpty25();
-		                  
-		templatepage.addSection25();
-		templatepage.clicksaveandCont25();
+		templatepage.clickOnSection();
+		templatepage.selectSection("/entertainment/tv");
+		templatepage.clicksaveandCont();
 		templatepage.verifypopup();
-		templatepage.verifySectionFieldIsPresent25();
+		templatepage.verifySectionFieldIsPresent();
 	
 	
 	});
@@ -358,14 +353,7 @@ describe('Verify COMMENT dropdown options', function() {
 	it('verify Show and Hide options in comments', function() {
 		templatepage.clickOnComments();		 
 		templatepage.verifyOptionsInComments();
-		//templatepage.clickOnSection17();
-		//templatepage.clicksaveandCont();
-		//templatepage.verifySectionAdded();		 
-		//templatepage.clickOnOk();
 		
-		
-	
-	
 	});
 
 });
@@ -375,6 +363,7 @@ describe('Verify that user is able to comment on the story by selecting Show opt
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
+		//templatepage.verifySnapHomePage();
 		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
@@ -389,22 +378,23 @@ describe('Verify that user is able to comment on the story by selecting Show opt
 	
 
 	it('should save the template without adding section', function() {
-		templatepage.enterHeadline32();		 
-		templatepage.enterSlugName32();
+		templatepage.enterHeadline();		 
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
 		templatepage.clickOnComments();
-		//templatepage.clickOnSectionAgain18();
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();
 		templatepage.clickOnCreateStoryFromTemplate();		 
 		templatepage.verifyStoryCreationPagePresent();
 		templatepage.clickShowAdvancedSettings();		 
-		templatepage.enterStoryHeadline32();
-		templatepage.enterStorySlug32();		 
+		templatepage.enterStoryHeadline();
+		templatepage.enterStorySlug();
+		//templatepage.clickOnSection();
+		//templatepage.selectSection("/entertainment/tv");
 		templatepage.clickOnSection32();
 		templatepage.addSection32();
 		templatepage.clicksaveandCont();	
-		templatepage.clickOnSaveWithoutDeadline32();		 
-		templatepage.clickOnArc32();
+		templatepage.clickOnSaveWithoutDeadline();		 
+		templatepage.clickOnArc();
 	
 	
 	
@@ -417,8 +407,9 @@ describe('Verify the functionality of SAVE REMINDER dropdown list', function() {
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -442,8 +433,9 @@ describe('Verify that template history revisions show correct sections relevant 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -456,22 +448,20 @@ describe('Verify that template history revisions show correct sections relevant 
 	
 
 	it('should enter all mandatory fields and verify correct is section added or not', function() {
-		templatepage.enterHeadline32();		 
-		templatepage.enterSlugName26();
+		templatepage.enterHeadline();		 
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
 		templatepage.clicksaveandCont();
-		templatepage.addSection25();
+		templatepage.clickOnSection();
+		templatepage.selectSection("/entertainment/tv");
 		templatepage.clicksaveandCont();
-		templatepage.clickOnSectionAgain17();		 
+        templatepage.clickOnSectionAgainn();		 
 		templatepage.clicksaveandCont();
-		templatepage.clickOnViewRevisions26();
-		templatepage.clickOnView26();
-		templatepage.verifySectionField26();
-	
-	
-	
-	});
+		templatepage.clickOnViewRevisions();
+		templatepage.clickOnView();
+		templatepage.verifySectionFieldd();
+		});
 
-});*/
+});
 
 
 		
