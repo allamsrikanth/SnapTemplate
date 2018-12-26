@@ -2,7 +2,7 @@ var OR = require('../json/OR_los_angeles.json');
 var base = require('../pages/Basepage.js');
 var loginpage = require('../pages/LoginPage.js');
 var homepage = require('../pages/HomePage.js');
-var templatepage = require('../pages/TemplatePage.js');
+var TemplatePage = require('../pages/TemplatePage.js');
 
 describe('Verify that user is able to create a new template', function() {
 	
@@ -11,8 +11,8 @@ describe('Verify that user is able to create a new template', function() {
 		browser.ignoreSynchronization = true;
 		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
-        loginpage.enterSlackDetails();
-		loginpage.enterOrganizationDetails();
+        //loginpage.enterSlackDetails();
+		//loginpage.enterOrganizationDetails();
 	});
 	
 	it('should click on new template',function() {
@@ -21,24 +21,24 @@ describe('Verify that user is able to create a new template', function() {
 	});
 	
 	it('Verify that user is able to create a new template', function() {
-		//templatepage.verifySnapHomePage();
-		templatepage.enterHeadline();
-		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
-		templatepage.clicksaveandCont();
-		templatepage.verifypopup();
-		templatepage.headlinePreview();
+		//TemplatePage.verifySnapHomePage();
+		TemplatePage.enterHeadline();
+		TemplatePage.enterSlugName(TemplatePage.getName(10)+"template-2018");
+		TemplatePage.clicksaveandCont();
+		TemplatePage.verifypopup();
+		TemplatePage.headlinePreview();
 		
 		
 	});
 
 });
 	
-describe('Verify the functionality of Save & Continue button when slug field does not contain word template', function() {
+/*describe('Verify the functionality of Save & Continue button when slug field does not contain word template', function() {
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
+		TemplatePage.verifySnapHomePage();
 		//base.navigateToURL(OR.url);
 		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
@@ -52,11 +52,11 @@ describe('Verify the functionality of Save & Continue button when slug field doe
 		
 	
 	it('should  enters the slug without template word',function() {
-		templatepage.enterHeadline();		 
-		templatepage.enterSlugName(templatepage.getName(10)+"-2018");
-		templatepage.clicksaveandCont();
-		templatepage.verifyslugpupup();
-		//templatepage.handlepopup();
+		TemplatePage.enterHeadline();		 
+		TemplatePage.enterSlugName(TemplatePage.getName(10)+"-2018");
+		TemplatePage.clicksaveandCont();
+		TemplatePage.verifyslugpupup();
+		//TemplatePage.handlepopup();
 		
 		browser.refresh();
 		browser.switchTo().alert().accept();
@@ -71,7 +71,7 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-	    templatepage.verifySnapHomePage();
+	    TemplatePage.verifySnapHomePage();
 		//base.navigateToURL(OR.url);
 		//loginpage.enterDetails();
 	    //loginpage.enterSlackDetails();
@@ -86,20 +86,20 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	
 	
 	it('Verify that user is able see headline preview ', function() {
-		templatepage.enterHeadline();		 
-		templatepage.headlinePreview();
+		TemplatePage.enterHeadline();		 
+		TemplatePage.headlinePreview();
 		browser.refresh();
 		browser.switchTo().alert().accept();
 		
 	});
 
 });
-/*describe('Verify the functionality of HEADLINE field when user enters morethan 200 characters', function() {
+describe('Verify the functionality of HEADLINE field when user enters morethan 200 characters', function() {
 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
+		TemplatePage.verifySnapHomePage();
 		//base.navigateToURL(OR.url);
 		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
@@ -114,21 +114,21 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	
 
 	it('Verify that user is able see headline preview ', function() {
-		templatepage.enterHeadline200();		 
-		templatepage.verifyHeadlinePopup();
+		TemplatePage.enterHeadline200();		 
+		TemplatePage.verifyHeadlinePopup();
 		browser.refresh();
 		browser.switchTo().alert().accept();
         
 	
 	});
 
-});*/
+});
 describe('Verify the functionality of Save & Continue button when mandatory fields are blank', function() {
 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
+		TemplatePage.verifySnapHomePage();
 		//base.navigateToURL(OR.url);
 		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
@@ -143,11 +143,11 @@ describe('Verify the functionality of Save & Continue button when mandatory fiel
 	
 
 	it('Verify that user is able see headline preview ', function() {
-		templatepage.clearHeadline();		 
-		templatepage.clearSlug();
-		templatepage.clicksaveandCont();
-		templatepage.verifyErrorPopup();		 
-		templatepage.clickOnOk();
+		TemplatePage.clearHeadline();		 
+		TemplatePage.clearSlug();
+		TemplatePage.clicksaveandCont();
+		TemplatePage.verifyErrorPopup();		 
+		TemplatePage.clickOnOk();
 		browser.refresh();
 		browser.switchTo().alert().accept();
 		 
@@ -159,7 +159,7 @@ describe('Verify the functionality of STORY TYPE dropdown list in p2p mode', fun
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
+		TemplatePage.verifySnapHomePage();
 		//base.navigateToURL(OR.url);
 		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
@@ -174,8 +174,8 @@ describe('Verify the functionality of STORY TYPE dropdown list in p2p mode', fun
 	
 
 	it('Verify the options in story type in p2p mode', function() {
-		templatepage.clickOnStorytype();
-		templatepage.verifyStorytypeOptions();
+		TemplatePage.clickOnStorytype();
+		TemplatePage.verifyStorytypeOptions();
 		
 	});
 
@@ -189,7 +189,7 @@ describe('Verify the functionality of BYLINE field', function() {
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
+		TemplatePage.verifySnapHomePage();
 		//base.navigateToURL(OR.url);
         //loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
@@ -204,17 +204,17 @@ describe('Verify the functionality of BYLINE field', function() {
 		
 
 	it('enter the Byline value',function() {
-		templatepage.enterHeadline();		 
-		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
-		templatepage.clickonByline();
-		templatepage.selectBylinefromAutopopulated();
-		templatepage.verifyBylinePresentWithinBox();
-		templatepage.clicksaveandCont();
-		templatepage.verifyBylinePreview();
-		templatepage.clickOnCrossSign();
-		templatepage.verifyBylineEmpty();
-		templatepage.clicksaveandCont();
-		templatepage.verifyBylinepreviewEmpty();
+		TemplatePage.enterHeadline();		 
+		TemplatePage.enterSlugName(TemplatePage.getName(10)+"template-2018");
+		TemplatePage.clickonByline();
+		TemplatePage.selectBylinefromAutopopulated();
+		TemplatePage.verifyBylinePresentWithinBox();
+		TemplatePage.clicksaveandCont();
+		TemplatePage.verifyBylinePreview();
+		TemplatePage.clickOnCrossSign();
+		TemplatePage.verifyBylineEmpty();
+		TemplatePage.clicksaveandCont();
+		TemplatePage.verifyBylinepreviewEmpty();
 		
 	});
 	
@@ -225,7 +225,7 @@ describe('should Verify the pop up message when user enters the already taken sl
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
+		TemplatePage.verifySnapHomePage();
 		//base.navigateToURL(OR.url);
 		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
@@ -240,10 +240,10 @@ describe('should Verify the pop up message when user enters the already taken sl
 		
 	
 	it('enter the Byline value',function() {
-		templatepage.enterHeadline();		 
-		templatepage.enteralreadytakenSlugName();
-		templatepage.clicksaveandCont();
-		templatepage.alredyTakenPopup();
+		TemplatePage.enterHeadline();		 
+		TemplatePage.enteralreadytakenSlugName();
+		TemplatePage.clicksaveandCont();
+		TemplatePage.alredyTakenPopup();
 		browser.refresh();
 		browser.switchTo().alert().accept();
 		 
@@ -260,7 +260,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
+		TemplatePage.verifySnapHomePage();
 		//base.navigateToURL(OR.url);
 		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
@@ -274,17 +274,17 @@ describe('Verify that user is able to add multiple byliness', function() {
 	});
 	
 	it('enter the Byline value',function() {
-		templatepage.enterHeadline();		 
-		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
-		templatepage.clickonByline();
-		templatepage.selectBylinefromAutopopulated();
-		templatepage.clickonByline1();
-		templatepage.selectBylinefromAutopopulated1();
-		//templatepage.clickonByline1();
-		//templatepage.selectBylinefromAutopopulated2();
-		templatepage.verifyBylinePreview1();
-		templatepage.clicksaveandCont();
-		templatepage.verifypopup();
+		TemplatePage.enterHeadline();		 
+		TemplatePage.enterSlugName(TemplatePage.getName(10)+"template-2018");
+		TemplatePage.clickonByline();
+		TemplatePage.selectBylinefromAutopopulated();
+		TemplatePage.clickonByline1();
+		TemplatePage.selectBylinefromAutopopulated1();
+		//TemplatePage.clickonByline1();
+		//TemplatePage.selectBylinefromAutopopulated2();
+		TemplatePage.verifyBylinePreview1();
+		TemplatePage.clicksaveandCont();
+		TemplatePage.verifypopup();
 		
 	
 	});
@@ -298,7 +298,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 			browser.ignoreSynchronization = true;
 			//base.navigateToURL(OR.url);
 			//loginpage.enterDetails();
-			templatepage.verifySnapHomePage();
+			TemplatePage.verifySnapHomePage();
 			//loginpage.enterSlackDetails();
 			//loginpage.enterOrganizationDetails();
 		});
@@ -310,24 +310,24 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 		it('Verify that user is able see autofiled fields', function() {
-			templatepage.verifyHeadline();		 
-			templatepage.verifySlug();
-			templatepage.verifyStory();
-			templatepage.verifyBasicbuild();
-			templatepage.verifycomments();
-			templatepage.verifysaveReminder();
+			TemplatePage.verifyHeadline();		 
+			TemplatePage.verifySlug();
+			TemplatePage.verifyStory();
+			TemplatePage.verifyBasicbuild();
+			TemplatePage.verifycomments();
+			TemplatePage.verifysaveReminder();
 			 	
 		});
 		
 	
 });
 	
-	/*describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story ', function() {
+	describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story ', function() {
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
 			browser.ignoreSynchronization = true;
-			//templatepage.verifySnapHomePage();
+			//TemplatePage.verifySnapHomePage();
 			base.navigateToURL(OR.url);
 			loginpage.enterDetails();
 			//loginpage.enterSlackDetails();
@@ -340,28 +340,28 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 		it('verify BasicBuild and ShowAD Rail options',function() {
-			templatepage.verifyStory();		 
-			templatepage.verifyBasicbuildIsPresent();
-			templatepage.clickOnBasicbuildIsVerifyOptions();
-			templatepage.verifyShowADRailIsNotPresent();
-			templatepage.verifytheWidgets1();
-			templatepage.selectHtmlStory();
-			templatepage.verifyBasicbuildIsNotPresent();
-			templatepage.verifyShowADRailIsPresent();
-			templatepage.verifytheWidgets2();
+			TemplatePage.verifyStory();		 
+			TemplatePage.verifyBasicbuildIsPresent();
+			TemplatePage.clickOnBasicbuildIsVerifyOptions();
+			TemplatePage.verifyShowADRailIsNotPresent();
+			TemplatePage.verifytheWidgets1();
+			TemplatePage.selectHtmlStory();
+			TemplatePage.verifyBasicbuildIsNotPresent();
+			TemplatePage.verifyShowADRailIsPresent();
+			TemplatePage.verifytheWidgets2();
 			browser.refresh();
 			browser.switchTo().alert().accept();
 			
 		
 		});
-	});*/
+	});
 	
 	describe('Verify that section field is not present on template creation page.',function(){
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
 			browser.ignoreSynchronization = true;
-			templatepage.verifySnapHomePage();
+			TemplatePage.verifySnapHomePage();
 			//base.navigateToURL(OR.url);
 			//loginpage.enterDetails();
 			//loginpage.enterSlackDetails();
@@ -374,8 +374,8 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 
 		it('Verify if section is not displayed and collection is displayed in template edit page', function() {
-			templatepage.verifySectionNotDisp();
-			templatepage.verifyCollection();
+			TemplatePage.verifySectionNotDisp();
+			TemplatePage.verifyCollection();
 			//browser.switchTo().alert().accept();
             //browser.driver.sleep(3000);
 			
@@ -383,4 +383,4 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
-});
+});*/

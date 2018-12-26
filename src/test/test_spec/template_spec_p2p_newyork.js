@@ -11,8 +11,8 @@ describe('Verify that user is able to create a new template', function() {
 		browser.ignoreSynchronization = true;
 		base.navigateToURL(OR.url);
 		loginpage.enterDetails();
-        loginpage.enterSlackDetails();
-		loginpage.enterOrganizationDetails();
+        //loginpage.enterSlackDetails();
+		//loginpage.enterOrganizationDetails();
 	});
 	
 	it('should click on new template',function() {

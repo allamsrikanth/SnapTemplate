@@ -1,4 +1,6 @@
-var OR = require('../json/OR_new_york.json');
+//var OR = require('../json/OR_new_york.json');
+var OR = require('../json/OR_los_angeles.json');
+//var OR = require('../json/OR_chicago.json');
 var baseObject = require('../pages/BasePage.js');
 require('../utilities/customlocators.js');
 require('../utilities/select-wrapper.js');
@@ -143,24 +145,17 @@ var HomePage=function () {
         browser.driver.sleep(3000);
     };
 this.searchTemplate = function(){
-		
-		element(by.id("dashboard-search-input")).sendKeys("verifying sections template");
-		element(by.xpath("//button[contains(text(),'Search')]")).click();
-		browser.driver.sleep(3000);
-		//var dsp = element(by.xpath("//div/h3[text()='New Template123']")).isDisplayed();
-		//expect(dsp).toBe(true);	
-
-		};
-		this.searchTemplate25 = function(){
-			
-			element(by.id("dashboard-search-input")).sendKeys("Verify P2P Mode template");
-			element(by.xpath("//button[contains(text(),'Search')]")).click();
-			browser.driver.sleep(6000);
-			//var dsp = element(by.xpath("//div/h3[text()='New Template123']")).isDisplayed();
-			//expect(dsp).toBe(true);	
-
-			};
-    this.verifyNewStoryCreationPage = function(){
+	 element(by.id(OR.locators.TemplatePage.search_updatedtemplate)).sendKeys("verifying sections template");
+	 element(by.xpath(OR.locators.TemplatePage.click_search)).click();
+	 browser.driver.sleep(3000);
+	};
+this.searchTemplatee = function(){
+	 element(by.id("dashboard-search-input")).sendKeys("Verify P2P Mode template");
+	 element(by.xpath("//button[contains(text(),'Search')]")).click();
+	 browser.driver.sleep(6000);
+				
+   };
+ this.verifyNewStoryCreationPage = function(){
         element(by.css(OR.locators.LogoutPage.searchbar)).sendKeys(OR.locators.data.searchtemplate);
         element(by.css(OR.locators.LogoutPage.searchicon)).click();
         browser.driver.sleep(2000);

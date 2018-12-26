@@ -98,7 +98,7 @@ describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and 
 		
 		});
 	});
-/*describe('Verify that user is able to save the template without adding section', function() {
+describe('Verify that user is able to save the template without adding section', function() {
 	
 
 	it('Launch and login  Tribune Application', function() {
@@ -261,7 +261,7 @@ describe('Verify that deleting primary section, the top remaining section become
 	
 	});
 
-});*/
+});
 /*describe('Verify that user is able to add multiple sections to the template and make any section as a primary section', function() {
 	
 
@@ -297,7 +297,7 @@ describe('Verify that deleting primary section, the top remaining section become
 	});
 
 });*/
-/*describe('Verify that section field is blank when user opens the P2P mode template in ARC mode', function() {
+describe('Verify that section field is blank when user opens the P2P mode template in ARC mode', function() {
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
@@ -311,7 +311,7 @@ describe('Verify that deleting primary section, the top remaining section become
 	
 	it('should  search  template',function() {
 		  browser.driver.sleep(6000);
-		  homepage.searchTemplate25();
+		  homepage.searchTemplatee();
 	});
 	
 	it('should save the template without adding section', function() {
@@ -338,7 +338,8 @@ describe('Verify COMMENT dropdown options', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
 		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -357,7 +358,7 @@ describe('Verify COMMENT dropdown options', function() {
 	});
 
 });
-describe('Verify that user is able to comment on the story by selecting Show option in Comment dropdown', function() {
+/*describe('Verify that user is able to comment on the story by selecting Show option in Comment dropdown', function() {
 	
 
 	it('Launch and login  Tribune Application', function() {
@@ -395,12 +396,14 @@ describe('Verify that user is able to comment on the story by selecting Show opt
 		templatepage.clicksaveandCont();	
 		templatepage.clickOnSaveWithoutDeadline();		 
 		templatepage.clickOnArc();
+		browser.refresh();
+		browser.switchTo().alert().accept();
 	
 	
 	
 	});
 
-});
+});*/
 describe('Verify the functionality of SAVE REMINDER dropdown list', function() {
 	
 	

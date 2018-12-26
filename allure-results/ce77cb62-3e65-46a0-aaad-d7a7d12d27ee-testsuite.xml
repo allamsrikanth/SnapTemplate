@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1545303345698' stop='1545303392115'>
+    <name>Verify that user is able to create a new template</name>
+    <title>Verify that user is able to create a new template</title>
+    <test-cases>
+        <test-case start='1545303345698' status='passed' stop='1545303356795'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='cc0214ef-e0ea-4bf9-ad1f-f667caddf219-attachment.png' type='image/png' size='402014'/>
+            </attachments>
+        </test-case>
+        <test-case start='1545303356795' status='passed' stop='1545303363811'>
+            <name>should click on new template</name>
+            <title>should click on new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='8781b4f7-bcfb-42a6-b55d-794d8adc3dfc-attachment.png' type='image/png' size='86860'/>
+            </attachments>
+        </test-case>
+        <test-case start='1545303363811' status='passed' stop='1545303392114'>
+            <name>Verify that user is able to create a new template</name>
+            <title>Verify that user is able to create a new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='d85caf44-eb4b-4241-8354-c7df528dfcb4-attachment.png' type='image/png' size='85597'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

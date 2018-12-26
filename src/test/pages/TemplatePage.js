@@ -1,4 +1,6 @@
-var OR = require('../json/OR_new_york.json');
+//var OR = require('../json/OR_new_york.json');
+var OR = require('../json/OR_los_angeles.json');
+//var OR = require('../json/OR_chicago.json');
 var baseObject = require('../pages/BasePage.js');
 
 var TemplatePage=function () {
@@ -28,7 +30,8 @@ var TemplatePage=function () {
 	this.enterHeadline = function(){
 		browser.driver.sleep(4000);		
 		element(by.xpath(OR.locators.TemplatePage.headline)).clear();
-		element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("snap-Template_test-auto-admin-ct-xebia");
+		//element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("snap-Template_test-auto-admin-ct-xebia");
+		element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys(OR.locators.data.headlinee);
 		browser.driver.sleep(4000);
 		return this;
 	};
@@ -45,9 +48,10 @@ var TemplatePage=function () {
 		return this;	
 	};
 	this.enterStorySlug = function(){
-		 browser.driver.sleep(6000);
+		 browser.driver.sleep(2000);
 		 element(by.xpath(OR.locators.TemplatePage.slugname)).clear();
-		 element(by.xpath(OR.locators.TemplatePage.slugname)).sendKeys("ny-show-commelxhhbbnntg-story-20180622");
+		 element(by.xpath(OR.locators.TemplatePage.slugname)).sendKeys("ny-showw-commelxhhbbnntg-story-20180622");
+		 browser.driver.sleep(6000);
 		 return this;	
 	};
 	this.enterHeadline32= function(){
@@ -67,6 +71,7 @@ var TemplatePage=function () {
 		 return this;
 	};
 	this.verifyErrorPopup= function(){
+		 browser.driver.sleep(1000);
 		 expect(element(by.xpath(OR.locators.TemplatePage.headline_error)).isDisplayed()).toBe(true);
 		 
 	     expect(element(by.xpath(OR.locators.TemplatePage.ok_ispresent)).isDisplayed()).toBe(true);
@@ -75,11 +80,11 @@ var TemplatePage=function () {
 	};
 	this.clickOnOk = function(){
 		 element(by.xpath(OR.locators.TemplatePage.clickon_ok)).click();
-		 browser.driver.sleep(3000);
+		 browser.driver.sleep(2000);
 		 expect(element(by.xpath(OR.locators.TemplatePage.story_notcreate)).isPresent()).toBeFalsy();
 		 expect(element(by.xpath(OR.locators.TemplatePage.please_enterheadline)).isPresent()).toBeFalsy();
 		 expect(element(by.xpath(OR.locators.TemplatePage.template_editpage)).isDisplayed()).toBe(true);
-		 browser.driver.sleep(3000);
+		 browser.driver.sleep(2000);
 		 return this;
 	};
 	this.verifyHeadlinePopup = function(){
@@ -103,9 +108,9 @@ var TemplatePage=function () {
 		  browser.driver.sleep(2000);
 		  return this;
 	};
-	this.enteralreadytakenSlugName = function(){
+	this.enterAlreadyTakenSlugName = function(){
 		 element(by.xpath(OR.locators.TemplatePage.slugname)).clear();
-		 element(by.xpath(OR.locators.TemplatePage.slugname)).sendKeys("SlugTemplate09876543");
+		 element(by.xpath(OR.locators.TemplatePage.slugname)).sendKeys(OR.locators.data.taken_slug);
 		 browser.driver.sleep(6000);
 		 return this;
 	};
@@ -149,11 +154,7 @@ var TemplatePage=function () {
 		 //browser.driver.sleep(8000);
 		 return this;
 	};
-	this.clicksaveandCont25 = function(){
-		 element(by.xpath("//button[@id='save']")).click();
-		 //browser.driver.sleep(10000);
-		 return this;
-	};
+	
 	this.clickShowAdvancedSettings = function(){
 		 element(by.xpath(OR.locators.TemplatePage.click_showadvancedsettings)).click();
 		 //browser.driver.sleep(10000);
@@ -188,36 +189,20 @@ var TemplatePage=function () {
 		 //browser.driver.sleep(2000);
 		 var alert = element(by.xpath(OR.locators.TemplatePage.verify_slugpopuperror)).isDisplayed()
 		 expect(alert).toBe(true);
-		 //expect(element(by.xpath("//p[text()='Template slug must include the word \"template\"']")).isDisplayed()).toBe(true);
-		 element(by.xpath("//button/span[text()='OK']")).click();
+		 element(by.xpath(OR.locators.TemplatePage.click_ok)).click();
 		 return this;
 	};
-	this.enterSlug = function(){
-		 element(by.xpath("//input[@name='slug']")).clear();
-		 element(by.xpath("//input[@name='slug']")).sendKeys("ny-snap-test-auto-admin-ct-xebia-template");
-		 browser.driver.sleep(10000);
-		 return this;
-	};
-	this.enterMandatoryFields = function(){
-	     element.all(by.xpath('option[.="Full Width"]')).click();
-	     element.all(by.xpath('option[.="SendtoNews"]')).click();
-         return this;
-	};
-    this.enterTemplateName123=function(){
-	     element(by.id("dashboard-search-input")).sendKeys("New Template2");
-	     element(by.xpath("//button[contains(text(),'Search')]")).click();
-	     return this;
-    };
+    
     this.editTemplate=function(){
 	     element(by.xpath(OR.locators.TemplatePage.click_edittepmlate)).click();
-	     element(by.xpath("//input[@name='headline']")).clear();
-	     element(by.xpath("//input[@name='headline']")).sendKeys("New Template123");
+	     element(by.xpath(OR.locators.TemplatePage.headline)).clear();
+	     element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys(OR.locators.data.upadte_headline);
 	     return this;
     };
     this.updateDetails=function(){
     	browser.driver.sleep(6000);
 	     element(by.xpath(OR.locators.TemplatePage.headline)).clear();
-	     element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("New Template123");
+	     element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys(OR.locators.data.upadte_headline);
 	     return this;
     };
     this.clickOnSection=function()	{
@@ -271,9 +256,12 @@ var TemplatePage=function () {
 		 //browser.driver.sleep(6000);
 	     
   };
-    this.verifySectionPreview=function()	{	
-    	expect(element(by.xpath("//span[@class='tag tag-solid tag-last']")).isDisplayed()).toBe(true);
+    this.verifySectionPreview=function(name)	{	
+    	expect(element(by.xpath("//span[@class='tag tag-solid tag-last']")).getext()).toEqual(name);
    };
+   //this.verifySectionPreview=function(name)	{	
+   	//expect(element(by.xpath("//span[@class='tag tag-solid tag-last']")).getext()).toEqual(name);
+  //};
     this.AddNewSection=function(){
 	     element(by.xpath(OR.locators.TemplatePage.click_addnewsection)).click();
 	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
@@ -354,8 +342,8 @@ var TemplatePage=function () {
 		 element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
 		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
 		 expect(eles.count()).toBeGreaterThan(0);
-		 browser.driver.sleep(10000);
-		 element(by.xpath("//div[text()='/entertainment/tv']")).click();
+		 browser.driver.sleep(4000);
+		 element(by.xpath("//div[text()='/new-york/brooklyn']")).click();
 		 browser.driver.sleep(6000);
 					
 					return this;
@@ -368,7 +356,7 @@ var TemplatePage=function () {
 				return this;
 				};
 	this.clickOnSection32=function()	{	
-		browser.driver.sleep(6000);	
+		browser.driver.sleep(8000);	
 		element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
 		element(by.xpath("//button/span[text()='Add new section']")).click();
 		browser.driver.sleep(6000);			
@@ -588,17 +576,18 @@ var TemplatePage=function () {
 	this.verifyHeadline=function(){
 		browser.driver.sleep(6000);	
 	    expect(element(by.xpath(OR.locators.TemplatePage.verify_defaultvalueheadline)).getAttribute('value')).toEqual('snap-test-auto-normal-ct-xebia Joshi Template');
-	 	return this;	
+	 	return this;                                                                                                    	
 	};
+	
 	
 	this.verifySlug = function(){
 		 browser.driver.sleep(6000);
-		 expect(element(by.xpath(OR.locators.TemplatePage.slugname)).getAttribute('value')).toEqual('ny-snap-test-auto-normal-ct-xebia-template-20181218');	 
+		 expect(element(by.xpath(OR.locators.TemplatePage.slugname)).getAttribute('value')).toEqual(OR.locators.data.slug_value);	 
 	 	 return this;
 	};
 	this.verifyStory=function(){
 		 browser.driver.sleep(4000);
-		 expect(element(by.id(OR.locators.TemplatePage.verify_defaultstoryvalue)).$('option:checked').getText()).toEqual('Simple Story');
+		 expect(element(by.id(OR.locators.TemplatePage.verify_defaultstoryvalue)).$('option:checked').getText()).toEqual(OR.locators.data.story_type);
 		 return this;
 	};
 	this.verifyStoryArc=function(){
@@ -623,12 +612,12 @@ var TemplatePage=function () {
      	 browser.driver.sleep(4000);
      	 element(by.xpath(OR.locators.TemplatePage.click_basicbuild)).click();
    	     browser.driver.sleep(6000);
-   	     expect(element(by.id(OR.locators.TemplatePage.verify_basicbuildoptions)).all(by.tagName('option')).getText()).toEqual(['No section','Breaking Graphic','SendtoNews']);
+   	     expect(element(by.id(OR.locators.TemplatePage.verify_basicbuildoptions)).all(by.tagName('option')).getText()).toEqual(['No section','Test','rishikesh']);
    		 return this;
 	};
 	this.verifyShowADRailIsNotPresent=function(){	
 	     browser.driver.sleep(6000);
-	     expect(element(by.xpath(OR.locators.TemplatePage.verify_showADrail)).isPresent()).toBeFalsy();
+	     expect(element(by.xpath(OR.locators.TemplatePage.verify_showADrail)).isDisplayed()).toBe(false);
          return this;
 	     //isPresent()).toBeFalsy();
 	};
@@ -678,7 +667,7 @@ var TemplatePage=function () {
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_facebook)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_infobox)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_break)).isDisplayed()).toBe(true);
-	   expect(element(by.xpath(OR.locators.verify_adholder)).isDisplayed()).toBe(true);
+	   //expect(element(by.xpath(OR.locators.verify_adholder)).isDisplayed()).toBe(true);
 	   //browser.driver.sleep(6000);
        return this;
     };
@@ -744,7 +733,7 @@ var TemplatePage=function () {
     	 return this;
     };
     this.alredyTakenPopup=function(){
-    	 browser.driver.sleep(6000);
+    	 //browser.driver.sleep(6000);
  		 var alert = element(by.xpath(OR.locators.TemplatePage.verify_alreadytakenslug)).isDisplayed()
  		 expect(alert).toBe(true);
  		 browser.driver.sleep(6000);
@@ -752,18 +741,18 @@ var TemplatePage=function () {
     };
     this.clickonByline=function(){
          element(by.xpath(OR.locators.TemplatePage.click_byline)).clear();
-         element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys("jim");
+         element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys(OR.locators.data.byline_name);
 	     return this;
      };
     this.clickonByline1=function(){
-         element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys("jim");
+         element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys(OR.locators.data.byline_name);
     	 return this;
         };
     this.selectBylinefromAutopopulated=function(){
     	 browser.driver.sleep(6000);
     	 var eles = element.all(by.xpath(OR.locators.TemplatePage.select_byline));
-		 expect(eles.get(0).getText()).toEqual("Jim Carrey");
-		 expect(eles.get(1).getText()).toEqual("Jim Rich");	 
+		 expect(eles.get(0).getText()).toEqual(OR.locators.data.byline_value1);
+		 expect(eles.get(1).getText()).toEqual(OR.locators.data.byline_value2);	 
 		 eles.get(0).click();
 		 return this;
     };
@@ -790,7 +779,7 @@ var TemplatePage=function () {
     	 return this;
     };
     this.verifyBylinePreview1=function(){
-    	 browser.driver.sleep(2000);
+    	 browser.driver.sleep(4000);
     	 expect(element(by.xpath(OR.locators.TemplatePage.verify_byispresentinpreview)).isDisplayed()).toBe(true);
     	 return this;
     };
@@ -811,7 +800,7 @@ var TemplatePage=function () {
     
     this.verifyBylineEmpty=function(){
     	 expect(element(by.xpath(OR.locators.TemplatePage.verify_bylineisempty)).getText()).toEqual("");
-    	 expect(element(by.xpath("//span[text()='Jim Carrey']")).isPresent()).toBeFalsy();
+    	 //expect(element(by.xpath("//span[text()='Jim Carrey']")).isPresent()).toBeFalsy();
     		return this;    	
     }; 
     this.verifyBylinepreviewEmpty=function(){
