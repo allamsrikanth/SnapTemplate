@@ -112,7 +112,7 @@ describe('Verify the functionality of HEADLINE field when user enters morethan 2
 	
 
 	it('Verify that user is able see headline preview ', function() {
-		TemplatePage.enterHeadline200();		 
+		TemplatePage.enterHeadlinee();		 
 		TemplatePage.verifyHeadlinePopup();
 		browser.refresh();
 		browser.switchTo().alert().accept();
@@ -381,4 +381,4 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
-});
+});+`

@@ -98,7 +98,7 @@
        "please_enterheadline":"//p[contains(text(),'Please enter a Headline')]",
        "template_editpage":"//label[text()='Template']",
        "clickstorytypep2p":"//select[@id='meta-story-type']",
-       "click_byline":"(//input[@class='tag-search ui-autocomplete-input'])[1]",
+       "click_byline":"//input[@class='tag-search ui-autocomplete-input']",
        "select_byline":"//li[@class='ui-menu-item']",
        "verify_bylineinbox":"(//ul[@class='tag-list collection-list selectable'])[1]",
        "verify_bylinepreview":"//span[text()='Jim Carrey']",

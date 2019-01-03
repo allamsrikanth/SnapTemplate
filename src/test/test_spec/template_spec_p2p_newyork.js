@@ -5,42 +5,45 @@ var homepage = require('../pages/HomePage.js');
 var templatepage = require('../pages/TemplatePage.js');
 
 describe('Verify that user is able to create a new template', function() {
-	
-	it('Launch and login  Tribune Application', function() {
-		browser.waitForAngularEnabled(false);
-		browser.ignoreSynchronization = true;
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
-        //loginpage.enterSlackDetails();
+        beforeEach(function(){
+	    browser.waitForAngularEnabled(false);
+	    browser.ignoreSynchronization = true;
+	   });
+   it('It should display the message as Your story has been successfully saved', function() {
+        base.navigateToURL(OR.url);
+		browser.driver.sleep(4000);
+	    loginpage.enterDetails();
+		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
-	});
-	
-	it('should click on new template',function() {
-		  browser.driver.sleep(2000);
-		  homepage.createNewTemplate();
-	});
-	
-	it('Verify that user is able to create a new template', function() {
-		//templatepage.verifySnapHomePage();
+		homepage.createNewTemplate();
+		browser.driver.sleep(2000);
 		templatepage.enterHeadline();
 		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();
-		templatepage.headlinePreview();
-		
-		
+	
 	});
+	
+	it('User should remain on newly created templete',function() {
+		browser.driver.sleep(2000);
+		  templatepage.newlyCreatedTemplated();
+	});
+	
+	it('It should show the headline on the preview screen', function() {
+		browser.driver.sleep(2000);
+		templatepage.headlinePreview();
+		});
 
 });
 	
-describe('Verify the functionality of Save & Continue button when slug field does not contain word template', function() {
+/*describe('Verify the functionality of Save & Continue button when slug field does not contain word template', function() {
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
-		//base.navigateToURL(OR.url);
-		//loginpage.enterDetails();
+		//templatepage.verifySnapHomePage();
+		base.navigateToURL(OR.url);
+		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -93,7 +96,7 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 		
 	});
 
-});
+});*/
 /*describe('Verify the functionality of HEADLINE field when user enters morethan 200 characters', function() {
 
 	it('Launch and login  Tribune Application', function() {
@@ -114,7 +117,7 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	
 
 	it('Verify that user is able see headline preview ', function() {
-		templatepage.enterHeadline200();		 
+		templatepage.enterHeadlinee();		 
 		templatepage.verifyHeadlinePopup();
 		browser.refresh();
 		browser.switchTo().alert().accept();
@@ -123,7 +126,7 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	});
 
 });*/
-describe('Verify the functionality of Save & Continue button when mandatory fields are blank', function() {
+/*describe('Verify the functionality of Save & Continue button when mandatory fields are blank', function() {
 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
@@ -189,9 +192,9 @@ describe('Verify the functionality of BYLINE field', function() {
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
-		//base.navigateToURL(OR.url);
-        //loginpage.enterDetails();
+		//templatepage.verifySnapHomePage();
+		base.navigateToURL(OR.url);
+        loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -206,20 +209,31 @@ describe('Verify the functionality of BYLINE field', function() {
 	it('enter the Byline value',function() {
 		templatepage.enterHeadline();		 
 		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
-		templatepage.clickonByline();
-		templatepage.selectBylinefromAutopopulated();
-		templatepage.verifyBylinePresentWithinBox();
-		templatepage.clicksaveandCont();
-		templatepage.verifyBylinePreview();
-		templatepage.clickOnCrossSign();
-		templatepage.verifyBylineEmpty();
-		templatepage.clicksaveandCont();
-		templatepage.verifyBylinepreviewEmpty();
+		TemplatePage.clickonByline();
+		TemplatePage.selectBylinefromAutopopulated1();
+		TemplatePage.verifyBylinePresentWithinBox();
+		TemplatePage.clicksaveandCont();
+		TemplatePage.verifyBylinePreview();
+		TemplatePage.clickOnCrossSign();
+		TemplatePage.verifyBylineEmpty();
+		TemplatePage.clicksaveandCont();
+		TemplatePage.verifyBylinepreviewEmpty();
+		
+		
+		//templatepage.clickonByline();
+		//templatepage.selectBylinefromAutopopulated();
+		//templatepage.verifyBylinePresentWithinBox();
+		//templatepage.clicksaveandCont();
+		//templatepage.verifyBylinePreview();
+		//templatepage.clickOnCrossSign();
+		//templatepage.verifyBylineEmpty();
+		//templatepage.clicksaveandCont();
+		//templatepage.verifyBylinepreviewEmpty();
 		
 	});
 	
-});
-describe('should Verify the pop up message when user enters the already taken slug', function() {
+});*/
+/*describe('should Verify the pop up message when user enters the already taken slug', function() {
 	
 	
 	it('Launch and login  Tribune Application', function() {
@@ -320,7 +334,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
-});
+});*/
 	
 	/*describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story ', function() {
 		
@@ -354,7 +368,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 			
 		
 		});
-	});*/
+	});
 	
 	describe('Verify that section field is not present on template creation page.',function(){
 		
@@ -383,4 +397,4 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
-});
+});*/

@@ -1,5 +1,5 @@
-//var OR = require('../json/OR_new_york.json');
-var OR = require('../json/OR_los_angeles.json');
+var OR = require('../json/OR_new_york.json');
+//var OR = require('../json/OR_los_angeles.json');
 //var OR = require('../json/OR_chicago.json');
 var baseObject = require('../pages/BasePage.js');
 require('../utilities/customlocators.js');

@@ -1,6 +1,6 @@
-//var OR = require('../json/OR_new_york.json');
+var OR = require('../json/OR_new_york.json');
 //var OR = require('../json/OR_los_angeles.json');
-var OR = require('../json/OR_chicago.json');
+//var OR = require('../json/OR_chicago.json');
 require('../utilities/customlocators.js');
 require('../utilities/select-wrapper.js');
 var LoginPage=function () {

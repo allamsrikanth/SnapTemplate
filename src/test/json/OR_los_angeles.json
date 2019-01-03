@@ -38,8 +38,27 @@
       "click_saveandcont":"//button[@id='save']",
       "click_saveandcont":"//button[@id='save']",
        "verify_templatecreated":"//p[text()='Your story has been successfully saved!']",
-       "check_headlinepreiview":"//div[@id='preview']"
-      
+       "check_headlinepreiview":"//div[@id='preview']",
+       "click_homepage":"//i[@id='home']",
+       "verify_snaphomepage":"//h2[text()='Welcome to SNAP']",
+       "verify_slugpopuperror":"//p[contains(text(),'Template slug must include the word')]",
+       "click_ok":"//button/span[text()='OK']",
+       "verify_headline200popup":"//p[contains(text(),'Field limit reached (200 characters)!')]",
+       "headline_error":"//p[contains(text(),'Please enter a Headline')]",
+       "ok_ispresent":"//button/span[text()='OK']",
+       "clickon_ok":"//button/span[text()='OK']",
+       "story_notcreate":"//p[text()='Your story has been successfully saved!']",
+       "please_enterheadline":"//p[contains(text(),'Please enter a Headline')]",
+       "template_editpage":"//label[text()='Template']",
+       "clickstorytypep2p":"//select[@id='meta-story-type']",
+       "vrify_storyoptionsp2p":"meta-story-type",
+       "click_byline":"(//input[@class='tag-search ui-autocomplete-input'])[1]",
+       "select_byline":"//li[@class='ui-menu-item']",
+       "verify_bylineinbox":"(//ul[@class='tag-list collection-list selectable'])[1]",
+       "verify_bylinepreview":"//span[text()='Jim Carrey']",
+       "click_crossign":"//i[@class='fa fa-times remove']",
+       "verify_bylineisempty":"(//input[@class='tag-search ui-autocomplete-input'])[1]"
+       
       
     },
     "StoryPage":{
@@ -51,7 +70,7 @@
     "data": {
       "username": "snap-test-auto-normal-ct-xebia",
       "admin_username":"snap-test-auto-admin-ct-xebia",
-      "password": "XeBit@20",
+      "password": "Bit@20Xe",
       "workspace_name": "tribpub",
       "org_username": "svc-snap-test-auto",
       "org_password": "XeBit@20",
@@ -95,7 +114,9 @@
       "slug_for_local_storage_la":"la-lead_art_test_with_local_storage_image_",
       "search_section_keyword_la":"/l",
       "slug_for_p2p_image_la":"la-lead_art_test_with_p2p_photograph_",
-      "headlinee":"snap-Template_test-auto-admin-ct-xebia"
+      "headlinee":"snap-Template_test-auto-admin-ct-xebia",
+      "byline_name":"jim"
+     
     }
   }
 }

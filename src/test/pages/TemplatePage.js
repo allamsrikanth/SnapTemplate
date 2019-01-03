@@ -1,5 +1,5 @@
-//var OR = require('../json/OR_new_york.json');
-var OR = require('../json/OR_los_angeles.json');
+var OR = require('../json/OR_new_york.json');
+//var OR = require('../json/OR_los_angeles.json');
 //var OR = require('../json/OR_chicago.json');
 var baseObject = require('../pages/BasePage.js');
 
@@ -30,12 +30,11 @@ var TemplatePage=function () {
 	this.enterHeadline = function(){
 		browser.driver.sleep(4000);		
 		element(by.xpath(OR.locators.TemplatePage.headline)).clear();
-		//element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("snap-Template_test-auto-admin-ct-xebia");
 		element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys(OR.locators.data.headlinee);
 		browser.driver.sleep(4000);
 		return this;
 	};
-	this.enterHeadline200 = function(){
+	this.enterHeadlinee = function(){
 		browser.driver.sleep(3000);
 		element(by.xpath(OR.locators.TemplatePage.headline)).clear();
 	    element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("snap automationo snap automation snap automation snap autoaamation snap automaaaaassaaaaaaaasaaaaaatissaaossaan aassaaaaautomation snap automation snap auotomation automation snapsnapp automation snap au");
@@ -54,12 +53,7 @@ var TemplatePage=function () {
 		 browser.driver.sleep(6000);
 		 return this;	
 	};
-	this.enterHeadline32= function(){
-		 browser.driver.sleep(6000);
-		 element(by.xpath("//input[@name='headline']")).clear();
-		 element(by.xpath("//input[@name='headline']")).sendKeys("Test tronc template");
-	     return this;	
-	};
+	
 	this.clearHeadline = function(){
 		 element(by.xpath(OR.locators.TemplatePage.headline)).clear();
 		 browser.driver.sleep(6000);
@@ -117,8 +111,6 @@ var TemplatePage=function () {
     this.verifySectionErrorpopup = function(){
 		browser.driver.sleep(1000);
 		expect(element(by.id(OR.locators.TemplatePage.verify_sectionerror)).isDisplayed()).toBe(true);
-		//expect(element(by.xpath("//div[@id='react-modal-message']")).isDisplayed()).toBe(true);
-		//expect(element(by.xpath("//div[text()='Cannot assign a story to the same section multiple times']")).isDisplayed()).toBe(true);
 		return this;
 	};
 	this.getSlugName = function(){
@@ -210,6 +202,12 @@ var TemplatePage=function () {
     	element(by.xpath(OR.locators.TemplatePage.click_section)).click();
     	browser.driver.sleep(5000);
     };
+    this.newlyCreatedTemplated=function()	{
+    	browser.driver.sleep(3000);
+    	var temp = element(by.xpath("//label[@id='template-title']")).isDisplayed();
+    	expect(temp).toBe(true);
+    	browser.driver.sleep(5000);
+    };
     this.clearSectionField=function()	{
     	browser.driver.sleep(6000);
     	element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
@@ -230,17 +228,7 @@ var TemplatePage=function () {
 	     browser.driver.sleep(6000);
 	     
    };
-   this.selectSection21=function()	{
-   	//element(by.xpath("//button/span[text()='Add new section']")).click();
-	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-	     let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-	     expect(eles.count()).toBeGreaterThan(0); 
-	     browser.driver.sleep(10000);
-	     //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-	     element(by.xpath("//div[text()='/entertainment/tv']")).click();
-	     browser.driver.sleep(10000);
-	     
-  };
+  
    this.selectSectionAgain=function()	{
 	   element(by.xpath("//button/span[text()='Add new section']")).click();
 		 browser.driver.sleep(5000);
@@ -278,21 +266,7 @@ var TemplatePage=function () {
 	     //element(by.id("home")).click();
 	     return this;
 	};
-	this.clickOnSection17=function(){	
-	     element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-	     element(by.xpath("//button/span[text()='Add new section']")).click();
-	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-	     let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-	     expect(eles.count()).toBeGreaterThan(0); 
-	     browser.driver.sleep(10000);
-	     //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-	     element(by.xpath("//div[text()='/entertainment/tv']")).click();
-	     browser.driver.sleep(10000);
-	     //var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-	     //expect(isdsp).toBe(true);
-	     //element(by.id("home")).click();
-	     return this;
-	};
+	
 	this.clickOnSection18=function(){	
 	     element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
 		 element(by.xpath("//button/span[text()='Add new section']")).click();
@@ -308,34 +282,8 @@ var TemplatePage=function () {
 		 //element(by.id("home")).click();
 		 return this;
     };
-	this.addSection25=function()	{
-		browser.driver.sleep(6000);
-		 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-		 element(by.xpath("//button/span[text()='Add new section']")).click();
-		 element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-		 browser.driver.sleep(10000);
-		 //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-		 element(by.xpath("//div[text()='/entertainment/tv']")).click();
-		 browser.driver.sleep(6000);
-		 return this;
-	};
-	this.addSectiondummy=function()	{
-		browser.driver.sleep(6000);
-		 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-		 element(by.xpath("//button/span[text()='Add new section']")).click();
-		 element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-		 //let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-		 //expect(eles.count()).toBeGreaterThan(0);
-		 browser.driver.sleep(10000);
-		 //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-		 element(by.xpath("//div[text()='/entertainment/tv']")).click();
-		 //element(by.xpath("//input[@value='/entertainment/tv']")).click();
-		 browser.driver.sleep(6000);
-		 //var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-		 //expect(isdsp).toBe(true);
-		 //element(by.id("home")).click();
-		 return this;
-	};
+
+
 	this.addSection32=function()	{	
 		 //element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
  		 //element(by.xpath("//button/span[text()='Add new section']")).click();
@@ -348,13 +296,7 @@ var TemplatePage=function () {
 					
 					return this;
 			};
-	this.clickOnSection25=function()	{	
-				element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-				element(by.xpath("//button/span[text()='Add new section']")).click();
-				browser.driver.sleep(6000);
-				
-				return this;
-				};
+	
 	this.clickOnSection32=function()	{	
 		browser.driver.sleep(8000);	
 		element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
@@ -426,26 +368,7 @@ var TemplatePage=function () {
 			//element(by.id("home")).click();
 			return this;
 	};
-	this.clickOnSectionAgain21=function()	{	
-			 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-			 //element(by.xpath("//button/span[text()='Add new section']")).click();
-			  browser.driver.sleep(10000);
-			  element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-			  element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).clear();
-			  browser.driver.sleep(10000);
-			  //let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-			  //expect(eles.count()).toBeGreaterThan(0);
-			  //browser.driver.sleep(10000);
-			  //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-			   element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
-			    browser.driver.sleep(10000);
-				element(by.xpath("//div[text()='/new-york/brooklyn']")).click();
-				  browser.driver.sleep(10000);
-				//var isdsp = element(by.xpath("//span[contains(text(),'')]")).isDisplayed();
-				//expect(isdsp).toBe(true);
-				//element(by.id("home")).click();
-				return this;
-	};		
+	
     this.verifySnapHomePage = function(){
 	     browser.driver.sleep(8000);
 	     element(by.xpath(OR.locators.TemplatePage.click_homepage)).click();
@@ -507,24 +430,8 @@ var TemplatePage=function () {
 		 //expect(element(by.id('save_reminder')).all(by.tagName('option')).getText()).toEqual(['5 minutes','15 minutes','30 minutes','60 minutes','No reminder']);
 		 return this;
 	};
-	this.verifySectionField25 = function(){
-		element(by.xpath("//button/span[text()='Add new section']")).click();
-		 expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionispresent)).getAttribute("value")).toEqual("");
-		 ///element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getText().toEqual('');
-		 //var isdsp = element(by.xpath("//span[contains(text(),'sports/hockey/rangers')]")).isDisplayed();
-		 //expect(isdsp).toBe(true);
-		 browser.driver.sleep(10000);
-		 return this;
 
-	};
-	this.verifySectionFieldIsEmpty25 = function(){
-		 expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionfieldisempty)).getAttribute("value")).toEqual("");
-		 //expect(element(by.xpath("//div[text()='/entertainment/tv']")).isDisplayed()).toBe(false);
-		 //var isdsp = element(by.xpath("//span[contains(text(),'sports/hockey/rangers')]")).isDisplayed();
-		 //expect(isdsp).toBe(true);
-		 browser.driver.sleep(8000);
-		 return this;
-    };
+
 	this.verifySectionFieldIsEmpty = function(){
 		element(by.xpath("//button/span[text()='Add new section']")).click();
 	     expect(element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getAttribute("value")).toEqual("");
@@ -740,6 +647,7 @@ var TemplatePage=function () {
     	 return this;
     };
     this.clickonByline=function(){
+    	browser.driver.sleep(2000);
          element(by.xpath(OR.locators.TemplatePage.click_byline)).clear();
          element(by.xpath(OR.locators.TemplatePage.click_byline)).sendKeys(OR.locators.data.byline_name);
 	     return this;
