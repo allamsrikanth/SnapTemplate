@@ -4,7 +4,7 @@ var loginpage = require('../pages/LoginPage.js');
 var homepage = require('../pages/HomePage.js');
 var templatepage = require('../pages/TemplatePage.js');
 
-describe('Verify that user is able to create a new template', function() {
+/*describe('Verify that user is able to create a new template', function() {
         beforeEach(function(){
 	    browser.waitForAngularEnabled(false);
 	    browser.ignoreSynchronization = true;
@@ -36,7 +36,7 @@ describe('Verify that user is able to create a new template', function() {
 
 });
 	
-/*describe('Verify the functionality of Save & Continue button when slug field does not contain word template', function() {
+describe('Verify the functionality of Save & Continue button when slug field does not contain word template', function() {
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
@@ -59,9 +59,7 @@ describe('Verify that user is able to create a new template', function() {
 		templatepage.enterSlugName(templatepage.getName(10)+"-2018");
 		templatepage.clicksaveandCont();
 		templatepage.verifyslugpupup();
-		//templatepage.handlepopup();
-		
-		browser.refresh();
+        browser.refresh();
 		browser.switchTo().alert().accept();
 		
 	});
@@ -397,4 +395,98 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
+});
+
+
+describe('Verify that user is able to comment on the story by selecting Show option in Comment dropdown', function() {
+	     beforeEach(function(){
+	     browser.waitForAngularEnabled(false);
+	     browser.ignoreSynchronization = true;
+	   //templatepage.verifySnapHomePage();
+	   //loginpage.enterSlackDetails();
+	   //loginpage.enterOrganizationDetails();
+	});
+	
+it('On Clicking Create Story From the Template user should be navigated to story creation page and Comment dropdown should be set to Show by default', function() {
+	    base.navigateToURL(OR.url);
+	    browser.driver.sleep(4000);
+	    loginpage.enterDetails();
+		browser.driver.sleep(2000);
+		homepage.createNewTemplate();
+		browser.driver.sleep(2000);
+		templatepage.enterHeadline();		 
+		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
+		templatepage.clickOnComments();
+		//templatepage.selectComments("Show");
+		templatepage.clicksaveandCont();
+		templatepage.verifypopup();
+		templatepage.clickOnCreateStoryFromTemplate();		 
+		templatepage.verifyStoryCreationPagePresent();
+		templatepage.clickShowAdvancedSettings();
+	});
+it('On saving the story and opening it on  front end comment section should be present in the story',function() {
+		browser.driver.sleep(2000);
+		templatepage.enterStoryHeadline();
+		browser.driver.sleep(2000);
+		templatepage.enterStorySlug();
+		browser.driver.sleep(3000);
+		templatepage.EnterSeoDescription();
+		templatepage.SelectedPublished();
+		
+		templatepage.clicksaveandCont();	
+		templatepage.ClickOnWebsite();		 
+		//templatepage.clickOnArc();
+		//browser.refresh();
+		//browser.switchTo().alert().accept();
+		  
+	});
+	
 });*/
+   
+describe('Verify that user is able to comment on the story by selecting Hide option in Comment dropdown', function() {
+    beforeEach(function(){
+    browser.waitForAngularEnabled(false);
+    browser.ignoreSynchronization = true;
+  //templatepage.verifySnapHomePage();
+  //loginpage.enterSlackDetails();
+  //loginpage.enterOrganizationDetails();
+});
+
+it('On Clicking Create Story From the Template user should be navigated to story creation page and Comment dropdown should be set to Show by default', function() {
+   base.navigateToURL(OR.url);
+   browser.driver.sleep(4000);
+   loginpage.enterDetails();
+	browser.driver.sleep(2000);
+	homepage.createNewTemplate();
+	browser.driver.sleep(2000);
+	templatepage.enterHeadline();		 
+	templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
+	templatepage.clickOnComments();
+	templatepage.selectComments("Hide");
+	templatepage.clicksaveandCont();
+	templatepage.verifypopup();
+	templatepage.clickOnCreateStoryFromTemplate();		 
+	templatepage.verifyStoryCreationPagePresent();
+	templatepage.clickShowAdvancedSettings();
+	browser.driver.sleep(2000);
+	templatepage.clickOnComments();
+});
+it('On saving the story and opening it on  front end comment section should be present in the story',function() {
+	browser.driver.sleep(2000);
+	templatepage.enterStoryHeadline();
+	browser.driver.sleep(2000);
+	templatepage.enterStorySlug();
+	browser.driver.sleep(3000);
+	templatepage.EnterSeoDescription();
+	templatepage.SelectedPublished();
+	
+	templatepage.clicksaveandCont();	
+	templatepage.ClickOnWebsite();		 
+	//templatepage.clickOnArc();
+	//browser.refresh();
+	//browser.switchTo().alert().accept();
+	  
+});
+
+});
+   

@@ -148,9 +148,9 @@
           "click_viewrevisions":"//button[@id='view-revisions']",
           "click_view":"(//button[text()='View'])[1]",
           "click_ok":"//button/span[text()='OK']",
-          "upadte_headline":"New Template123",
-       
-        "verify_defaultaAdrailvalue":"//select[@name='show_rail']",
+          "upadte_headline":"New TemplateHeadline",
+          "newtemplate_edit":"//label[@id='template-title']",
+         "verify_defaultaAdrailvalue":"//select[@name='show_rail']",
         "verify_basicbuildispresent":"//div[@id='bake-embeds-box']",
         "verify_showADrail":"//div[@id='show_rail_box']",
          "click_basicbuild":"//select[@id='meta-baked-embeds']",

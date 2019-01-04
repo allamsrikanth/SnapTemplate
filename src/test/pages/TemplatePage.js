@@ -43,7 +43,7 @@ var TemplatePage=function () {
 	this.enterStoryHeadline = function(){
 		browser.driver.sleep(6000);
 		element(by.xpath(OR.locators.TemplatePage.headline)).clear();
-		element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("Show comment story");
+		element(by.xpath(OR.locators.TemplatePage.headline)).sendKeys("Hide comment ARC storyy");
 		return this;	
 	};
 	this.enterStorySlug = function(){
@@ -169,14 +169,7 @@ var TemplatePage=function () {
 		 browser.driver.sleep(5000);
 		 return this;
 	};
-	this.handlepopup = function(){
-		 //browser.driver.sleep(1000);
-		 var ptor = protractor.getWindowHandle()
-		 var alertDialog = ptor.switchTo().alert();
-		 alertDialog.accept();  
-		 //alertDialog.dismiss();
-		 return this;
-	};
+	
 	this.verifyslugpupup = function(){
 		 //browser.driver.sleep(2000);
 		 var alert = element(by.xpath(OR.locators.TemplatePage.verify_slugpopuperror)).isDisplayed()
@@ -198,15 +191,18 @@ var TemplatePage=function () {
 	     return this;
     };
     this.clickOnSection=function()	{
-    	browser.driver.sleep(3000);
     	element(by.xpath(OR.locators.TemplatePage.click_section)).click();
+    	browser.driver.sleep(5000);
+    };
+    this.EnterSeoDescription=function()	{
+    	element(by.xpath("//textarea[@name='description']")).sendKeys("test");
     	browser.driver.sleep(5000);
     };
     this.newlyCreatedTemplated=function()	{
     	browser.driver.sleep(3000);
-    	var temp = element(by.xpath("//label[@id='template-title']")).isDisplayed();
+    	var temp = element(by.xpath(OR.locators.TemplatePage.newtemplate_edit)).isDisplayed();
     	expect(temp).toBe(true);
-    	browser.driver.sleep(5000);
+    	
     };
     this.clearSectionField=function()	{
     	browser.driver.sleep(6000);
@@ -223,7 +219,7 @@ var TemplatePage=function () {
 	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
 	     let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
 	     expect(eles.count()).toBeGreaterThan(0);
-	     browser.driver.sleep(6000);
+	     browser.driver.sleep(8000);
 	     element(by.xpath("//div[text()='"+sectionName+"']")).click();
 	     browser.driver.sleep(6000);
 	     
@@ -238,33 +234,17 @@ var TemplatePage=function () {
 		 expect(eles.count()).toBeGreaterThan(0);
 		 browser.driver.sleep(6000);
 		 element(by.xpath("//div[text()='/sports/hockey/rangers']")).click();
-		// browser.driver.sleep(6000);
-		 //element(by.xpath("//div[text()='/new-york/brooklyn']")).click();
-		 //element(by.xpath("//div[text()='/entertainment/tv']")).click();
-		 //browser.driver.sleep(6000);
-	     
-  };
+	};
     this.verifySectionPreview=function(name)	{	
     	expect(element(by.xpath("//span[@class='tag tag-solid tag-last']")).getext()).toEqual(name);
    };
-   //this.verifySectionPreview=function(name)	{	
-   	//expect(element(by.xpath("//span[@class='tag tag-solid tag-last']")).getext()).toEqual(name);
-  //};
-    this.AddNewSection=function(){
+   this.AddNewSection=function(){
 	     element(by.xpath(OR.locators.TemplatePage.click_addnewsection)).click();
 	     element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
 	     let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
 	     expect(eles.count()).toBeGreaterThan(0);
 	     browser.driver.sleep(6000);
-	     //element(by.xpath("//div[@name='/new-york/brooklyn']")).click();
-	     //element(by.xpath("//div[text()='/entertainment/tv']")).click();
-	     //browser.driver.sleep(6000);
-	     
-	     //var isdsp = element(by.xpath("//span[contains(text(),'new-york/bronx')]")).isDisplayed();
-	     //expect(isdsp).toBe(true);
-	    // browser.driver.sleep(6000);
-	     //element(by.id("home")).click();
-	     return this;
+	      return this;
 	};
 	
 	this.clickOnSection18=function(){	
@@ -274,28 +254,22 @@ var TemplatePage=function () {
 		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
 		 expect(eles.count()).toBeGreaterThan(0);
 		 browser.driver.sleep(10000);
-	     //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-		 element(by.xpath("//div[text()='/entertainment/tv']")).click();
+	     element(by.xpath("//div[text()='/entertainment/tv']")).click();
 		 browser.driver.sleep(6000);
-		 //var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-		 //expect(isdsp).toBe(true);
-		 //element(by.id("home")).click();
+		 
 		 return this;
     };
 
 
 	this.addSection32=function()	{	
-		 //element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
- 		 //element(by.xpath("//button/span[text()='Add new section']")).click();
 		 element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).click();
 		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
 		 expect(eles.count()).toBeGreaterThan(0);
 		 browser.driver.sleep(4000);
 		 element(by.xpath("//div[text()='/new-york/brooklyn']")).click();
 		 browser.driver.sleep(6000);
-					
-					return this;
-			};
+	     return this;
+		};
 	
 	this.clickOnSection32=function()	{	
 		browser.driver.sleep(8000);	
@@ -326,47 +300,29 @@ var TemplatePage=function () {
 		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
 		 expect(eles.count()).toBeGreaterThan(0);
 		 browser.driver.sleep(6000);
-		 //element(by.xpath("//div[text()='/entertainment/tv']")).click();
-	     element(by.xpath("//div[text()='/sports/hockey/rangers']")).click();
-		 //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-		 // eles.get(2).click();
-		 //element(by.xpath("//div[text()='/entertainment/tv']")).click();
-		 // browser.driver.sleep(10000);
-		 //var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-		 //expect(isdsp).toBe(true);
-		 //element(by.id("home")).click();
-		 return this;
+		 element(by.xpath("//div[text()='/sports/hockey/rangers']")).click();
+	     return this;
 	};
 	this.clickOnSectionAgain18=function()	{	
-		 //element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
 		 element(by.xpath("//button/span[text()='Add new section']")).click();
 	     element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[2]")).click();
 		 let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
 		 expect(eles.count()).toBeGreaterThan(0);
-	     browser.driver.sleep(10000);
-		 //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
+	     browser.driver.sleep(4000);
 		 element(by.xpath("//div[text()='/new-york/brooklyn']")).click();
 		 browser.driver.sleep(6000);
 		return this;
 	};
 	this.clickOnSectionAgainand18=function()	{	
-		 //element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-		  element(by.xpath("//button/span[text()='Add new section']")).click();
+		 element(by.xpath("//button/span[text()='Add new section']")).click();
 		  browser.driver.sleep(10000);
-			
-			element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[3]")).click();
-			  browser.driver.sleep(10000);
-			let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
-			expect(eles.count()).toBeGreaterThan(0);
-			  browser.driver.sleep(10000);
-			  //element(by.xpath("//div[@name='/new-york/brooklyn'")).click();
-			  eles.get(3).click();
-			//element(by.xpath("//div[text()='/entertainment/tv']")).click();
-			 // browser.driver.sleep(10000);
-			//var isdsp = element(by.xpath("//span[contains(text(),'entertainment/tv')]")).isDisplayed();
-			//expect(isdsp).toBe(true);
-			//element(by.id("home")).click();
-			return this;
+		  element(by.xpath("(//input[@placeholder='Type to search Arc sections...'])[3]")).click();
+		  browser.driver.sleep(10000);
+		  let eles = element.all(by.xpath("//div/input[@placeholder='Type to search Arc sections...']/../div/div"))
+		  expect(eles.count()).toBeGreaterThan(0);
+		  browser.driver.sleep(10000);
+		  eles.get(3).click();
+	      return this;
 	};
 	
     this.verifySnapHomePage = function(){
@@ -440,40 +396,28 @@ var TemplatePage=function () {
      };
 	 this.verifySectionFieldIsPresent = function(){
 		  expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionispresent)).getAttribute("value")).toEqual("/entertainment/tv");
-				//expect(element(by.xpath("//div[text()='/entertainment/tv']")).isDisplayed()).toBe(true);
-				//var isdsp = element(by.xpath("//span[contains(text(),'/entertainment/tv')]")).isDisplayed();
-				//expect(isdsp).toBe(true);
-				 browser.driver.sleep(10000);
-					return this;
+		   browser.driver.sleep(4000);
+		   return this;
          };
          this.verifySectionFieldd = function(){
        	 element(by.xpath("//h2[text()='Sections']/i[@class='fa fa-caret-square-o-right']")).click();
-        	browser.driver.sleep(6000);
+         browser.driver.sleep(6000);
  		 expect(element(by.xpath("//input[@placeholder='Type to search Arc sections...']")).getAttribute("value")).toEqual("/entertainment/tv");
- 		browser.driver.sleep(10000);
-				//expect(element(by.xpath("//div[text()='/entertainment/tv']")).isDisplayed()).toBe(true);
-				//var isdsp = element(by.xpath("//span[contains(text(),'/entertainment/tv')]")).isDisplayed();
-				//expect(isdsp).toBe(true);
-				// browser.driver.sleep(10000);
-		return this;
+ 		 browser.driver.sleep(10000);
+		 return this;
       };
 		
-	
-	this.verifySectionAdded21 = function(){
-		
-		var isdsp = element(by.xpath("//span[contains(text(),'new-york/bronx')]")).isDisplayed();
-		expect(isdsp).toBe(true);
-		 browser.driver.sleep(4000);
-			return this;
-
-		};
-	this.verifyUpdatedTemplate=function(){
+      this.verifySectionAdded21 = function(){
+	  var isdsp = element(by.xpath("//span[contains(text(),'new-york/bronx')]")).isDisplayed();
+	  expect(isdsp).toBe(true);
+	  browser.driver.sleep(4000);
+	  return this;
+     };
+	  this.verifyUpdatedTemplate=function(){
 		browser.driver.sleep(5000);
 		
 		element(by.css(OR.locators.LogoutPage.searchbar)).sendKeys("New Template123");
 		element(by.css(OR.locators.LogoutPage.searchicon)).click();
-		//element(by.id(OR.locators.TemplatePage.search_updatedtemplate)).sendKeys("New Template123");
-		//element(by.xpath(OR.locators.TemplatePage.click_search)).click();
 		browser.driver.sleep(6000);
 		var dsp = element(by.xpath(OR.locators.TemplatePage.verify_updatedtemplate)).isDisplayed();
 		expect(dsp).toBe(true);	
@@ -481,12 +425,10 @@ var TemplatePage=function () {
 		
 	};
 	this.verifyHeadline=function(){
-		browser.driver.sleep(6000);	
-	    expect(element(by.xpath(OR.locators.TemplatePage.verify_defaultvalueheadline)).getAttribute('value')).toEqual('snap-test-auto-normal-ct-xebia Joshi Template');
-	 	return this;                                                                                                    	
+		 browser.driver.sleep(6000);	
+	     expect(element(by.xpath(OR.locators.TemplatePage.verify_defaultvalueheadline)).getAttribute('value')).toEqual('snap-test-auto-normal-ct-xebia Joshi Template');
+	 	 return this;                                                                                                    	
 	};
-	
-	
 	this.verifySlug = function(){
 		 browser.driver.sleep(6000);
 		 expect(element(by.xpath(OR.locators.TemplatePage.slugname)).getAttribute('value')).toEqual(OR.locators.data.slug_value);	 
@@ -546,12 +488,23 @@ var TemplatePage=function () {
 	     return this;
 	};
    this.selectFullWidth=function(){	
-	   // browser.driver.sleep(4000);
-	   // element(by.xpath("//select[@id='meta-story-type']")).click();
-	    browser.driver.sleep(4000);
+	   browser.driver.sleep(4000);
 	    element.all(by.xpath(OR.locators.TemplatePage.select_fullwidth)).click();
 	    return this;
     };
+    
+    this.SelectedPublished=function(){	
+		 element.all(by.xpath("//option[.='Published']")).click();
+	     return this;
+	};
+	 this.ClickOnWebsite=function(){	
+		 element.all(by.xpath("//button[@name='view-on-website']")).click();
+	     return this;
+	};
+    this.selectComments=function(stroption){	
+		 element.all(by.xpath("//option[.='"+stroption+"']")).click();
+	     return this;
+	};
     this.verifyShowADRailIsPresent=function(){	
 	     expect(element(by.xpath(OR.locators.TemplatePage.verify_showADrail)).isDisplayed()).toBe(true);
 	     expect(element(by.xpath(OR.locators.TemplatePage.verify_defaultaAdrailvalue)).$('option:checked').getText()).toEqual('Show');
@@ -563,7 +516,6 @@ var TemplatePage=function () {
 	     return this;
 	};
   this.verifytheWidgets2=function(){	
-	   //expect(element(by.xpath(OR.locators.TemplatePage.headline)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_quote)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_image)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_embeddedvideo)).isDisplayed()).toBe(true);
@@ -574,9 +526,7 @@ var TemplatePage=function () {
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_facebook)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_infobox)).isDisplayed()).toBe(true);
 	   expect(element(by.xpath(OR.locators.TemplatePage.verify_break)).isDisplayed()).toBe(true);
-	   //expect(element(by.xpath(OR.locators.verify_adholder)).isDisplayed()).toBe(true);
-	   //browser.driver.sleep(6000);
-       return this;
+	   return this;
     };
    this.verifytheWidgets3=function(){	
 		expect(element(by.xpath(OR.locators.TemplatePage.verify_text)).isDisplayed()).toBe(true);
@@ -708,48 +658,27 @@ var TemplatePage=function () {
     
     this.verifyBylineEmpty=function(){
     	 expect(element(by.xpath(OR.locators.TemplatePage.verify_bylineisempty)).getText()).toEqual("");
-    	 //expect(element(by.xpath("//span[text()='Jim Carrey']")).isPresent()).toBeFalsy();
-    		return this;    	
+    	 return this;    	
     }; 
     this.verifyBylinepreviewEmpty=function(){
-   	 
-   	 expect(element(by.xpath(OR.locators.TemplatePage.verify_bylinepreview)).isPresent()).toBeFalsy();
-   		return this;    	
+   	  expect(element(by.xpath(OR.locators.TemplatePage.verify_bylinepreview)).isPresent()).toBeFalsy();
+   	return this;    	
    }; 
-    this.verifywidgets = function(){
-    	 expect(element(by.xpath("//li[@title='Text']")).isDisplayed()).toBe(true);
-		 expect(element(by.xpath("//li[@title='Quote']")).isDisplayed()).toBe(true);
-		 expect(element(by.xpath("//li[@title='Image']")).isDisplayed()).toBe(true);
-		 expect(element(by.xpath("//li[@title='Embedded Video']")).isDisplayed()).toBe(true);
-		 expect(element(by.xpath("//li[@title='Embedded Video']")).isDisplayed()).toBe(true);
-		 expect(element(by.xpath("//li[@title='HTML']")).isDisplayed()).toBe(true);
-		 expect(element(by.xpath("//li[@title='Tweet']")).isDisplayed()).toBe(true);
-		 expect(element(by.xpath("//li[@title='P2PEmbed']")).isDisplayed()).toBe(true);
-		 expect(element(by.xpath("//li[@title='Infobox']")).isDisplayed()).toBe(true);
-		    return this;
-	};
-	
-	this.verifySectionNotDisp = function(){
+   
+  this.verifySectionNotDisp = function(){
 		 browser.driver.sleep(4000);
 		expect(element(by.xpath(OR.locators.TemplatePage.verify_sectionnotpresent)).isPresent()).toBeFalsy();
-				//isPresent()).toBeFalsy();isDisplayed()).toBe(true);
 		return this;
-		//isPresent()).toBeFalsy();
+		
 	};
 	
 	this.verifyCollection = function(){
 		expect(element(by.xpath(OR.locators.TemplatePage.verify_collectionispresent)).isDisplayed()).toBe(true);
 		return this;
 	};
-	
-	//expect(element(by.xpath("//input[@value='/entertainment/tv']/../../following-sibling::div/input")).isChecked()).toBe(false);
-	//input[@value='/entertainment/tv']/../../following-sibling::div/input
-	
 	this.verifyPrimarySectionIsPresent = function(){
 		expect(element(by.xpath(OR.locators.TemplatePage.verify_primarysection)).isDisplayed()).toBe(true);
-				//isPresent()).toBeTruthy();
-				//isDisplayed()).toBe(true);
-		 browser.driver.sleep(6000);
+		browser.driver.sleep(6000);
 		return this;
 	};
 	this.verifyPrimarySectionIsPresentt = function(){

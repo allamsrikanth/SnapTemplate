@@ -1,0 +1,115 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1546586340666' stop='1546586435570'>
+    <name>Verify that user is not able to comment on the story by selecting Hide option in Comment dropdown</name>
+    <title>Verify that user is not able to comment on the story by selecting Hide option in Comment dropdown</title>
+    <test-cases>
+        <test-case start='1546586340667' status='failed' stop='1546586373573'>
+            <name>On Clicking Create Story From the Template user should be navigated to story creation page and Comment dropdown should be set to Hide by default</name>
+            <title>On Clicking Create Story From the Template user should be navigated to story creation page and Comment dropdown should be set to Hide by default</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='674e7b03-25f3-49fe-876c-e10d994a0f7e-attachment.png' type='image/png' size='13803'/>
+            </attachments>
+            <failure>
+                <message>Failed: No element found using locator: By(css selector, input[name='username'])</message>
+                <stack-trace>NoSuchElementError: No element found using locator: By(css selector, input[name='username'])
+                    at elementArrayFinder.getWebElements.then (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+                    at ManagedPromise.invokeCallback_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+                    at &lt;anonymous>
+                    at process._tickCallback (internal/process/next_tick.js:189:7)Error
+                    at ElementArrayFinder.applyAction_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+                    at ElementArrayFinder.(anonymous function).args [as sendKeys] (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+                    at ElementFinder.(anonymous function).args [as sendKeys] (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+                    at LoginPage.enterDetails (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\LoginPage.js:9:57)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_newyork.js:414:16)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                From: Task: Run beforeEach in control flow
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+                    at attempt (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+                    at Spec.queueRunnerFactory (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+                    at Spec.execute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+                    at UserContext.fn (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+                    at attempt (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+                From asynchronous test: 
+                Error
+                    at Suite.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_newyork.js:409:5)
+                    at addSpecsToSuite (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+                    at Env.describe (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+                    at describe (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+                    at Object.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_newyork.js:408:1)
+                    at Module._compile (module.js:653:30)
+                    at Object.Module._extensions..js (module.js:664:10)
+                    at Module.load (module.js:566:32)
+                    at tryModuleLoad (module.js:506:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1546586373573' status='failed' stop='1546586435569'>
+            <name>On saving the story and opening it on Arc front end comment section should not be present in the story</name>
+            <title>On saving the story and opening it on Arc front end comment section should not be present in the story</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='3eab0aa8-353a-4d9e-8f01-83e37234c9b8-attachment.png' type='image/png' size='62855'/>
+            </attachments>
+            <failure>
+                <message>Failed: No element found using locator: By(xpath, //input[@name='headline'])</message>
+                <stack-trace>NoSuchElementError: No element found using locator: By(xpath, //input[@name='headline'])
+                    at elementArrayFinder.getWebElements.then (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+                    at ManagedPromise.invokeCallback_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+                    at &lt;anonymous>
+                    at process._tickCallback (internal/process/next_tick.js:189:7)Error
+                    at ElementArrayFinder.applyAction_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+                    at ElementArrayFinder.(anonymous function).args [as clear] (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+                    at ElementFinder.(anonymous function).args [as clear] (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+                    at TemplatePage.enterStoryHeadline (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:45:56)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_newyork.js:434:16)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                From: Task: Run it("On saving the story and opening it on Arc front end comment section should not be present in the story") in control flow
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+                    at attempt (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at runNext (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4264:13
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4172:9
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:64:48
+                    at ControlFlow.emit (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\events.js:62:21)
+                    at ControlFlow.shutdown_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2674:10)
+                    at shutdownTask_.MicroTask (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53)
+                From asynchronous test: 
+                Error
+                    at Suite.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_newyork.js:433:2)
+                    at addSpecsToSuite (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+                    at Env.describe (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+                    at describe (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+                    at Object.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_newyork.js:408:1)
+                    at Module._compile (module.js:653:30)
+                    at Object.Module._extensions..js (module.js:664:10)
+                    at Module.load (module.js:566:32)
+                    at tryModuleLoad (module.js:506:12)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
