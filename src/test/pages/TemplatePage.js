@@ -573,11 +573,7 @@ var TemplatePage=function () {
 		 expect(alert).toBe(true);
 		 return this;
 	};
-	this.slugwithoutTemplate=function(){
-		 element(by.xpath("//input[@name='slug']")).clear();
-		 element(by.xpath("//input[@name='slug']")).sendKeys("Slug09876543");
-		 return this;
-	};
+
     this.errorTemplate=function(){
     	  var mesg = element(by.xpath("//div[@id='react-modal-message']")).isDisplayed()
 		  expect(mesg).toBe(true);

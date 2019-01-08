@@ -453,9 +453,9 @@ describe('Verify that user is able to comment on the story by selecting Hide opt
 });
 
 it('On Clicking Create Story From the Template user should be navigated to story creation page and Comment dropdown should be set to Show by default', function() {
-   base.navigateToURL(OR.url);
-   browser.driver.sleep(4000);
-   loginpage.enterDetails();
+    base.navigateToURL(OR.url);
+    browser.driver.sleep(4000);
+    loginpage.enterDetails();
 	browser.driver.sleep(2000);
 	homepage.createNewTemplate();
 	browser.driver.sleep(2000);
@@ -479,7 +479,6 @@ it('On saving the story and opening it on  front end comment section should be p
 	browser.driver.sleep(3000);
 	templatepage.EnterSeoDescription();
 	templatepage.SelectedPublished();
-	
 	templatepage.clicksaveandCont();	
 	templatepage.ClickOnWebsite();		 
 	//templatepage.clickOnArc();
