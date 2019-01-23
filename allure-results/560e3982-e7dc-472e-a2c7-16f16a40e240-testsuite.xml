@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547035776746' stop='1547035811652'>
+    <name>Verify that New Headline text is displayed on prview screen when user clear the HEADLINE field</name>
+    <title>Verify that New Headline text is displayed on prview screen when user clear the HEADLINE field</title>
+    <test-cases>
+        <test-case start='1547035776747' status='passed' stop='1547035789251'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='a666aa73-52bd-4f68-9563-cbce690dbde7-attachment.png' type='image/png' size='53523'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547035789251' status='passed' stop='1547035795429'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='57be828e-d62a-4e43-b7a8-1aa36c3bc001-attachment.png' type='image/png' size='88696'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547035795429' status='passed' stop='1547035811652'>
+            <name>Verify that user is able see headline preview </name>
+            <title>Verify that user is able see headline preview </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='da219aa8-4f9c-459c-933e-fe2c63878c78-attachment.png' type='image/png' size='12669'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

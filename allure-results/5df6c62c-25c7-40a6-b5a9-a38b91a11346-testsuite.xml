@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547533183195' stop='1547533245836'>
+    <name>Verify the functionality of Save &amp; Continue button when mandatory fields are blank</name>
+    <title>Verify the functionality of Save &amp; Continue button when mandatory fields are blank</title>
+    <test-cases>
+        <test-case start='1547533183195' status='passed' stop='1547533195902'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='4b1bb4b6-a408-4441-a04b-dffdbd663bb5-attachment.png' type='image/png' size='75287'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547533195903' status='passed' stop='1547533202130'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='0a36d2ba-5795-447a-9ec9-799596296106-attachment.png' type='image/png' size='91172'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547533202130' status='passed' stop='1547533245836'>
+            <name>Verify that user is able see headline preview </name>
+            <title>Verify that user is able see headline preview </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='1fffb485-c5c1-473e-814b-45ecc0e02fc2-attachment.png' type='image/png' size='5009'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

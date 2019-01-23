@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547030202016' stop='1547030315935'>
+    <name>Verify that user is able to comment on the story by selecting Show option in Comment dropdown</name>
+    <title>Verify that user is able to comment on the story by selecting Show option in Comment dropdown</title>
+    <test-cases>
+        <test-case start='1547030202016' status='passed' stop='1547030274853'>
+            <name>On Clicking Create Story From the Template user should be navigated to story creation page and Comment dropdown should be set to Show by default</name>
+            <title>On Clicking Create Story From the Template user should be navigated to story creation page and Comment dropdown should be set to Show by default</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='2d4758c9-aa67-4d67-943b-948ae9190d60-attachment.png' type='image/png' size='80395'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547030274854' status='passed' stop='1547030315933'>
+            <name>On saving the story and opening it on  front end comment section should be present in the story</name>
+            <title>On saving the story and opening it on  front end comment section should be present in the story</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='f2ec852d-157c-44ed-855b-e85c7d55a938-attachment.png' type='image/png' size='3473'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

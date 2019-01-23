@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547720509501' stop='1547720546444'>
+    <name>Verify the functionality of STORY TYPE dropdown list in p2p mode</name>
+    <title>Verify the functionality of STORY TYPE dropdown list in p2p mode</title>
+    <test-cases>
+        <test-case start='1547720509502' status='passed' stop='1547720528567'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='b948b41c-6997-4b1f-aa73-d946c24fcfcc-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547720528567' status='passed' stop='1547720536862'>
+            <name>should click on new template</name>
+            <title>should click on new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='bab592dd-9d24-4038-b74e-bf80f284a6c9-attachment.png' type='image/png' size='91172'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547720536862' status='failed' stop='1547720546443'>
+            <name>Verify the options in story type in p2p mode</name>
+            <title>Verify the options in story type in p2p mode</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='060d726b-44a1-48e2-bf5e-88d5040cff00-attachment.png' type='image/png' size='90010'/>
+            </attachments>
+            <failure>
+                <message>Expected [ 'Simple Story', 'HTMLStory', 'Big Story' ] to equal 'Simple Story.HTMLStory. Big Story '.</message>
+                <stack-trace>Error: Failed expectation
+                    at TemplatePage.verifyStorytypeOptions (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:132:111)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_newyork.js:180:16)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547039273360' stop='1547039306698'>
+    <name>Verify the functionality of HEADLINE field when user enters morethan 200 characters</name>
+    <title>Verify the functionality of HEADLINE field when user enters morethan 200 characters</title>
+    <test-cases>
+        <test-case start='1547039273360' status='passed' stop='1547039285896'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='4db7900d-26cf-4a7c-a808-cd9f15888444-attachment.png' type='image/png' size='62638'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547039285896' status='passed' stop='1547039292005'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='0b9b3fcf-f9b0-4dad-ab7b-b96848fcc290-attachment.png' type='image/png' size='86860'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547039292005' status='passed' stop='1547039306697'>
+            <name>Verify that user is able see headline preview </name>
+            <title>Verify that user is able see headline preview </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='53f84832-ac44-4909-bafe-9d4443694aca-attachment.png' type='image/png' size='3473'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

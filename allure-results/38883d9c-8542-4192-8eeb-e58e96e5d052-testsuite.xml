@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547038604085' stop='1547038643007'>
+    <name>Verify the functionality of Save &amp; Continue button when slug field does not contain word template</name>
+    <title>Verify the functionality of Save &amp; Continue button when slug field does not contain word template</title>
+    <test-cases>
+        <test-case start='1547038604085' status='passed' stop='1547038616560'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='fb08e659-80ce-4b36-86f8-114d237dfc66-attachment.png' type='image/png' size='62638'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547038616560' status='passed' stop='1547038625316'>
+            <name>verify that user is able to create new template</name>
+            <title>verify that user is able to create new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='bc2f1626-c9fa-4e06-a601-247a8f0576d6-attachment.png' type='image/png' size='86860'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547038625316' status='passed' stop='1547038643006'>
+            <name>should  enters the slug without template word</name>
+            <title>should  enters the slug without template word</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='58a47af9-88ad-4e93-a280-0696eb2e4959-attachment.png' type='image/png' size='3473'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

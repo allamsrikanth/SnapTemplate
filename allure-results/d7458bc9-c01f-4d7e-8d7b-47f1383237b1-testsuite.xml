@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547101426068' stop='1547101482768'>
+    <name>Verify that user is able to add multiple byliness</name>
+    <title>Verify that user is able to add multiple byliness</title>
+    <test-cases>
+        <test-case start='1547101426068' status='passed' stop='1547101438572'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='44a81653-0bc4-4ea6-bc68-5455531ce834-attachment.png' type='image/png' size='62638'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547101438572' status='passed' stop='1547101446118'>
+            <name>should create a new template</name>
+            <title>should create a new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='d1a745df-e989-4349-a538-9b1c0df54b7e-attachment.png' type='image/png' size='76472'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547101446118' status='failed' stop='1547101482768'>
+            <name>enter the Byline value</name>
+            <title>enter the Byline value</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='bd031d18-ec5d-4ec6-b184-f3abacdc1828-attachment.png' type='image/png' size='82236'/>
+            </attachments>
+            <failure>
+                <message>Expected 'Jim Puzzanghera' to equal 'Jim Carrey'.</message>
+                <stack-trace>Error: Failed expectation
+                    at TemplatePage.selectBylinefromAutopopulated (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:623:34)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_losangeles.js:281:20)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

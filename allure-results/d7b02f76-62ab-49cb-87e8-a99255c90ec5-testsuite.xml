@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547019518900' stop='1547019601084'>
+    <name>Verify that user is able to create a new template</name>
+    <title>Verify that user is able to create a new template</title>
+    <test-cases>
+        <test-case start='1547019518900' status='passed' stop='1547019587347'>
+            <name>It should display the message as Your story has been successfully saved</name>
+            <title>It should display the message as Your story has been successfully saved</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='059b0910-e6aa-47ff-9fab-e87b5d07d0ac-attachment.png' type='image/png' size='81944'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547019587347' status='passed' stop='1547019592704'>
+            <name>User should remain on newly created templete</name>
+            <title>User should remain on newly created templete</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='fc26aef7-20b5-478d-b17c-d500fd9e660c-attachment.png' type='image/png' size='81944'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547019592704' status='passed' stop='1547019601084'>
+            <name>It should show the headline on the preview screen</name>
+            <title>It should show the headline on the preview screen</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='c6965987-8f81-478b-a9bd-048f6fdef249-attachment.png' type='image/png' size='81944'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547113053528' stop='1547113111349'>
+    <name>Verify the functionality of BYLINE field</name>
+    <title>Verify the functionality of BYLINE field</title>
+    <test-cases>
+        <test-case start='1547113053528' status='passed' stop='1547113066016'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='48622e79-8620-45a6-a3d5-00c1458c5040-attachment.png' type='image/png' size='62638'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547113066016' status='passed' stop='1547113072201'>
+            <name>should create a new template</name>
+            <title>should create a new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='7ceb3e01-79c7-4f74-b131-9e4e67c4f04f-attachment.png' type='image/png' size='86860'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547113072201' status='passed' stop='1547113111348'>
+            <name>enter the Byline value</name>
+            <title>enter the Byline value</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='28d85dff-3401-4652-9e38-d346d3129be4-attachment.png' type='image/png' size='85840'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547557475091' stop='1547557536366'>
+    <name>Verify that user is able to add multiple byliness</name>
+    <title>Verify that user is able to add multiple byliness</title>
+    <test-cases>
+        <test-case start='1547557475091' status='passed' stop='1547557487631'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='a229e36f-6a25-4ae1-a565-9e47b54acf1b-attachment.png' type='image/png' size='68715'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547557487631' status='passed' stop='1547557494919'>
+            <name>should create a new template</name>
+            <title>should create a new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='3ea47267-5386-4796-8d5c-ed6793eb3b9a-attachment.png' type='image/png' size='93454'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547557494919' status='passed' stop='1547557536366'>
+            <name>enter the Byline value</name>
+            <title>enter the Byline value</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='2bfed4dc-5599-492b-9bfe-c6f15e9b631d-attachment.png' type='image/png' size='91209'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

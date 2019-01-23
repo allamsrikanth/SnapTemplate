@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547643724176' stop='1547643821960'>
+    <name>Verify that section field is blank when user opens the P2P mode template in ARC mode</name>
+    <title>Verify that section field is blank when user opens the P2P mode template in ARC mode</title>
+    <test-cases>
+        <test-case start='1547643724176' status='passed' stop='1547643743051'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='c5195965-0c46-4313-b858-d83751646c0d-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547643743052' status='passed' stop='1547643755825'>
+            <name>should  search  template</name>
+            <title>should  search  template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='a22cd6a1-4d6c-4635-80e0-d90dcc891121-attachment.png' type='image/png' size='57761'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547643755825' status='passed' stop='1547643821959'>
+            <name>should save the template without adding section</name>
+            <title>should save the template without adding section</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='ffdef808-8ea1-46aa-a168-9e5de332c9ae-attachment.png' type='image/png' size='81794'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

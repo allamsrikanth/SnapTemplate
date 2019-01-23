@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547634915785' stop='1547634985206'>
+    <name>Verify the functionality of STORY TYPE dropdown list </name>
+    <title>Verify the functionality of STORY TYPE dropdown list </title>
+    <test-cases>
+        <test-case start='1547634915786' status='passed' stop='1547634961892'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='d95579d7-89fa-478e-80c6-f2ea7b6dfc3e-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547634961892' status='passed' stop='1547634970612'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='5fad31a3-eb49-4ba8-98d1-33fd349e56d7-attachment.png' type='image/png' size='85442'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547634970612' status='passed' stop='1547634985205'>
+            <name>Verify the options story type in arc mode </name>
+            <title>Verify the options story type in arc mode </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='031ae2d2-dc10-491e-b793-a83a631999ee-attachment.png' type='image/png' size='14661'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

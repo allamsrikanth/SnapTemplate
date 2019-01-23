@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547105188279' stop='1547105221240'>
+    <name>Verify that section field is not present on template creation page.</name>
+    <title>Verify that section field is not present on template creation page.</title>
+    <test-cases>
+        <test-case start='1547105188279' status='passed' stop='1547105200777'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='223cd053-537d-4286-b933-0139da82a0a2-attachment.png' type='image/png' size='62638'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547105200777' status='passed' stop='1547105206848'>
+            <name>should  create new template</name>
+            <title>should  create new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='076cb329-4296-4074-84d3-2fd84c07dad7-attachment.png' type='image/png' size='86860'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547105206848' status='passed' stop='1547105221239'>
+            <name>Verify if section is not displayed and collection is displayed in template edit page</name>
+            <title>Verify if section is not displayed and collection is displayed in template edit page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='0240b989-df3b-4f27-acd9-0a08c01ec271-attachment.png' type='image/png' size='86860'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

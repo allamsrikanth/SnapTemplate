@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547706957566' stop='1547706960603'>
+    <name>Verify the login functionality with empty username</name>
+    <title>Verify the login functionality with empty username</title>
+    <test-cases>
+        <test-case start='1547706957566' status='passed' stop='1547706960602'>
+            <name>should not login the user and popup should be displayed</name>
+            <title>should not login the user and popup should be displayed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='4114da9c-c0f2-485a-8c2e-82d931ee68ea-attachment.png' type='image/png' size='547675'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

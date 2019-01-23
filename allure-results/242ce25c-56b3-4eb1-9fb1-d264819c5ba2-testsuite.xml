@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547112566845' stop='1547112614720'>
+    <name>Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story </name>
+    <title>Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story </title>
+    <test-cases>
+        <test-case start='1547112566846' status='passed' stop='1547112586911'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='177648eb-9124-4cd2-acd8-5ad2a45d889d-attachment.png' type='image/png' size='402014'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547112586911' status='passed' stop='1547112594272'>
+            <name>should click on new template</name>
+            <title>should click on new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='49c9bb9a-a52c-41f5-8a31-3618afec95e7-attachment.png' type='image/png' size='77983'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547112594272' status='passed' stop='1547112614719'>
+            <name>verify BasicBuild and ShowAD Rail options</name>
+            <title>verify BasicBuild and ShowAD Rail options</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='a5031b90-1c5e-450a-9ae7-cdf4d8e37712-attachment.png' type='image/png' size='12669'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

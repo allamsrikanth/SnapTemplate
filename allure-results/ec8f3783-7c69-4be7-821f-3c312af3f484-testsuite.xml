@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547731577765' stop='1547731686185'>
+    <name>Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Right Rail story and Full Width story</name>
+    <title>Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Right Rail story and Full Width story</title>
+    <test-cases>
+        <test-case start='1547731577766' status='passed' stop='1547731592793'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='2eb8d52c-3511-4721-ab91-49dc7f68c59d-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547731592793' status='passed' stop='1547731600904'>
+            <name>should click on new template</name>
+            <title>should click on new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='b38ae600-b0c4-453b-bd53-3732ec9f4df4-attachment.png' type='image/png' size='84023'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547731600904' status='passed' stop='1547731686184'>
+            <name>verify BasicBuild and ShowAD Rail options in Arc mode</name>
+            <title>verify BasicBuild and ShowAD Rail options in Arc mode</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='54776c2a-50cb-49fc-b409-5e0c47dc9e1e-attachment.png' type='image/png' size='88045'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547564483930' stop='1547564512905'>
+    <name>Verify the functionality of STORY TYPE dropdown list in p2p mode</name>
+    <title>Verify the functionality of STORY TYPE dropdown list in p2p mode</title>
+    <test-cases>
+        <test-case start='1547564483930' status='passed' stop='1547564496473'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='3de765aa-21d8-4700-b0a0-a6107d30e1e7-attachment.png' type='image/png' size='66584'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547564496473' status='passed' stop='1547564503333'>
+            <name>should click on new template</name>
+            <title>should click on new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='34944bef-475c-44c7-bcdb-a1b7ff75ae93-attachment.png' type='image/png' size='85442'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547564503333' status='failed' stop='1547564512904'>
+            <name>Verify the options in story type in p2p mode</name>
+            <title>Verify the options in story type in p2p mode</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='08e76b7b-a0f9-4891-bb5d-dc31554f7196-attachment.png' type='image/png' size='85442'/>
+            </attachments>
+            <failure>
+                <message>Expected $.length = 2 to equal 3.
+                Expected $[0] = 'Right Rail' to equal 'Simple Story'.
+                Expected $[1] = 'Full Width' to equal 'HTMLStory'.
+                Expected $[2] = undefined to equal 'Big Story'.</message>
+                <stack-trace>Error: Failed expectation
+                    at TemplatePage.verifyStorytypeOptions (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:138:111)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_p2p_losangeles.js:179:20)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

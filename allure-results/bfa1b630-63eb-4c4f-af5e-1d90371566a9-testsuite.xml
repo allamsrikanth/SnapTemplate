@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547727179436' stop='1547727313266'>
+    <name>Verify that user is able to update the added section</name>
+    <title>Verify that user is able to update the added section</title>
+    <test-cases>
+        <test-case start='1547727179437' status='passed' stop='1547727194529'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='d5b7a790-f4bb-4332-ace1-9e74b084498e-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547727194529' status='passed' stop='1547727206104'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='13b1ed28-747d-4a37-8712-0d3b8ac90ede-attachment.png' type='image/png' size='84023'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547727206104' status='passed' stop='1547727313265'>
+            <name>should save the template without adding section</name>
+            <title>should save the template without adding section</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='7a36baaf-9fb0-4efb-a17d-68605887130f-attachment.png' type='image/png' size='5009'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

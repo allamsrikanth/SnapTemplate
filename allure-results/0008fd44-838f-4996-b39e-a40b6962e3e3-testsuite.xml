@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547037731596' stop='1547037759728'>
+    <name>Verify the functionality of STORY TYPE dropdown list in p2p mode</name>
+    <title>Verify the functionality of STORY TYPE dropdown list in p2p mode</title>
+    <test-cases>
+        <test-case start='1547037731596' status='passed' stop='1547037744069'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='38d8b92a-3b28-4ff2-bece-dcbb930349dd-attachment.png' type='image/png' size='53523'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547037744069' status='passed' stop='1547037750175'>
+            <name>should click on new template</name>
+            <title>should click on new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='d189b08b-e239-46c6-85f3-638ec0981f79-attachment.png' type='image/png' size='88696'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547037750175' status='passed' stop='1547037759728'>
+            <name>Verify the options in story type in p2p mode</name>
+            <title>Verify the options in story type in p2p mode</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='5ffb7f4e-fa20-41aa-8cb4-868c80964950-attachment.png' type='image/png' size='87949'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

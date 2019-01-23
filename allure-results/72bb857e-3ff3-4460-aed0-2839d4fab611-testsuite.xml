@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547462971139' stop='1547463111629'>
+    <name>Verify that user can update existing template with additional details or not</name>
+    <title>Verify that user can update existing template with additional details or not</title>
+    <test-cases>
+        <test-case start='1547462971139' status='passed' stop='1547462994201'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='891aad56-c134-4fd4-ad2a-0b45e4327f7b-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547462994201' status='passed' stop='1547463055476'>
+            <name>Verify that user is able to search an old template</name>
+            <title>Verify that user is able to search an old template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='1f763ba8-dfb1-4d9b-8dd0-92c51a4fd6f8-attachment.png' type='image/png' size='75508'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547463055476' status='passed' stop='1547463111628'>
+            <name>Verify that user is able to Update an old template</name>
+            <title>Verify that user is able to Update an old template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='35e8e861-1b8d-480d-8f81-8877bb7c2091-attachment.png' type='image/png' size='107098'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

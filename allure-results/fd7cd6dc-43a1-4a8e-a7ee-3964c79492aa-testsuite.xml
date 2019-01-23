@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547192114224' stop='1547192161620'>
+    <name>Verify COMMENT dropdown options</name>
+    <title>Verify COMMENT dropdown options</title>
+    <test-cases>
+        <test-case start='1547192114224' status='passed' stop='1547192139327'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='48c56b65-8b85-480f-9428-3ea34b66f229-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547192139328' status='passed' stop='1547192151084'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='a945240d-1a27-4a5b-ab4b-304451f18dcf-attachment.png' type='image/png' size='84023'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547192151084' status='passed' stop='1547192161620'>
+            <name>verify Show and Hide options in comments</name>
+            <title>verify Show and Hide options in comments</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='32a8d512-03df-4936-b0d0-368efb72f940-attachment.png' type='image/png' size='78097'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -340,7 +340,7 @@ describe('Verify that user is able to add multiple byliness', function() {
 		it('verify BasicBuild and ShowAD Rail options',function() {
 			TemplatePage.verifyStory();		 
 			TemplatePage.verifyBasicbuildIsPresent();
-			TemplatePage.clickOnBasicbuildIsVerifyOptions();
+			TemplatePage.clickOnBasicbuildIsVerifyOptionss();
 			TemplatePage.verifyShowADRailIsNotPresent();
 			TemplatePage.verifytheWidgets1();
 			TemplatePage.selectHtmlStory();
@@ -381,4 +381,4 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
-});+`
+});

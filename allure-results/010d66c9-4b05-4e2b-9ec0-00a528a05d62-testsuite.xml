@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547561557573' stop='1547561605035'>
+    <name>Verify that following fields are autoselected</name>
+    <title>Verify that following fields are autoselected</title>
+    <test-cases>
+        <test-case start='1547561557573' status='passed' stop='1547561570070'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='e99211f2-ec80-4898-a207-85cd3246df44-attachment.png' type='image/png' size='66584'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547561570070' status='passed' stop='1547561580244'>
+            <name>should able to create a new template</name>
+            <title>should able to create a new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='40a48b4c-88ef-491e-bc70-b2213050ac33-attachment.png' type='image/png' size='93454'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547561580244' status='passed' stop='1547561605035'>
+            <name>Verify that user is able see autofiled fields</name>
+            <title>Verify that user is able see autofiled fields</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='19eefe0c-cc8c-4c20-9793-adb897ea0811-attachment.png' type='image/png' size='93454'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

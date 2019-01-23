@@ -11,10 +11,11 @@ var templatepage = require('../pages/TemplatePage.js');
 	   });
    it('It should display the message as Your story has been successfully saved', function() {
         base.navigateToURL(OR.url);
-		browser.driver.sleep(4000);
+		browser.driver.sleep(8000);
 	    loginpage.enterDetails();
-		//loginpage.enterSlackDetails();
-		//loginpage.enterOrganizationDetails();
+		loginpage.enterSlackDetails();
+		loginpage.enterOrganizationDetails();
+		browser.driver.sleep(2000);
 		homepage.createNewTemplate();
 		browser.driver.sleep(2000);
 		templatepage.enterHeadline();
@@ -26,12 +27,12 @@ var templatepage = require('../pages/TemplatePage.js');
 	
 	it('User should remain on newly created templete',function() {
 		browser.driver.sleep(2000);
-		  templatepage.newlyCreatedTemplated();
+		templatepage.newlyCreatedTemplated();
 	});
 	
 	it('It should show the headline on the preview screen', function() {
 		browser.driver.sleep(2000);
-		templatepage.headlinePreview();
+		templatepage.headlinePrevieew();
 		});
 
 });
@@ -41,9 +42,9 @@ describe('Verify the functionality of Save & Continue button when slug field doe
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		//templatepage.verifySnapHomePage();
-		base.navigateToURL(OR.url);
-		loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+		//loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -88,21 +89,21 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	
 	it('Verify that user is able see headline preview ', function() {
 		templatepage.enterHeadline();		 
-		templatepage.headlinePreview();
+		templatepage.headlinePrevieew();
 		browser.refresh();
 		browser.switchTo().alert().accept();
 		
 	});
 
 });*/
-/*describe('Verify the functionality of HEADLINE field when user enters morethan 200 characters', function() {
+describe('Verify the functionality of HEADLINE field when user enters morethan 200 characters', function() {
 
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
-		//base.navigateToURL(OR.url);
-		//loginpage.enterDetails();
+		//templatepage.verifySnapHomePage();
+		base.navigateToURL(OR.url);
+		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -115,15 +116,15 @@ describe('Verify that New Headline text is displayed on prview screen when user 
 	
 
 	it('Verify that user is able see headline preview ', function() {
-		templatepage.enterHeadlinee();		 
-		templatepage.verifyHeadlinePopup();
+		templatepage.enterHeadlinee();
+	    templatepage.verifyHeadlinePopup();
 		browser.refresh();
 		browser.switchTo().alert().accept();
         
 	
 	});
 
-});*/
+});
 /*describe('Verify the functionality of Save & Continue button when mandatory fields are blank', function() {
 
 	it('Launch and login  Tribune Application', function() {
@@ -160,9 +161,9 @@ describe('Verify the functionality of STORY TYPE dropdown list in p2p mode', fun
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		templatepage.verifySnapHomePage();
-		//base.navigateToURL(OR.url);
-		//loginpage.enterDetails();
+		//templatepage.verifySnapHomePage();
+		base.navigateToURL(OR.url);
+		loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -180,19 +181,19 @@ describe('Verify the functionality of STORY TYPE dropdown list in p2p mode', fun
 		
 	});
 
-});
+});*/
 
 
 
-describe('Verify the functionality of BYLINE field', function() {
+/*describe('Verify the functionality of BYLINE field', function() {
 	
 	
 	it('Launch and login  Tribune Application', function() {
 		browser.waitForAngularEnabled(false);
 		browser.ignoreSynchronization = true;
-		//templatepage.verifySnapHomePage();
-		base.navigateToURL(OR.url);
-        loginpage.enterDetails();
+		templatepage.verifySnapHomePage();
+		//base.navigateToURL(OR.url);
+        //loginpage.enterDetails();
 		//loginpage.enterSlackDetails();
 		//loginpage.enterOrganizationDetails();
 	});
@@ -207,31 +208,20 @@ describe('Verify the functionality of BYLINE field', function() {
 	it('enter the Byline value',function() {
 		templatepage.enterHeadline();		 
 		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
-		TemplatePage.clickonByline();
-		TemplatePage.selectBylinefromAutopopulated1();
-		TemplatePage.verifyBylinePresentWithinBox();
-		TemplatePage.clicksaveandCont();
-		TemplatePage.verifyBylinePreview();
-		TemplatePage.clickOnCrossSign();
-		TemplatePage.verifyBylineEmpty();
-		TemplatePage.clicksaveandCont();
-		TemplatePage.verifyBylinepreviewEmpty();
+		templatepage.clickonByline();
+		templatepage.selectBylinefromAutopopulated1();
+		templatepage.verifyBylinePresentWithinBox();
+		templatepage.clicksaveandCont();
+		templatepage.verifyBylinePreview();
+		templatepage.clickOnCrossSign();
+		templatepage.verifyBylineEmpty();
+		templatepage.clicksaveandCont();
+		templatepage.verifyBylinepreviewEmpty();
 		
-		
-		//templatepage.clickonByline();
-		//templatepage.selectBylinefromAutopopulated();
-		//templatepage.verifyBylinePresentWithinBox();
-		//templatepage.clicksaveandCont();
-		//templatepage.verifyBylinePreview();
-		//templatepage.clickOnCrossSign();
-		//templatepage.verifyBylineEmpty();
-		//templatepage.clicksaveandCont();
-		//templatepage.verifyBylinepreviewEmpty();
-		
-	});
+		});
 	
-});*/
-/*describe('should Verify the pop up message when user enters the already taken slug', function() {
+});
+describe('should Verify the pop up message when user enters the already taken slug', function() {
 	
 	
 	it('Launch and login  Tribune Application', function() {
@@ -253,7 +243,7 @@ describe('Verify the functionality of BYLINE field', function() {
 	
 	it('enter the Byline value',function() {
 		templatepage.enterHeadline();		 
-		templatepage.enteralreadytakenSlugName();
+		templatepage.enterAlreadyTakenSlugName();
 		templatepage.clicksaveandCont();
 		templatepage.alredyTakenPopup();
 		browser.refresh();
@@ -332,16 +322,16 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
-});*/
+});
 	
-	/*describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story ', function() {
+	describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Simple story and HTML story ', function() {
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
 			browser.ignoreSynchronization = true;
-			//templatepage.verifySnapHomePage();
-			base.navigateToURL(OR.url);
-			loginpage.enterDetails();
+			templatepage.verifySnapHomePage();
+			//base.navigateToURL(OR.url);
+			//loginpage.enterDetails();
 			//loginpage.enterSlackDetails();
 			//loginpage.enterOrganizationDetails();
 		});
@@ -395,10 +385,10 @@ describe('Verify that user is able to add multiple byliness', function() {
 		});
 		
 	
-});
+});*/
 
 
-describe('Verify that user is able to comment on the story by selecting Show option in Comment dropdown', function() {
+/*describe('Verify that user is able to comment on the story by selecting Show option in Comment dropdown', function() {
 	     beforeEach(function(){
 	     browser.waitForAngularEnabled(false);
 	     browser.ignoreSynchronization = true;
@@ -417,6 +407,7 @@ it('On Clicking Create Story From the Template user should be navigated to story
 		templatepage.enterHeadline();		 
 		templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
 		templatepage.clickOnComments();
+		//browser.driver.sleep(2000);
 		//templatepage.selectComments("Show");
 		templatepage.clicksaveandCont();
 		templatepage.verifypopup();
@@ -425,43 +416,44 @@ it('On Clicking Create Story From the Template user should be navigated to story
 		templatepage.clickShowAdvancedSettings();
 	});
 it('On saving the story and opening it on  front end comment section should be present in the story',function() {
-		browser.driver.sleep(2000);
+		browser.driver.sleep(4000);
 		templatepage.enterStoryHeadline();
 		browser.driver.sleep(2000);
-		templatepage.enterStorySlug();
-		browser.driver.sleep(3000);
+		templatepage.enterStorySlug(templatepage.getName(10)+"-2018");
+		browser.driver.sleep(4000);
 		templatepage.EnterSeoDescription();
 		templatepage.SelectedPublished();
 		
 		templatepage.clicksaveandCont();	
 		templatepage.ClickOnWebsite();		 
 		//templatepage.clickOnArc();
-		//browser.refresh();
-		//browser.switchTo().alert().accept();
+		browser.refresh();
+		browser.switchTo().alert().accept();
 		  
 	});
 	
-});*/
+});
    
 describe('Verify that user is able to comment on the story by selecting Hide option in Comment dropdown', function() {
     beforeEach(function(){
     browser.waitForAngularEnabled(false);
     browser.ignoreSynchronization = true;
-  //templatepage.verifySnapHomePage();
+    templatepage.verifySnapHomePage();
   //loginpage.enterSlackDetails();
   //loginpage.enterOrganizationDetails();
 });
 
 it('On Clicking Create Story From the Template user should be navigated to story creation page and Comment dropdown should be set to Show by default', function() {
-    base.navigateToURL(OR.url);
-    browser.driver.sleep(4000);
-    loginpage.enterDetails();
-	browser.driver.sleep(2000);
+    //base.navigateToURL(OR.url);
+    //browser.driver.sleep(2000);
+    //loginpage.enterDetails();
+	//browser.driver.sleep(2000);
 	homepage.createNewTemplate();
 	browser.driver.sleep(2000);
 	templatepage.enterHeadline();		 
 	templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
 	templatepage.clickOnComments();
+	browser.driver.sleep(5000);
 	templatepage.selectComments("Hide");
 	templatepage.clicksaveandCont();
 	templatepage.verifypopup();
@@ -475,7 +467,7 @@ it('On saving the story and opening it on  front end comment section should be p
 	browser.driver.sleep(2000);
 	templatepage.enterStoryHeadline();
 	browser.driver.sleep(2000);
-	templatepage.enterStorySlug();
+	templatepage.enterStorySlug(templatepage.getName(10)+"-2018");
 	browser.driver.sleep(3000);
 	templatepage.EnterSeoDescription();
 	templatepage.SelectedPublished();
@@ -487,5 +479,5 @@ it('On saving the story and opening it on  front end comment section should be p
 	  
 });
 
-});
+});*/
    

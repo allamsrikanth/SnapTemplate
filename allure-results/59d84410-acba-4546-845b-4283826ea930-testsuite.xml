@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547642920990' stop='1547642991477'>
+    <name>Verify that deleting primary section, the top remaining section becomes the primary section</name>
+    <title>Verify that deleting primary section, the top remaining section becomes the primary section</title>
+    <test-cases>
+        <test-case start='1547642920990' status='passed' stop='1547642933514'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='57eaa675-aed4-4d94-b3c0-e737282826ea-attachment.png' type='image/png' size='66584'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547642933514' status='passed' stop='1547642943308'>
+            <name>should should search  template</name>
+            <title>should should search  template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6a933720-55fa-4804-aa8d-29b7737fdceb-attachment.png' type='image/png' size='57559'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547642943308' status='passed' stop='1547642991477'>
+            <name>should save the template without adding section</name>
+            <title>should save the template without adding section</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='4faff43b-8b7c-43cb-8b34-95a587c8e1e9-attachment.png' type='image/png' size='81217'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

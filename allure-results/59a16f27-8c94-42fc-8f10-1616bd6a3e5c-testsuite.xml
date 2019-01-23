@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547639742705' stop='1547639825851'>
+    <name>Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Right Rail story and Full Width story</name>
+    <title>Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Right Rail story and Full Width story</title>
+    <test-cases>
+        <test-case start='1547639742705' status='passed' stop='1547639768272'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='6834ac80-7fcf-4bf0-a8db-15c52641a450-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547639768272' status='passed' stop='1547639777248'>
+            <name>should click on new template</name>
+            <title>should click on new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='3bb13393-e1dd-4ea0-883e-840d3bfaae41-attachment.png' type='image/png' size='85442'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547639777248' status='failed' stop='1547639825851'>
+            <name>verify BasicBuild and ShowAD Rail options in Arc mode</name>
+            <title>verify BasicBuild and ShowAD Rail options in Arc mode</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='cef256ab-9765-486e-90b1-f9756e155757-attachment.png' type='image/png' size='93323'/>
+            </attachments>
+            <failure>
+                <message>Expected $.length = 10 to equal 3.
+                Expected $[1] = 'Automated tests build' to equal 'Breaking Graphic'.
+                Expected $[2] = 'For lead art swapping' to equal 'SendtoNews'.
+                Expected $[3] = 'Politics' to equal undefined.
+                Expected $[4] = 'Test 2' to equal undefined.
+                Expected $[5] = 'Test Package ' to equal undefined.
+                Expected $[6] = 'local' to equal undefined.
+                Expected $[7] = 'news' to equal undefined.
+                Expected $[8] = 'swap again' to equal undefined.
+                Expected $[9] = 'test' to equal undefined.</message>
+                <stack-trace>Error: Failed expectation
+                    at TemplatePage.clickOnBasicbuildIsVerifyOptions (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:492:120)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_losangeles.js:99:17)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

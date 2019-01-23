@@ -33,7 +33,7 @@ describe('Verify the functionality of STORY TYPE dropdown list ', function() {
 
 });
 
-/*describe('Verify that user can update existing template with additional details or not', function() {
+describe('Verify that user can update existing template with additional details or not', function() {
 	
 	
 	it('Launch and login  Tribune Application', function() {
@@ -48,6 +48,15 @@ describe('Verify the functionality of STORY TYPE dropdown list ', function() {
 	
 	it('Verify that user is able to search an old template',function() {
 		  browser.driver.sleep(4000);
+		   homepage.createNewTemplate();
+			browser.driver.sleep(2000);
+			templatepage.enterHeadlinne();
+			templatepage.enterSlugName(templatepage.getName(10)+"template-2018");
+			templatepage.clicksaveandCont();
+			templatepage.verifypopup();
+			browser.driver.sleep(6000);
+			templatepage.verifySnapHomePage()
+			browser.driver.sleep(2000);
 		  homepage.verifyTemplateEditPage();
 	});
 	
@@ -55,7 +64,7 @@ describe('Verify the functionality of STORY TYPE dropdown list ', function() {
 	it('Verify that user is able to Update an old template', function() {		
 		templatepage.updateDetails();
 		templatepage.clickOnSection();
-		templatepage.selectSection("/entertainment/tv");
+		templatepage.selectSection("/living");
 		//templatepage.AddNewSection();
 		templatepage.clicksaveandCont();
 		//templatepage.verifySectionPreview();
@@ -64,8 +73,8 @@ describe('Verify the functionality of STORY TYPE dropdown list ', function() {
 		templatepage.verifyUpdatedTemplate();
 		//templatepage.clickOnExit();
 	});
-});*/
-describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Right Rail story and Full Width story', function() {
+});
+/*describe('Verify the behavior of Basic Build dropdown Show AD Rail dropdown and widgets for Right Rail story and Full Width story', function() {
 		
 		it('Launch and login  Tribune Application', function() {
 			browser.waitForAngularEnabled(false);
@@ -262,7 +271,7 @@ describe('Verify that deleting primary section, the top remaining section become
 	});
 
 });
-/*describe('Verify that user is able to add multiple sections to the template and make any section as a primary section', function() {
+describe('Verify that user is able to add multiple sections to the template and make any section as a primary section', function() {
 	
 
 	it('Launch and login  Tribune Application', function() {
@@ -296,7 +305,7 @@ describe('Verify that deleting primary section, the top remaining section become
 	
 	});
 
-});*/
+});
 describe('Verify that section field is blank when user opens the P2P mode template in ARC mode', function() {
 	
 	it('Launch and login  Tribune Application', function() {
@@ -358,7 +367,7 @@ describe('Verify COMMENT dropdown options', function() {
 	});
 
 });
-/*describe('Verify that user is able to comment on the story by selecting Show option in Comment dropdown', function() {
+describe('Verify that user is able to comment on the story by selecting Show option in Comment dropdown', function() {
 	
 
 	it('Launch and login  Tribune Application', function() {
@@ -403,7 +412,7 @@ describe('Verify COMMENT dropdown options', function() {
 	
 	});
 
-});*/
+});
 describe('Verify the functionality of SAVE REMINDER dropdown list', function() {
 	
 	
@@ -464,7 +473,7 @@ describe('Verify that template history revisions show correct sections relevant 
 		templatepage.verifySectionFieldd();
 		});
 
-});
+});*/
 
 
 		

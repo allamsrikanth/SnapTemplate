@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1547711399615' stop='1547711557518'>
+    <name>Verify that template history revisions show correct sections relevant to the given revision</name>
+    <title>Verify that template history revisions show correct sections relevant to the given revision</title>
+    <test-cases>
+        <test-case start='1547711399616' status='passed' stop='1547711419339'>
+            <name>Launch and login  Tribune Application</name>
+            <title>Launch and login  Tribune Application</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='f0fe977e-ccfc-4379-93c8-873b7be941bc-attachment.png' type='image/png' size='609646'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547711419339' status='passed' stop='1547711430841'>
+            <name>should click on  new template</name>
+            <title>should click on  new template</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='fb1ce3fa-68cd-4439-b6b1-18761d2f2ac7-attachment.png' type='image/png' size='75475'/>
+            </attachments>
+        </test-case>
+        <test-case start='1547711430842' status='failed' stop='1547711557517'>
+            <name>should enter all mandatory fields and verify correct is section added or not</name>
+            <title>should enter all mandatory fields and verify correct is section added or not</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='772474ae-7363-463f-b33f-6ffe70bad774-attachment.png' type='image/png' size='92802'/>
+            </attachments>
+            <failure>
+                <message>Expected '/la-times/politics' to equal 'OR.locators.TemplatePage.verify_sectionfield'.</message>
+                <stack-trace>Error: Failed expectation
+                    at TemplatePage.verifySectionFieldd (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\pages\TemplatePage.js:417:111)
+                    at UserContext.&lt;anonymous> (C:\Users\srikanthr\eclipse-workspace\SnapAutomation-master\src\test\test_spec\template_spec_arc_losangeles.js:483:16)
+                    at C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+                    at new ManagedPromise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+                    at ControlFlow.promise (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+                    at schedulerExecute (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+                    at TaskQueue.execute_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at asyncRun (C:\Users\srikanthr\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

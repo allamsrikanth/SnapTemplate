@@ -37,6 +37,7 @@ exports.config = {
     },
 
     onPrepare: function () {
+    	browser.manage().window().setSize(1600, 1000);
         browser.driver.manage().timeouts().implicitlyWait(10000);
         var jasmineReporters = require('jasmine-reporters');
         jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
